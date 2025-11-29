@@ -1,0 +1,31 @@
+# Monty's Joint Website Context
+
+## Overview
+Monty's Joint is a premier gastropub and local restaurant in Thunder Bay, Ontario. We offer big flavours, live music, sports, and a vibrant community atmosphere.
+
+## Key Information
+- **Name**: Monty's Joint
+- **Address**: 513 Victoria Ave E, Thunder Bay, ON
+- **Phone**: 1-807-343-0001
+- **Email**: montysjoint@icloud.com
+- **Website**: https://montysjoint.com
+
+## Hours of Operation
+- **Monday**: 5:00 PM - 10:00 PM
+- **Tuesday - Friday**: 11:30 AM - 10:00 PM
+- **Saturday**: 12:00 PM - 10:00 PM
+- **Sunday**: Closed
+
+## Main Pages
+- **Home** (`/`): Overview, reviews, featured menu items, private events info.
+- **Menu** (`/menu`): Full digital menu with categories (Burgers, Handhelds, Bowls, etc.).
+- **Reservations** (`/reservations`): Table booking via embedded widget.
+- **Order Online** (`/order`): Links to delivery partners (SkipTheDishes, Uber Eats).
+- **Promotions** (`/promotions`): Current specials, tournaments, and events.
+- **Blog** (`/blog`): News and updates.
+- **Contact** (`/contact`): Location map, contact form, and hours.
+
+## Key Features
+- **Live Music & Sports**: We host regular live entertainment and screen major sports events.
+- **Private Events**: Available for booking private parties and functions.
+- **Novemburger**: Participating in the local burger competition.
