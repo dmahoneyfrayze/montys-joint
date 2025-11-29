@@ -10,6 +10,8 @@ import Reservations from './pages/Reservations';
 import Order from './pages/Order';
 import Blog from './pages/Blog';
 import BirthdayClub from './pages/BirthdayClub';
+import Careers from './pages/Careers';
+import NotFound from './pages/NotFound';
 import './styles/global.css';
 
 function App() {
@@ -24,8 +26,10 @@ function App() {
         <Route path="/order" element={<Order />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/birthday-club" element={<BirthdayClub />} />
+        <Route path="/careers" element={<Careers />} />
         <Route path="/terms-of-service" element={<Terms />} />
         <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
