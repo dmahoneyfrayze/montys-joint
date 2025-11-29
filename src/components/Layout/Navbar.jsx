@@ -38,7 +38,7 @@ const Navbar = () => {
 
                     <Link to="/menu" className="nav-link">Menu</Link>
                     <Link to="/promotions" className="nav-link">Specials</Link>
-                    <a href="/#private-events" className="nav-link">Private Events</a>
+                    <a href="/#private-events" className="nav-link" onClick={() => setIsOpen(false)}>Private Events</a>
                     <Link to="/contact" className="nav-link">Contact</Link>
 
                     {/* Mobile Only Call Button */}

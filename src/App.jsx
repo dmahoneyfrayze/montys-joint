@@ -12,11 +12,13 @@ import Blog from './pages/Blog';
 import BirthdayClub from './pages/BirthdayClub';
 import Careers from './pages/Careers';
 import NotFound from './pages/NotFoundPage';
+import ScrollToTop from './components/UI/ScrollToTop';
 import './styles/global.css';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
