@@ -112,7 +112,7 @@ const Home = () => {
 
                 <MotionSection delay={0.5}>
                     <div style={{ marginTop: '4rem', display: 'flex', justifyContent: 'center' }}>
-                        <img src="/assets/theme-big-flavour.png" alt="Big Flavour, Bigger Impact" style={{ width: '150px', height: 'auto', opacity: 0.8 }} />
+                        <img src="/assets/theme-big-flavour.png" alt="Big Flavour, Bigger Impact" loading="lazy" style={{ width: '150px', height: 'auto', opacity: 0.8 }} />
                     </div>
                 </MotionSection>
             </section>

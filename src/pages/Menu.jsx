@@ -108,7 +108,7 @@ const Menu = () => {
                                     <span className="promo-btn">View Details</span>
                                 </div>
                             </div>
-                            <img src="/assets/novemburger.jpg" alt="Novemburger" />
+                            <img src="/assets/novemburger.jpg" alt="Novemburger" loading="lazy" />
                         </Link>
                     </MotionSection>
 
@@ -126,7 +126,7 @@ const Menu = () => {
                                     {category.items.map((item, idx) => (
                                         <div key={idx} className="menu-item-card">
                                             {item.image && (
-                                                <img src={item.image} alt={item.name} className="menu-item-image" />
+                                                <img src={item.image} alt={item.name} loading="lazy" className="menu-item-image" />
                                             )}
                                             <div className="menu-item-content">
                                                 <div className="menu-item-header">
