@@ -136,6 +136,11 @@
     .navbar.scrolled .navbar-actions {
         display: flex !important;
     }
+
+    /* Hide Logo when scrolled on mobile to save space */
+    .navbar.scrolled .navbar-logo {
+        display: none;
+    }
 }
 
 @media (max-width: 480px) {
