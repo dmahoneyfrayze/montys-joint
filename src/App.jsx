@@ -11,7 +11,7 @@ import Order from './pages/Order';
 import Blog from './pages/Blog';
 import BirthdayClub from './pages/BirthdayClub';
 import Careers from './pages/Careers';
-import NotFound from './pages/NotFound';
+import NotFound from './pages/NotFoundPage';
 import './styles/global.css';
 
 function App() {
