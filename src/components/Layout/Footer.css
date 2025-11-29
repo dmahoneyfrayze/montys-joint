@@ -1,8 +1,9 @@
+/* Footer.css */
 .footer {
-    background-color: var(--color-dark-grey);
-    padding: 4rem 0 1rem;
-    border-top: 2px solid var(--color-yellow);
-    margin-top: auto;
+    background-color: #000;
+    color: #fff;
+    padding: 4rem 0 2rem;
+    border-top: 1px solid #333;
 }
 
 .footer-container {
@@ -13,15 +14,17 @@
 }
 
 .footer-title {
-    font-size: 1.5rem;
     color: var(--color-yellow);
+    font-size: 1.5rem;
     margin-bottom: 1.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
 }
 
 .footer-tagline {
+    color: #ccc;
     margin-bottom: 1.5rem;
     font-style: italic;
-    color: #ccc;
 }
 
 .social-links {
@@ -30,8 +33,8 @@
 }
 
 .social-icon {
-    color: var(--color-white);
-    transition: color var(--transition-fast);
+    color: #fff;
+    transition: color 0.3s ease;
 }
 
 .social-icon:hover {
@@ -41,7 +44,7 @@
 .footer-contact li {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
     margin-bottom: 1rem;
     color: #ccc;
 }
@@ -51,24 +54,52 @@
     flex-shrink: 0;
 }
 
+.footer-link-text {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link-text:hover {
+    color: var(--color-yellow);
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-yellow);
+    padding-left: 5px;
+}
+
 .footer-hours li {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.5rem;
-    color: #ccc;
-    border-bottom: 1px solid #333;
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid #222;
     padding-bottom: 0.5rem;
 }
 
 .footer-hours .day {
+    color: var(--color-yellow);
     font-weight: bold;
-    color: var(--color-white);
+}
+
+.footer-hours .time {
+    color: #ccc;
 }
 
 .footer-bottom {
     text-align: center;
-    padding-top: 1rem;
-    border-top: 1px solid #333;
+    padding-top: 2rem;
+    border-top: 1px solid #222;
     color: #666;
     font-size: 0.9rem;
 }
