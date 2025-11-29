@@ -9,6 +9,7 @@ import Promotions from './pages/Promotions';
 import Reservations from './pages/Reservations';
 import Order from './pages/Order';
 import Blog from './pages/Blog';
+import BirthdayClub from './pages/BirthdayClub';
 import './styles/global.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/reservations" element={<Reservations />} />
         <Route path="/order" element={<Order />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/birthday-club" element={<BirthdayClub />} />
         <Route path="/terms-of-service" element={<Terms />} />
         <Route path="/privacy-policy" element={<Privacy />} />
       </Routes>

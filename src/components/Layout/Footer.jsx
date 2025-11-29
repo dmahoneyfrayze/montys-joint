@@ -72,6 +72,7 @@ const Footer = () => {
                         <li><Link to="/menu">Menu</Link></li>
                         <li><Link to="/promotions">Specials</Link></li>
                         <li><Link to="/blog">Blog</Link></li>
+                        <li><Link to="/birthday-club">Birthday Club</Link></li>
                         <li><Link to="/reservations">Book a Table</Link></li>
                         <li><Link to="/order">Order Online</Link></li>
                         <li><Link to="/contact">Contact</Link></li>
