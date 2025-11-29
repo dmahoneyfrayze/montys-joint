@@ -1,0 +1,23 @@
+:root {
+  /* Brand Colors */
+  --color-black: #000000;
+  --color-yellow: #FFBF00;
+  --color-white: #FFFFFF;
+  --color-dark-grey: #121212;
+  --color-light-grey: #f4f4f4;
+  
+  /* Fonts */
+  --font-primary: 'Bebas Neue', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.4s ease;
+}
