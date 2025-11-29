@@ -74,7 +74,7 @@ const Home = () => {
                                 From birthday bashes to corporate gatherings, our private room is the perfect spot.
                                 Custom menus, dedicated service, and a vibe you won't find anywhere else.
                             </p>
-                            <Link to="/contact" className="btn btn-primary" style={{
+                            <a href="https://go.montysjoint.com/widget/form/EEy6e5HE9WudRN8PzSJC" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{
                                 background: 'var(--color-yellow)',
                                 color: '#000',
                                 border: 'none',
@@ -86,7 +86,7 @@ const Home = () => {
                                 display: 'inline-block'
                             }}>
                                 Inquire Now
-                            </Link>
+                            </a>
                         </div>
                     </MotionSection>
                 </div>
