@@ -57,7 +57,39 @@ const Home = () => {
                         </div>
                     </MotionSection>
                 </div>
-
+                {/* Private Events Mini-Landing */}
+                <div id="private-events" style={{ marginBottom: '4rem' }}>
+                    <MotionSection delay={0.25}>
+                        <div style={{
+                            background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/assets/private-events.jpg)',
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            padding: '4rem 2rem',
+                            borderRadius: '16px',
+                            border: '1px solid #333',
+                            textAlign: 'center'
+                        }}>
+                            <h2 style={{ color: '#fff', fontSize: '2.5rem', marginBottom: '1rem' }}>HOST YOUR NEXT EVENT</h2>
+                            <p style={{ color: '#ccc', maxWidth: '600px', margin: '0 auto 2rem', fontSize: '1.1rem' }}>
+                                From birthday bashes to corporate gatherings, our private room is the perfect spot.
+                                Custom menus, dedicated service, and a vibe you won't find anywhere else.
+                            </p>
+                            <Link to="/contact" className="btn btn-primary" style={{
+                                background: 'var(--color-yellow)',
+                                color: '#000',
+                                border: 'none',
+                                padding: '1rem 2rem',
+                                fontSize: '1.1rem',
+                                fontWeight: 'bold',
+                                textDecoration: 'none',
+                                borderRadius: '4px',
+                                display: 'inline-block'
+                            }}>
+                                Inquire Now
+                            </Link>
+                        </div>
+                    </MotionSection>
+                </div>
                 <MotionSection delay={0.3}>
                     <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginBottom: '4rem' }}>
                         <a href="tel:18073430001" style={{ background: '#fff', color: '#000', padding: '0.8rem 1.5rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold' }}>Call Now</a>
