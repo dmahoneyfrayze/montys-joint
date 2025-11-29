@@ -126,11 +126,28 @@
     .navbar-container {
         gap: 0.5rem;
     }
+
+    /* Hide CTAs by default on mobile */
+    .navbar-actions {
+        display: none !important;
+    }
+
+    /* Show CTAs when scrolled on mobile */
+    .navbar.scrolled .navbar-actions {
+        display: flex !important;
+    }
 }
 
 @media (max-width: 480px) {
     .navbar-container {
         padding: 0 0.5rem;
+    }
+
+    .navbar-logo {
+        flex-shrink: 0;
+        /* Ensure logo never squishes */
+        margin-right: auto;
+        /* Push everything else to the right */
     }
 
     .navbar-logo img {

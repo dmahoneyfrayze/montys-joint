@@ -46,7 +46,7 @@ const Navbar = () => {
                         <Phone size={18} /> Call Us
                     </a>
                 </div>
-                <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                <div className="navbar-actions" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
                     <Link to="/reservations" className="nav-btn btn" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none' }}>
                         Book Table
                     </Link>
