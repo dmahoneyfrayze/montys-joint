@@ -153,8 +153,9 @@ const Home = () => {
                     <h2 style={{ textAlign: 'center', color: '#000', marginBottom: '2rem' }}>What People Are Saying</h2>
                     <iframe
                         src="https://go.montysjoint.com/reputation/widgets/review_widget/l8CVOHqx40wEE90Dx7g2"
-                        style={{ minWidth: '100%', width: '100%', border: 'none', minHeight: '300px' }}
+                        style={{ minWidth: '100%', width: '100%', border: 'none', minHeight: '800px', overflow: 'hidden' }}
                         title="Reviews"
+                        scrolling="no"
                     ></iframe>
                     <script type='text/javascript' src='https://go.montysjoint.com/reputation/assets/review-widget.js'></script>
                 </div>
