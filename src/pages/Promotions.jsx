@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import Layout from '../components/Layout/Layout';
 
 const Promotions = () => {
@@ -47,7 +48,10 @@ const Promotions = () => {
                         <p style={{ fontSize: '1.2rem', color: '#ccc', maxWidth: '700px', margin: '0 auto 1rem auto' }}>
                             Try our signature creation for this year's Novemburger! A perfect harmony of flavours that will rock your tastebuds.
                         </p>
-                        <p style={{ color: 'var(--color-yellow)', fontWeight: 'bold', fontSize: '1.2rem' }}>Available for a Limited Time Only!</p>
+                        <p style={{ color: 'var(--color-yellow)', fontWeight: 'bold', fontSize: '1.2rem', marginBottom: '1.5rem' }}>Available for a Limited Time Only!</p>
+                        <Link to="/order" className="btn" style={{ background: 'var(--color-yellow)', color: '#000', padding: '1rem 2rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold', display: 'inline-block' }}>
+                            Order it before it's too late &rarr;
+                        </Link>
                     </div>
                 </div>
 

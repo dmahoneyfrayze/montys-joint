@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import Layout from '../components/Layout/Layout';
 import { Utensils, Beer, Pizza, Sandwich, Salad, Drumstick, Star } from 'lucide-react';
 
@@ -87,6 +88,10 @@ const Menu = () => {
                 <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
                     <img src="/assets/burger-stamp.webp" alt="Monty's Joint Stamp" style={{ width: '100px', marginBottom: '1rem', opacity: '0.9' }} />
                     <h1 style={{ fontSize: '3rem', color: 'var(--color-yellow)' }}>Our Menu</h1>
+
+                    <Link to="/promotions" style={{ display: 'inline-block', marginTop: '1rem', background: '#1a1a1a', border: '1px solid var(--color-yellow)', padding: '1rem 2rem', borderRadius: '4px', textDecoration: 'none', color: 'var(--color-yellow)', fontWeight: 'bold' }}>
+                        Check out the Novemburger: The Jam Session &rarr;
+                    </Link>
                 </div>
 
                 <div style={{ display: 'grid', gap: '4rem' }}>
