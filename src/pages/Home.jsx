@@ -101,12 +101,7 @@ const Home = () => {
                 <MotionSection delay={0.4}>
                     <div style={{ padding: '2rem', background: '#fff', borderRadius: '8px' }}>
                         <h2 style={{ textAlign: 'center', color: '#000', marginBottom: '2rem' }}>What People Are Saying</h2>
-                        <iframe
-                            src="https://go.montysjoint.com/reputation/widgets/review_widget/l8CVOHqx40wEE90Dx7g2"
-                            style={{ minWidth: '100%', width: '100%', border: 'none', minHeight: '800px', overflow: 'hidden' }}
-                            title="Reviews"
-                            scrolling="no"
-                        ></iframe>
+                        <ReviewWidget />
                     </div>
                 </MotionSection>
 
@@ -117,6 +112,44 @@ const Home = () => {
                 </MotionSection>
             </section>
         </Layout>
+    );
+};
+
+const ReviewWidget = () => {
+    const [isVisible, setIsVisible] = React.useState(false);
+    const widgetRef = React.useRef(null);
+
+    React.useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect();
+                }
+            },
+            { rootMargin: '200px' } // Load slightly before it comes into view
+        );
+
+        if (widgetRef.current) {
+            observer.observe(widgetRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
+    return (
+        <div ref={widgetRef} style={{ minHeight: '800px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            {isVisible ? (
+                <iframe
+                    src="https://go.montysjoint.com/reputation/widgets/review_widget/l8CVOHqx40wEE90Dx7g2"
+                    style={{ minWidth: '100%', width: '100%', border: 'none', minHeight: '800px', overflow: 'hidden' }}
+                    title="Reviews"
+                    scrolling="no"
+                ></iframe>
+            ) : (
+                <div style={{ color: '#666' }}>Loading reviews...</div>
+            )}
+        </div>
     );
 };
 
