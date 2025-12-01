@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Layout from '../components/Layout/Layout';
 import MotionSection from '../components/UI/MotionSection';
-import { Check } from 'lucide-react';
+import { Check, Star, Users, Music, Wine, Mic, MapPin, Award, ChevronDown, ChevronUp } from 'lucide-react';
 
 const PrivateEvents = () => {
     useEffect(() => {
@@ -22,6 +22,8 @@ const PrivateEvents = () => {
             title: 'Private Dinner / Corporate',
             price: 'Custom Quote',
             perPerson: false,
+            popular: true,
+            idealFor: '20-80 guests',
             features: [
                 'Custom Plated or Buffet Menu',
                 'Reserved Section or Full Buyout',
@@ -33,6 +35,7 @@ const PrivateEvents = () => {
             title: 'Kids Birthday Bash',
             price: 'Inquire for Details',
             perPerson: false,
+            idealFor: 'Kids & Families',
             features: [
                 'Kid-Friendly Dinner at Monty’s',
                 'Access to Armani’s After Dinner',
@@ -44,12 +47,47 @@ const PrivateEvents = () => {
             title: 'The Full Night Out',
             price: 'Inquire for Details',
             perPerson: false,
+            idealFor: 'Celebrations',
             features: [
                 'Dinner & Drinks at Monty’s',
                 'Transition to Armani’s Nightclub',
                 'VIP Entry & Dance Floor Access',
                 'The Ultimate Celebration Package'
             ]
+        }
+    ];
+
+    const testimonials = [
+        {
+            quote: "We hosted our staff Christmas party here and it was flawless. The food was hot, the drinks were cold, and the transition to the nightclub was a huge hit!",
+            author: "Sarah J., Corporate Event"
+        },
+        {
+            quote: "Best kids birthday ever. The bouncy castles at Armani's kept them entertained for hours while the adults enjoyed dinner.",
+            author: "Mike T., Parent"
+        },
+        {
+            quote: "Monty's made planning our team lunch so easy. Great service and a really cool vibe.",
+            author: "Jessica L., Team Lead"
+        }
+    ];
+
+    const faqs = [
+        {
+            question: "Can you accommodate dietary restrictions?",
+            answer: "Absolutely. Our kitchen is experienced in handling gluten-free, vegetarian, vegan, and allergy-specific requests. Just let us know in advance."
+        },
+        {
+            question: "Can we bring our own cake?",
+            answer: "Yes! You are welcome to bring a cake for your celebration. We can store it for you until it's time to serve."
+        },
+        {
+            question: "Is there a minimum spend?",
+            answer: "Minimum spends vary based on the date, time, and group size. Please fill out the inquiry form for a specific quote."
+        },
+        {
+            question: "Is A/V equipment included?",
+            answer: "Yes, we have a 75\" TV with HDMI input and an independent sound system available for your use at no extra charge."
         }
     ];
 
@@ -97,43 +135,66 @@ const PrivateEvents = () => {
 
             {/* Hero Section */}
             <div style={{
-                background: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/assets/private-events-hero.webp)',
+                background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/assets/private-events-hero.webp)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 padding: '150px 2rem 100px',
                 textAlign: 'center',
                 marginBottom: '4rem'
             }}>
-                <h1 style={{ fontSize: '3.5rem', color: '#fff', marginBottom: '1rem' }}>Host Your Next Event</h1>
-                <p style={{ fontSize: '1.5rem', color: '#ccc', maxWidth: '800px', margin: '0 auto' }}>
-                    The ideal spot for Christmas parties, corporate gatherings, and birthday celebrations.
+                <h1 style={{ fontSize: '3.5rem', color: '#fff', marginBottom: '1.5rem', maxWidth: '900px', margin: '0 auto 1.5rem' }}>Host Effortless Private Events at Monty’s Joint</h1>
+                <p style={{ fontSize: '1.5rem', color: '#ccc', maxWidth: '800px', margin: '0 auto 2.5rem' }}>
+                    From corporate Christmas parties to kids’ birthdays, we handle food, venue, and entertainment so you can actually enjoy the night.
                 </p>
+                <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>
+                    <a href="#inquiry-form" className="btn" style={{ background: 'var(--color-yellow)', color: '#000', padding: '1rem 2rem', fontSize: '1.1rem', fontWeight: 'bold', borderRadius: '4px', textDecoration: 'none' }}>
+                        Check Availability
+                    </a>
+                    <a href="#packages" className="btn-outline" style={{ border: '2px solid #fff', color: '#fff', padding: '1rem 2rem', fontSize: '1.1rem', fontWeight: 'bold', borderRadius: '4px', textDecoration: 'none' }}>
+                        View Event Packages
+                    </a>
+                </div>
+                <div style={{ display: 'flex', gap: '2rem', justifyContent: 'center', flexWrap: 'wrap', color: '#aaa', fontSize: '0.9rem', borderTop: '1px solid #444', paddingTop: '2rem', maxWidth: '1000px', margin: '0 auto' }}>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Star size={16} color="var(--color-yellow)" /> Perfect for: Corporate Parties</span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Award size={16} color="var(--color-yellow)" /> Birthdays</span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Users size={16} color="var(--color-yellow)" /> Team Events</span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Wine size={16} color="var(--color-yellow)" /> Holiday Parties</span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 'bold', color: '#fff' }}>Up to 200 Guests</span>
+                </div>
             </div>
 
             <div className="container" style={{ paddingBottom: '4rem' }}>
 
-                {/* Room Details */}
+                {/* Intro & Features */}
                 <MotionSection>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '6rem' }}>
                         <div>
-                            <h2 style={{ fontSize: '2.5rem', color: 'var(--color-yellow)', marginBottom: '1.5rem' }}>The Perfect Venue</h2>
-                            <p style={{ fontSize: '1.1rem', color: '#ccc', marginBottom: '2rem', lineHeight: '1.6' }}>
-                                Monty's Joint offers a unique atmosphere for any occasion. From intimate <strong>birthday dinners</strong> to large <strong>corporate Christmas parties</strong>, our venue can be tailored to your needs. We offer full venue buyouts for complete privacy and customization.
+                            <h2 style={{ fontSize: '2.5rem', color: 'var(--color-yellow)', marginBottom: '1.5rem' }}>Why Choose Monty's?</h2>
+                            <p style={{ fontSize: '1.1rem', color: '#ccc', marginBottom: '1rem', lineHeight: '1.6' }}>
+                                Located in the heart of downtown Thunder Bay, Monty's Joint offers a versatile venue for any occasion. Whether you're planning a corporate event, a staff Christmas party, or a milestone birthday, we provide the perfect backdrop.
                             </p>
-                            <ul style={{ listStyle: 'none', padding: 0, color: '#fff' }}>
-                                <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                    <span style={{ color: 'var(--color-yellow)', fontWeight: 'bold' }}>Best For:</span> Christmas Parties, Staff Events, Birthdays
-                                </li>
-                                <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                    <span style={{ color: 'var(--color-yellow)', fontWeight: 'bold' }}>Capacity:</span> Inquire for details
-                                </li>
-                                <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                    <span style={{ color: 'var(--color-yellow)', fontWeight: 'bold' }}>Space:</span> Full Restaurant & Bar
-                                </li>
-                                <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                    <span style={{ color: 'var(--color-yellow)', fontWeight: 'bold' }}>A/V:</span> 75" TV, HDMI Input, Independent Sound System
-                                </li>
-                            </ul>
+                            <p style={{ fontSize: '1.1rem', color: '#ccc', marginBottom: '2rem', lineHeight: '1.6' }}>
+                                Our space can accommodate <strong>up to 200 guests</strong> (ideal for groups of 20–120) with flexible layouts, full A/V capabilities, and a dedicated team to ensure everything runs smoothly.
+                            </p>
+
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: '#fff' }}>
+                                    <div style={{ background: '#333', padding: '0.5rem', borderRadius: '50%' }}><Wine size={20} color="var(--color-yellow)" /></div>
+                                    <span>Multiple Bars & Fully Licensed</span>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: '#fff' }}>
+                                    <div style={{ background: '#333', padding: '0.5rem', borderRadius: '50%' }}><Music size={20} color="var(--color-yellow)" /></div>
+                                    <span>2 Distinct Vibes (Monty's & Armani's)</span>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: '#fff' }}>
+                                    <div style={{ background: '#333', padding: '0.5rem', borderRadius: '50%' }}><Mic size={20} color="var(--color-yellow)" /></div>
+                                    <span>Stage for Presentations & Live Music</span>
+                                </div>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: '#fff' }}>
+                                    <div style={{ background: '#333', padding: '0.5rem', borderRadius: '50%' }}><MapPin size={20} color="var(--color-yellow)" /></div>
+                                    <span>Downtown Thunder Bay Location</span>
+                                </div>
+                            </div>
                         </div>
                         <div>
                             <img src="/assets/montys-interior-venue-2.webp" alt="Monty's Joint Interior" style={{ width: '100%', borderRadius: '8px', border: '1px solid #333' }} />
@@ -142,50 +203,123 @@ const PrivateEvents = () => {
                 </MotionSection>
 
                 {/* Packages */}
-                <MotionSection delay={0.2}>
-                    <h2 style={{ textAlign: 'center', fontSize: '2.5rem', color: '#fff', marginBottom: '3rem' }}>Event Packages</h2>
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '6rem' }}>
-                        {packages.map((pkg, index) => (
-                            <div key={index} style={{ background: '#1a1a1a', padding: '2rem', borderRadius: '8px', border: '1px solid #333', display: 'flex', flexDirection: 'column' }}>
-                                <h3 style={{ color: 'var(--color-yellow)', fontSize: '1.8rem', marginBottom: '0.5rem' }}>{pkg.title}</h3>
-                                <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#fff', marginBottom: '0.5rem' }}>
-                                    {pkg.price}
+                <div id="packages">
+                    <MotionSection delay={0.2}>
+                        <h2 style={{ textAlign: 'center', fontSize: '2.5rem', color: '#fff', marginBottom: '3rem' }}>Event Packages</h2>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '6rem' }}>
+                            {packages.map((pkg, index) => (
+                                <div key={index} style={{
+                                    background: '#1a1a1a',
+                                    padding: '2rem',
+                                    borderRadius: '8px',
+                                    border: pkg.popular ? '2px solid var(--color-yellow)' : '1px solid #333',
+                                    display: 'flex',
+                                    flexDirection: 'column',
+                                    position: 'relative'
+                                }}>
+                                    {pkg.popular && (
+                                        <div style={{
+                                            position: 'absolute',
+                                            top: '-12px',
+                                            left: '50%',
+                                            transform: 'translateX(-50%)',
+                                            background: 'var(--color-yellow)',
+                                            color: '#000',
+                                            padding: '0.25rem 1rem',
+                                            borderRadius: '20px',
+                                            fontWeight: 'bold',
+                                            fontSize: '0.9rem'
+                                        }}>
+                                            Most Popular
+                                        </div>
+                                    )}
+                                    <h3 style={{ color: 'var(--color-yellow)', fontSize: '1.8rem', marginBottom: '0.5rem' }}>{pkg.title}</h3>
+                                    <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem', fontStyle: 'italic' }}>Ideal for: {pkg.idealFor}</p>
+                                    <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#fff', marginBottom: '1.5rem' }}>
+                                        {pkg.price}
+                                    </div>
+                                    <hr style={{ borderColor: '#333', margin: '0 0 1.5rem 0' }} />
+                                    <p style={{ color: '#888', fontSize: '0.9rem', marginBottom: '1rem' }}>Includes:</p>
+                                    <ul style={{ listStyle: 'none', padding: 0, flex: 1 }}>
+                                        {pkg.features.map((feature, i) => (
+                                            <li key={i} style={{ marginBottom: '1rem', display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#ccc' }}>
+                                                <Check size={18} color="var(--color-yellow)" style={{ marginTop: '4px', minWidth: '18px' }} />
+                                                {feature}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                    <a href="#inquiry-form" className="btn" style={{ background: 'var(--color-yellow)', color: '#000', textAlign: 'center', padding: '1rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold', marginTop: '2rem' }}>
+                                        Check Availability
+                                    </a>
                                 </div>
-                                <hr style={{ borderColor: '#333', margin: '1.5rem 0' }} />
-                                <ul style={{ listStyle: 'none', padding: 0, flex: 1 }}>
-                                    {pkg.features.map((feature, i) => (
-                                        <li key={i} style={{ marginBottom: '1rem', display: 'flex', alignItems: 'flex-start', gap: '0.75rem', color: '#ccc' }}>
-                                            <Check size={18} color="var(--color-yellow)" style={{ marginTop: '4px' }} />
-                                            {feature}
-                                        </li>
-                                    ))}
-                                </ul>
-                                <a href="#inquiry-form" className="btn" style={{ background: 'var(--color-yellow)', color: '#000', textAlign: 'center', padding: '1rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold', marginTop: '2rem' }}>
-                                    Select Package
-                                </a>
+                            ))}
+                        </div>
+                    </MotionSection>
+                </div>
+
+                {/* Social Proof - Testimonials */}
+                <MotionSection delay={0.3}>
+                    <div style={{ marginBottom: '6rem' }}>
+                        <h2 style={{ textAlign: 'center', fontSize: '2.5rem', color: '#fff', marginBottom: '3rem' }}>What Our Guests Say</h2>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                            {testimonials.map((t, i) => (
+                                <div key={i} style={{ background: '#222', padding: '2rem', borderRadius: '8px', border: '1px solid #333' }}>
+                                    <div style={{ display: 'flex', gap: '0.25rem', marginBottom: '1rem' }}>
+                                        {[...Array(5)].map((_, starIndex) => (
+                                            <Star key={starIndex} size={16} fill="var(--color-yellow)" color="var(--color-yellow)" />
+                                        ))}
+                                    </div>
+                                    <p style={{ color: '#ccc', fontStyle: 'italic', marginBottom: '1.5rem', lineHeight: '1.6' }}>"{t.quote}"</p>
+                                    <p style={{ color: '#fff', fontWeight: 'bold' }}>- {t.author}</p>
+                                </div>
+                            ))}
+                        </div>
+                        {/* Badges */}
+                        <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap', marginTop: '4rem', borderTop: '1px solid #333', paddingTop: '3rem' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#ccc' }}>
+                                <MapPin size={20} color="var(--color-yellow)" /> Locally Owned
                             </div>
-                        ))}
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#ccc' }}>
+                                <Award size={20} color="var(--color-yellow)" /> Downtown Thunder Bay
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#ccc' }}>
+                                <Mic size={20} color="var(--color-yellow)" /> Full A/V Included
+                            </div>
+                        </div>
                     </div>
                 </MotionSection>
 
                 {/* Gallery */}
-                <MotionSection delay={0.3}>
+                <MotionSection delay={0.4}>
                     <h2 style={{ textAlign: 'center', fontSize: '2.5rem', color: '#fff', marginBottom: '3rem' }}>Event Gallery</h2>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '6rem' }}>
-                        <img src="/assets/montys-interior-live-music.webp" alt="Live Music Atmosphere" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
-                        <img src="/assets/montys-interior-venue-2.webp" alt="Venue Interior" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
-                        <img src="/assets/montys-interior-live-sports.webp" alt="Live Sports" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
-                        <img src="/assets/montys-interior-gallery-6.webp" alt="Dining Atmosphere" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
-                        <img src="/assets/montys-interior-food-3.webp" alt="Event Catering" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
-                        <img src="/assets/montys-interior-food-1.webp" alt="Food Detail" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
+                        {galleryImages.map((img, index) => (
+                            <img key={index} src={img} alt={`Event Gallery ${index + 1}`} style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
+                        ))}
+                    </div>
+                </MotionSection>
+
+                {/* FAQ Section */}
+                <MotionSection delay={0.5}>
+                    <div style={{ marginBottom: '6rem', maxWidth: '800px', margin: '0 auto 6rem' }}>
+                        <h2 style={{ textAlign: 'center', fontSize: '2.5rem', color: '#fff', marginBottom: '3rem' }}>Frequently Asked Questions</h2>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                            {faqs.map((faq, i) => (
+                                <div key={i} style={{ background: '#1a1a1a', padding: '1.5rem', borderRadius: '8px', border: '1px solid #333' }}>
+                                    <h3 style={{ color: 'var(--color-yellow)', fontSize: '1.2rem', marginBottom: '0.5rem' }}>{faq.question}</h3>
+                                    <p style={{ color: '#ccc', lineHeight: '1.6' }}>{faq.answer}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </MotionSection>
 
                 {/* Inquiry Form */}
                 <div id="inquiry-form">
-                    <MotionSection delay={0.4}>
+                    <MotionSection delay={0.6}>
                         <div style={{ maxWidth: '800px', margin: '0 auto', background: '#fff', padding: '2rem', borderRadius: '8px' }}>
-                            <h2 style={{ textAlign: 'center', color: '#000', marginBottom: '2rem' }}>Inquire Now</h2>
+                            <h2 style={{ textAlign: 'center', color: '#000', marginBottom: '0.5rem' }}>Start Planning Your Event</h2>
+                            <p style={{ textAlign: 'center', color: '#666', marginBottom: '2rem' }}>Takes less than 60 seconds. Our team will respond within 24 hours.</p>
                             <iframe
                                 src="https://go.montysjoint.com/widget/form/EEy6e5HE9WudRN8PzSJC"
                                 style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px' }}
