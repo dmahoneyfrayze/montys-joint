@@ -31,7 +31,7 @@ const Home = () => {
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center', textAlign: 'left', marginBottom: '4rem' }}>
                         <div>
-                            <img src="/assets/montys-interior-story.webp" alt="Monty's Joint Interior" style={{ width: '100%', borderRadius: '8px', border: '1px solid #333' }} />
+                            <img src="/assets/montys-exterior.webp" alt="Monty's Joint Exterior" style={{ width: '100%', borderRadius: '8px', border: '1px solid #333' }} />
                         </div>
                         <div>
                             <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'var(--color-yellow)' }}>
@@ -53,19 +53,19 @@ const Home = () => {
                         <h3 style={{ color: '#fff', marginBottom: '2rem' }}>Guest Favourites</h3>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
                             <div style={{ background: '#1a1a1a', padding: '1.5rem', borderRadius: '8px', border: '1px solid #333' }}>
-                                <img src="/assets/food-highlight-1.webp" alt="Homemade Mozza Sticks" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }} />
-                                <h4 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Homemade Mozza Sticks</h4>
-                                <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Fresh made in-house with marinara.</p>
+                                <img src="/assets/montys-cigars.jpg" alt="Monty's Cigars" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }} />
+                                <h4 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Monty's Cigars</h4>
+                                <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Premium selection available.</p>
                                 <Link to="/menu" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
                             </div>
                             <div style={{ background: '#1a1a1a', padding: '1.5rem', borderRadius: '8px', border: '1px solid #333' }}>
-                                <img src="/assets/food-highlight-2.webp" alt="The United Burger" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }} />
-                                <h4 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>The United Burger</h4>
-                                <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Caribbean spices, grilled red onion, provolone.</p>
+                                <img src="/assets/buttermilk-chicken.jpg" alt="Buttermilk Chicken Sandwich" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }} />
+                                <h4 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Buttermilk Chicken Sandwich</h4>
+                                <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Crispy buttermilk chicken breast.</p>
                                 <Link to="/menu" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
                             </div>
                             <div style={{ background: '#1a1a1a', padding: '1.5rem', borderRadius: '8px', border: '1px solid #333' }}>
-                                <img src="/assets/food-highlight-3.webp" alt="Classic Poutine" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }} />
+                                <img src="/assets/gallery-2.webp" alt="Classic Poutine" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }} />
                                 <h4 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Classic Poutine</h4>
                                 <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Golden fries, gravy, curds and mozzarella.</p>
                                 <Link to="/menu" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
@@ -84,12 +84,12 @@ const Home = () => {
                     <MotionSection delay={0.2}>
                         <h3 style={{ color: '#fff', marginBottom: '2rem' }}>Gallery</h3>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
-                            <img src="/assets/gallery-1.webp" alt="Mozza Sticks" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
-                            <img src="/assets/gallery-2.webp" alt="United Burger" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
-                            <img src="/assets/gallery-3.webp" alt="Classic Poutine" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
-                            <img src="/assets/gallery-4.webp" alt="Interior Bar" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
-                            <img src="/assets/gallery-5.webp" alt="Interior Dining" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
-                            <img src="/assets/gallery-6.webp" alt="Live Music" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
+                            <img src="/assets/montys-interior-live-music.webp" alt="Live Music at Monty's" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
+                            <img src="/assets/montys-interior-venue-2.webp" alt="Monty's Venue Interior" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
+                            <img src="/assets/montys-interior-live-sports.webp" alt="Live Sports at Monty's" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
+                            <img src="/assets/montys-interior-gallery-6.webp" alt="Monty's Atmosphere" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
+                            <img src="/assets/montys-interior-food-3.webp" alt="Dining at Monty's" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
+                            <img src="/assets/montys-interior-food-1.webp" alt="Monty's Interior Detail" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
                         </div>
                     </MotionSection>
                 </div>

@@ -53,8 +53,8 @@ const CountdownTimer = ({ targetDate }) => {
 
 const Promotions = () => {
     const recurringSpecials = [
-        { title: 'Live Music Friday', day: 'Friday', time: '6pm - 9pm', image: '/assets/gallery-6.webp', cta: '/reservations' },
-        { title: 'Hockey Night', day: 'Game Nights', time: 'Live', image: '/assets/live-sports.webp', cta: '/reservations' }
+        { title: 'Live Music Friday', day: 'Friday', time: '6pm - 9pm', image: '/assets/montys-interior-gallery-6.webp', cta: '/reservations' },
+        { title: 'Hockey Night', day: 'Game Nights', time: 'Live', image: '/assets/montys-interior-live-sports.webp', cta: '/reservations' }
     ];
 
     const upcomingEvents = [

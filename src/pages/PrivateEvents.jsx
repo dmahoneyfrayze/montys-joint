@@ -61,7 +61,7 @@ const PrivateEvents = () => {
         '/assets/gallery-4.webp',
         '/assets/gallery-1.webp',
         '/assets/gallery-2.webp',
-        '/assets/gallery-6.webp'
+        '/assets/montys-interior-gallery-6.webp'
     ];
 
     return (
