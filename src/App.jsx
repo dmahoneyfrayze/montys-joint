@@ -18,6 +18,7 @@ const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const BirthdayClub = lazy(() => import('./pages/BirthdayClub'));
 const Careers = lazy(() => import('./pages/Careers'));
+const Sitemap = lazy(() => import('./pages/Sitemap'));
 const NotFound = lazy(() => import('./pages/NotFoundPage'));
 
 // Loading fallback component
@@ -54,6 +55,7 @@ function App() {
           <Route path="/careers" element={<Careers />} />
           <Route path="/terms-of-service" element={<Terms />} />
           <Route path="/privacy-policy" element={<Privacy />} />
+          <Route path="/sitemap" element={<Sitemap />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

@@ -106,7 +106,8 @@ const Footer = () => {
                 <p>&copy; {new Date().getFullYear()} Monty's Joint. All rights reserved.</p>
                 <div style={{ marginTop: '0.5rem', fontSize: '0.8rem' }}>
                     <a href="/privacy-policy" style={{ color: '#666', marginRight: '1rem' }}>Privacy Policy</a>
-                    <a href="/terms-of-service" style={{ color: '#666' }}>Terms of Service</a>
+                    <a href="/terms-of-service" style={{ color: '#666', marginRight: '1rem' }}>Terms of Service</a>
+                    <Link to="/sitemap" style={{ color: '#666' }}>Sitemap</Link>
                 </div>
             </div>
         </footer>
