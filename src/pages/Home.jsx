@@ -222,56 +222,15 @@ const ReviewWidget = () => {
         return () => observer.disconnect();
     }, []);
 
-    React.useEffect(() => {
-        if (isVisible) {
-            // Load script for mobile widget
-            const script = document.createElement('script');
-            script.src = 'https://go.montysjoint.com/reputation/assets/review-widget.js';
-            script.async = true;
-            document.body.appendChild(script);
-
-            return () => {
-                document.body.removeChild(script);
-            };
-        }
-    }, [isVisible]);
-
     return (
         <div ref={widgetRef} style={{ minHeight: '800px' }}>
             {isVisible ? (
-                <>
-                    {/* Desktop Widget */}
-                    <div className="desktop-only">
-                        <iframe
-                            src="https://go.montysjoint.com/reputation/widgets/review_widget/l8CVOHqx40wEE90Dx7g2"
-                            style={{ minWidth: '100%', width: '100%', border: 'none', minHeight: '800px', overflow: 'hidden' }}
-                            title="Reviews Desktop"
-                            scrolling="no"
-                        ></iframe>
-                    </div>
-
-                    {/* Mobile Widget */}
-                    <div className="mobile-only">
-                        <iframe
-                            className="lc_reviews_widget"
-                            src="https://go.montysjoint.com/reputation/widgets/review_widget/l8CVOHqx40wEE90Dx7g2?widgetId=692d418b97baf0403c3a7758"
-                            frameBorder="0"
-                            scrolling="no"
-                            style={{ minWidth: '100%', width: '100%', minHeight: '800px' }}
-                            title="Reviews Mobile"
-                        ></iframe>
-                    </div>
-
-                    <style>{`
-                        .desktop-only { display: block; }
-                        .mobile-only { display: none; }
-                        
-                        @media (max-width: 768px) {
-                            .desktop-only { display: none; }
-                            .mobile-only { display: block; }
-                        }
-                    `}</style>
-                </>
+                <iframe
+                    src="https://go.montysjoint.com/reputation/widgets/review_widget/l8CVOHqx40wEE90Dx7g2"
+                    style={{ minWidth: '100%', width: '100%', border: 'none', minHeight: '800px', overflow: 'hidden' }}
+                    title="Reviews"
+                    scrolling="no"
+                ></iframe>
             ) : (
                 <div style={{ color: '#666', textAlign: 'center', padding: '2rem' }}>Loading reviews...</div>
             )}
