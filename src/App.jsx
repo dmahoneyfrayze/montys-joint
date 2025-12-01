@@ -12,6 +12,8 @@ const Privacy = lazy(() => import('./pages/Privacy'));
 const Promotions = lazy(() => import('./pages/Promotions'));
 const Reservations = lazy(() => import('./pages/Reservations'));
 const Order = lazy(() => import('./pages/Order'));
+const PrivateEvents = lazy(() => import('./pages/PrivateEvents'));
+const ThankYou = lazy(() => import('./pages/ThankYou'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const BirthdayClub = lazy(() => import('./pages/BirthdayClub'));
@@ -41,9 +43,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/contact/thank-you" element={<ThankYou />} />
           <Route path="/promotions" element={<Promotions />} />
           <Route path="/reservations" element={<Reservations />} />
           <Route path="/order" element={<Order />} />
+          <Route path="/private-events" element={<PrivateEvents />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/birthday-club" element={<BirthdayClub />} />

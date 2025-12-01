@@ -8,6 +8,9 @@ import MotionSection from '../components/UI/MotionSection';
 const Blog = () => {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [activeCategory, setActiveCategory] = useState('All');
+
+    const categories = ['All', 'Food', 'Events', 'Community', 'Behind the Scenes', 'Specials'];
 
     useEffect(() => {
         const loadPosts = async () => {
@@ -19,16 +22,49 @@ const Blog = () => {
         loadPosts();
     }, []);
 
+    const filteredPosts = activeCategory === 'All'
+        ? posts
+        : posts.filter(post => post.category === activeCategory);
+
     return (
         <Layout>
             <Helmet>
-                <title>Blog | Monty’s Joint</title>
+                <title>Blog | Monty’s Joint, Thunder Bay</title>
                 <meta name="description" content="Read the latest news, stories, and updates from Monty’s Joint. Food, community, and culture in Thunder Bay." />
+                <link rel="canonical" href="https://montysjoint.com/blog" />
+                <meta property="og:title" content="Blog | Monty’s Joint, Thunder Bay" />
+                <meta property="og:description" content="Read the latest news, stories, and updates from Monty’s Joint." />
+                <meta property="og:image" content="https://montysjoint.com/assets/logo-main.png" />
+                <meta property="og:url" content="https://montysjoint.com/blog" />
+                <meta property="og:type" content="website" />
             </Helmet>
             <div style={{ paddingTop: '100px', paddingBottom: '4rem' }} className="container">
                 <MotionSection>
                     <h1 style={{ textAlign: 'center', fontSize: '3rem', marginBottom: '1rem', color: 'var(--color-yellow)' }}>The Monty's Blog</h1>
-                    <p style={{ textAlign: 'center', color: '#ccc', marginBottom: '4rem', fontSize: '1.2rem' }}>News, stories, and updates from the team.</p>
+                    <p style={{ textAlign: 'center', color: '#ccc', marginBottom: '3rem', fontSize: '1.2rem' }}>News, stories, and updates from the team.</p>
+
+                    {/* Categories */}
+                    <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1rem', marginBottom: '4rem' }}>
+                        {categories.map(cat => (
+                            <button
+                                key={cat}
+                                onClick={() => setActiveCategory(cat)}
+                                style={{
+                                    background: activeCategory === cat ? 'var(--color-yellow)' : 'transparent',
+                                    color: activeCategory === cat ? '#000' : '#fff',
+                                    border: '1px solid var(--color-yellow)',
+                                    padding: '0.5rem 1.5rem',
+                                    borderRadius: '50px',
+                                    cursor: 'pointer',
+                                    fontWeight: 'bold',
+                                    fontSize: '0.9rem',
+                                    transition: 'all 0.3s ease'
+                                }}
+                            >
+                                {cat}
+                            </button>
+                        ))}
+                    </div>
                 </MotionSection>
 
                 {loading ? (
@@ -37,20 +73,29 @@ const Blog = () => {
                     </div>
                 ) : (
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '3rem' }}>
-                        {posts.map((post, index) => (
+                        {filteredPosts.map((post, index) => (
                             <MotionSection key={post.id} delay={index * 0.1}>
                                 <Link to={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
                                     <article style={{ background: '#1a1a1a', borderRadius: '8px', overflow: 'hidden', border: '1px solid #333', height: '100%', display: 'flex', flexDirection: 'column', transition: 'transform 0.3s ease' }} className="blog-card">
-                                        <div style={{ height: '200px', overflow: 'hidden' }}>
+                                        <div style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
                                             <img src={post.image} alt={post.title} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} />
+                                            <span style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'var(--color-yellow)', color: '#000', padding: '0.25rem 0.75rem', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 'bold' }}>
+                                                {post.category}
+                                            </span>
                                         </div>
                                         <div style={{ padding: '2rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                                            <div style={{ color: 'var(--color-yellow)', fontSize: '0.9rem', marginBottom: '0.5rem' }}>{post.date}</div>
+                                            <div style={{ color: '#888', fontSize: '0.85rem', marginBottom: '0.5rem', display: 'flex', justifyContent: 'space-between' }}>
+                                                <span>{post.date}</span>
+                                                <span>{post.readTime}</span>
+                                            </div>
                                             <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#fff', lineHeight: '1.3' }}>{post.title}</h2>
                                             <p style={{ color: '#ccc', lineHeight: '1.6', marginBottom: '1.5rem', flex: 1 }}>{post.excerpt}</p>
-                                            <span style={{ color: 'var(--color-yellow)', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center' }}>
-                                                Read More <span style={{ marginLeft: '0.5rem' }}>&rarr;</span>
-                                            </span>
+                                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 'auto' }}>
+                                                <span style={{ color: '#888', fontSize: '0.9rem' }}>By {post.author}</span>
+                                                <span style={{ color: 'var(--color-yellow)', fontWeight: 'bold', display: 'inline-flex', alignItems: 'center' }}>
+                                                    Read More <span style={{ marginLeft: '0.5rem' }}>&rarr;</span>
+                                                </span>
+                                            </div>
                                         </div>
                                     </article>
                                 </Link>
@@ -59,9 +104,9 @@ const Blog = () => {
                     </div>
                 )}
 
-                {!loading && posts.length === 0 && (
+                {!loading && filteredPosts.length === 0 && (
                     <div style={{ textAlign: 'center', color: '#ccc', padding: '4rem' }}>
-                        <p>No posts found. Please check back later!</p>
+                        <p>No posts found in this category.</p>
                     </div>
                 )}
 

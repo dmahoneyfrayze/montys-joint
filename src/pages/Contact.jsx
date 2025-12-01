@@ -18,8 +18,14 @@ const Contact = () => {
     return (
         <Layout>
             <Helmet>
-                <title>Contact Us | Monty’s Joint Thunder Bay</title>
+                <title>Contact Us | Monty’s Joint, Thunder Bay</title>
                 <meta name="description" content="Get in touch with Monty’s Joint. Find our location, hours, phone number, and email. We look forward to seeing you!" />
+                <link rel="canonical" href="https://montysjoint.com/contact" />
+                <meta property="og:title" content="Contact Us | Monty’s Joint, Thunder Bay" />
+                <meta property="og:description" content="Get in touch with Monty’s Joint. Find our location, hours, phone number, and email." />
+                <meta property="og:image" content="https://montysjoint.com/assets/logo-main.png" />
+                <meta property="og:url" content="https://montysjoint.com/contact" />
+                <meta property="og:type" content="website" />
             </Helmet>
             <div style={{ paddingTop: '100px', paddingBottom: '4rem' }} className="container">
                 <h1 style={{ textAlign: 'center', fontSize: '3rem', marginBottom: '3rem', color: 'var(--color-yellow)' }}>Contact Us</h1>
@@ -104,6 +110,14 @@ const Contact = () => {
                         referrerPolicy="no-referrer-when-downgrade"
                         title="Monty's Joint Location"
                     ></iframe>
+                </div>
+
+                {/* Parking + Directions */}
+                <div style={{ marginTop: '4rem', maxWidth: '800px', margin: '4rem auto 0' }}>
+                    <h3 style={{ color: 'var(--color-yellow)', fontSize: '2rem', marginBottom: '1rem' }}>How to Find Us</h3>
+                    <p style={{ color: '#ccc', fontSize: '1.1rem', lineHeight: '1.6' }}>
+                        Monty's Joint is conveniently located at 513 Victoria Ave E, right in the heart of Thunder Bay. We offer ample parking for our guests. You can find street parking directly in front of the restaurant on Victoria Ave, or use the public parking lot located just around the corner on Archibald St. For those taking public transit, we are easily accessible via the 3M Memorial and 11 John bus routes, with stops just steps from our front door. Look for our sign and come on in for a great meal!
+                    </p>
                 </div>
             </div>
         </Layout>

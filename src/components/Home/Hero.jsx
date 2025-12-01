@@ -8,15 +8,15 @@ const Hero = () => {
             <div className="hero-overlay"></div>
             <div className="container hero-content">
                 <h1 className="hero-title">
-                    Big Flavour<br />
-                    <span className="text-yellow">Bigger Impact</span>
+                    Thunder Bay’s<br />
+                    <span className="text-yellow">Neighbourhood Gastropub</span>
                 </h1>
                 <p className="hero-subtitle">
-                    Great burgers, live music, and the coldest draught in Thunder Bay—book your next night out at Monty’s Joint.
+                    Great food, cold beer, live music, and a place to feel at home.
                 </p>
                 <div className="hero-actions">
-                    <Link to="/reservations" className="btn" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none' }}>Book a Table</Link>
-                    <Link to="/menu" className="btn btn-outline">View Menu</Link>
+                    <Link to="/menu" className="btn" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none' }}>View Menu</Link>
+                    <a href="https://go.montysjoint.com/widget/booking" target="_blank" rel="noopener noreferrer" className="btn btn-outline">Book a Table</a>
                 </div>
                 <div style={{ marginTop: '1.5rem', color: '#fff', fontSize: '0.9rem', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
                     <span style={{ color: 'var(--color-yellow)' }}>★★★★★</span> 4.8 rating from 28+ reviews

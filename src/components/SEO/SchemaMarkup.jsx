@@ -43,7 +43,12 @@ const SchemaMarkup = () => {
             }
         ],
         "servesCuisine": ["Gastropub", "Burgers", "American"],
-        "priceRange": "$$"
+        "priceRange": "$$",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "28"
+        }
     };
 
     return (

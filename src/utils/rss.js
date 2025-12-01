@@ -55,6 +55,18 @@ export const fetchBlogPosts = async () => {
                 }
             }
 
+            // Author
+            const author = item.querySelector('creator')?.textContent || 'Monty\'s Team';
+
+            // Category
+            // RSS items can have multiple categories, we'll take the first one or default to 'Community'
+            const category = item.querySelector('category')?.textContent || 'Community';
+
+            // Read Time Calculation
+            const textContent = tempDiv.textContent || '';
+            const wordCount = textContent.split(/\s+/).length;
+            const readTime = Math.ceil(wordCount / 200) + ' min read';
+
             return {
                 id: slug, // Use slug as ID for simplicity in routing
                 title,
@@ -63,7 +75,10 @@ export const fetchBlogPosts = async () => {
                 excerpt,
                 content,
                 image,
-                link // Original link
+                link, // Original link
+                author,
+                category,
+                readTime
             };
         });
     } catch (error) {

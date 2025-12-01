@@ -9,8 +9,14 @@ const Home = () => {
     return (
         <Layout>
             <Helmet>
-                <title>Monty’s Joint | Gastropub & Local Restaurant In Thunder Bay</title>
+                <title>Thunder Bay Gastropub | Monty’s Joint</title>
                 <meta name="description" content="Monty’s Joint is Thunder Bay’s neighbourhood gastropub serving great food, the coldest draught, and a relaxed pub atmosphere. Enjoy dine-in, takeout, catering, and private bookings." />
+                <link rel="canonical" href="https://montysjoint.com/" />
+                <meta property="og:title" content="Thunder Bay Gastropub | Monty’s Joint" />
+                <meta property="og:description" content="Monty’s Joint is Thunder Bay’s neighbourhood gastropub serving great food, the coldest draught, and a relaxed pub atmosphere." />
+                <meta property="og:image" content="https://montysjoint.com/assets/logo-main.png" />
+                <meta property="og:url" content="https://montysjoint.com/" />
+                <meta property="og:type" content="website" />
             </Helmet>
             <Hero />
 
@@ -23,13 +29,22 @@ const Home = () => {
                         <span style={{ color: '#ccc' }}>"Best wings in town!"</span>
                     </div>
 
-                    <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'var(--color-yellow)' }}>
-                        Eat. Drink. Be Social.
-                    </h2>
-                    <p style={{ maxWidth: '600px', margin: '0 auto', fontSize: '1.2rem', color: '#ccc', marginBottom: '3rem' }}>
-                        Monty’s Joint is your local spot for good food, cold draught, and a relaxed atmosphere.
-                        From comfort classics to our new kids menu, we serve up dishes that hit the table hot.
-                    </p>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center', textAlign: 'left', marginBottom: '4rem' }}>
+                        <div>
+                            <img src="/assets/montys-interior-story.webp" alt="Monty's Joint Interior" style={{ width: '100%', borderRadius: '8px', border: '1px solid #333' }} />
+                        </div>
+                        <div>
+                            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'var(--color-yellow)' }}>
+                                The Story Behind Monty’s Joint
+                            </h2>
+                            <p style={{ fontSize: '1.1rem', color: '#ccc', marginBottom: '2rem', lineHeight: '1.6' }}>
+                                Monty’s Joint is your local spot for good food, cold draught, and a relaxed atmosphere. From comfort classics to our new kids menu, we serve up dishes that hit the table hot. We believe in great food, cold beer, live music, and a place to feel at home. Come join us and see what makes us Thunder Bay's favourite neighbourhood gastropub.
+                            </p>
+                            <Link to="/blog/the-story-behind-montys-joint" className="btn btn-primary" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none', padding: '0.8rem 1.5rem', fontSize: '1rem', fontWeight: 'bold', textDecoration: 'none', borderRadius: '4px' }}>
+                                Read Full Story
+                            </Link>
+                        </div>
+                    </div>
                 </MotionSection>
 
                 {/* Menu Highlights */}
@@ -38,22 +53,55 @@ const Home = () => {
                         <h3 style={{ color: '#fff', marginBottom: '2rem' }}>Guest Favourites</h3>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
                             <div style={{ background: '#1a1a1a', padding: '1.5rem', borderRadius: '8px', border: '1px solid #333' }}>
+                                <img src="/assets/food-highlight-1.webp" alt="Homemade Mozza Sticks" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }} />
                                 <h4 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Homemade Mozza Sticks</h4>
-                                <p style={{ color: '#ccc', fontSize: '0.9rem' }}>Fresh made in-house with marinara.</p>
+                                <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Fresh made in-house with marinara.</p>
+                                <Link to="/menu" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
                             </div>
                             <div style={{ background: '#1a1a1a', padding: '1.5rem', borderRadius: '8px', border: '1px solid #333' }}>
+                                <img src="/assets/food-highlight-2.webp" alt="The United Burger" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }} />
                                 <h4 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>The United Burger</h4>
-                                <p style={{ color: '#ccc', fontSize: '0.9rem' }}>Caribbean spices, grilled red onion, provolone.</p>
+                                <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Caribbean spices, grilled red onion, provolone.</p>
+                                <Link to="/menu" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
                             </div>
                             <div style={{ background: '#1a1a1a', padding: '1.5rem', borderRadius: '8px', border: '1px solid #333' }}>
+                                <img src="/assets/food-highlight-3.webp" alt="Classic Poutine" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }} />
                                 <h4 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Classic Poutine</h4>
-                                <p style={{ color: '#ccc', fontSize: '0.9rem' }}>Golden fries, gravy, curds and mozzarella.</p>
+                                <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Golden fries, gravy, curds and mozzarella.</p>
+                                <Link to="/menu" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
                             </div>
                         </div>
                         <div className="hero-actions" style={{ marginTop: '2rem' }}>
                             <Link to="/reservations" className="btn btn-primary" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none', padding: '1rem 2rem', fontSize: '1.2rem', fontWeight: 'bold', textDecoration: 'none', borderRadius: '4px' }}>
                                 Book a Table
                             </Link>
+                        </div>
+                    </MotionSection>
+                </div>
+
+                {/* Photo Gallery */}
+                <div style={{ marginBottom: '4rem' }}>
+                    <MotionSection delay={0.2}>
+                        <h3 style={{ color: '#fff', marginBottom: '2rem' }}>Gallery</h3>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
+                            <img src="/assets/gallery-1.webp" alt="Mozza Sticks" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
+                            <img src="/assets/gallery-2.webp" alt="United Burger" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
+                            <img src="/assets/gallery-3.webp" alt="Classic Poutine" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
+                            <img src="/assets/gallery-4.webp" alt="Interior Bar" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
+                            <img src="/assets/gallery-5.webp" alt="Interior Dining" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
+                            <img src="/assets/gallery-6.webp" alt="Live Music" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
+                        </div>
+                    </MotionSection>
+                </div>
+
+                {/* Online Ordering Badges */}
+                <div style={{ marginBottom: '4rem', textAlign: 'center' }}>
+                    <MotionSection delay={0.2}>
+                        <h3 style={{ color: '#fff', marginBottom: '2rem' }}>Order Online</h3>
+                        <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
+                            <a href="https://www.ubereats.com" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#06C167', color: '#fff', border: 'none', padding: '1rem 2rem', borderRadius: '4px', fontWeight: 'bold', textDecoration: 'none' }}>Uber Eats</a>
+                            <a href="https://www.skipthedishes.com" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#D21243', color: '#fff', border: 'none', padding: '1rem 2rem', borderRadius: '4px', fontWeight: 'bold', textDecoration: 'none' }}>SkipTheDishes</a>
+                            <a href="https://www.doordash.com" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#FF3008', color: '#fff', border: 'none', padding: '1rem 2rem', borderRadius: '4px', fontWeight: 'bold', textDecoration: 'none' }}>DoorDash</a>
                         </div>
                     </MotionSection>
                 </div>
@@ -98,7 +146,7 @@ const Home = () => {
                 <div id="private-events" style={{ marginBottom: '4rem' }}>
                     <MotionSection delay={0.25}>
                         <div style={{
-                            background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/assets/private-events.jpg)',
+                            background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/assets/private-events-landing.webp)',
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             padding: '4rem 2rem',
