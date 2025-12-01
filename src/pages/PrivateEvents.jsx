@@ -138,7 +138,7 @@ const PrivateEvents = () => {
                             </ul>
                         </div>
                         <div>
-                            <img src="/assets/interior-dining-01.jpg" alt="Monty's Joint Interior" style={{ width: '100%', borderRadius: '8px', border: '1px solid #333' }} />
+                            <img src="/assets/montys-interior-venue-2.webp" alt="Monty's Joint Interior" style={{ width: '100%', borderRadius: '8px', border: '1px solid #333' }} />
                         </div>
                     </div>
                 </MotionSection>
@@ -174,9 +174,12 @@ const PrivateEvents = () => {
                 <MotionSection delay={0.3}>
                     <h2 style={{ textAlign: 'center', fontSize: '2.5rem', color: '#fff', marginBottom: '3rem' }}>Event Gallery</h2>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '6rem' }}>
-                        {galleryImages.map((img, index) => (
-                            <img key={index} src={img} alt={`Event Gallery ${index + 1}`} style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
-                        ))}
+                        <img src="/assets/montys-interior-live-music.webp" alt="Live Music Atmosphere" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
+                        <img src="/assets/montys-interior-venue-2.webp" alt="Venue Interior" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
+                        <img src="/assets/montys-interior-live-sports.webp" alt="Live Sports" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
+                        <img src="/assets/montys-interior-gallery-6.webp" alt="Dining Atmosphere" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
+                        <img src="/assets/montys-interior-food-3.webp" alt="Event Catering" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
+                        <img src="/assets/montys-interior-food-1.webp" alt="Food Detail" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
                     </div>
                 </MotionSection>
 
