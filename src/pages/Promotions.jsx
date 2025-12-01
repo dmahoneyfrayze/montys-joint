@@ -60,7 +60,9 @@ const Promotions = () => {
         { title: 'Novemburger', day: 'November', time: 'Limited Time', image: '/assets/novemburger.jpg', cta: '/menu' }
     ];
 
-    const upcomingEvents = [];
+    const upcomingEvents = [
+        { date: '2025-02-22', time: '6:00 PM', artist: 'Youth Hockey Fundraiser', description: 'Support our local youth team! Great food, prizes, and community spirit.', cta: '/reservations' }
+    ];
 
     const pastSpecials = [];
 
