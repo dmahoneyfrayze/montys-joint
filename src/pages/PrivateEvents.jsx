@@ -19,38 +19,36 @@ const PrivateEvents = () => {
 
     const packages = [
         {
-            title: 'The Social Mixer',
-            price: '$25 - $35',
-            perPerson: true,
-            features: [
-                'Appetizer Platter Selection',
-                'Dedicated Server',
-                'Reserved Section (3 Hours)',
-                'Background Music Control'
-            ]
-        },
-        {
-            title: 'The Dinner Party',
-            price: '$45 - $60',
-            perPerson: true,
-            features: [
-                '3-Course Plated Dinner',
-                'Welcome Drink Ticket',
-                'Dedicated Server & Bartender',
-                'Reserved Section (4 Hours)',
-                'A/V Equipment Use'
-            ]
-        },
-        {
-            title: 'The Full Buyout',
-            price: 'Contact Us',
+            title: 'Private Dinner / Corporate',
+            price: 'Custom Quote',
             perPerson: false,
             features: [
-                'Exclusive Use of Entire Venue',
-                'Custom Buffet or Plated Menu',
-                'Full Bar Service',
-                'Live Music Setup Ready',
-                'Flexible Duration'
+                'Custom Plated or Buffet Menu',
+                'Reserved Section or Full Buyout',
+                'Dedicated Service Staff',
+                'Perfect for Staff Parties & Meetings'
+            ]
+        },
+        {
+            title: 'Kids Birthday Bash',
+            price: 'Inquire for Details',
+            perPerson: false,
+            features: [
+                'Kid-Friendly Dinner at Monty’s',
+                'Access to Armani’s After Dinner',
+                'Bouncy Castles & Live DJ',
+                'Hassle-Free Party Planning'
+            ]
+        },
+        {
+            title: 'The Full Night Out',
+            price: 'Inquire for Details',
+            perPerson: false,
+            features: [
+                'Dinner & Drinks at Monty’s',
+                'Transition to Armani’s Nightclub',
+                'VIP Entry & Dance Floor Access',
+                'The Ultimate Celebration Package'
             ]
         }
     ];
@@ -150,8 +148,8 @@ const PrivateEvents = () => {
                         {packages.map((pkg, index) => (
                             <div key={index} style={{ background: '#1a1a1a', padding: '2rem', borderRadius: '8px', border: '1px solid #333', display: 'flex', flexDirection: 'column' }}>
                                 <h3 style={{ color: 'var(--color-yellow)', fontSize: '1.8rem', marginBottom: '0.5rem' }}>{pkg.title}</h3>
-                                <div style={{ fontSize: '2rem', fontWeight: 'bold', color: '#fff', marginBottom: '0.5rem' }}>
-                                    {pkg.price} <span style={{ fontSize: '1rem', fontWeight: 'normal', color: '#888' }}>{pkg.perPerson ? '/ person' : ''}</span>
+                                <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#fff', marginBottom: '0.5rem' }}>
+                                    {pkg.price}
                                 </div>
                                 <hr style={{ borderColor: '#333', margin: '1.5rem 0' }} />
                                 <ul style={{ listStyle: 'none', padding: 0, flex: 1 }}>
