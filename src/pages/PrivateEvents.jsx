@@ -25,7 +25,7 @@ const PrivateEvents = () => {
             features: [
                 'Appetizer Platter Selection',
                 'Dedicated Server',
-                'Private Room Access (3 Hours)',
+                'Reserved Section (3 Hours)',
                 'Background Music Control'
             ]
         },
@@ -37,7 +37,7 @@ const PrivateEvents = () => {
                 '3-Course Plated Dinner',
                 'Welcome Drink Ticket',
                 'Dedicated Server & Bartender',
-                'Private Room Access (4 Hours)',
+                'Reserved Section (4 Hours)',
                 'A/V Equipment Use'
             ]
         },
@@ -67,11 +67,11 @@ const PrivateEvents = () => {
     return (
         <Layout>
             <Helmet>
-                <title>Private Events | Monty’s Joint, Thunder Bay</title>
-                <meta name="description" content="Host your next event at Monty’s Joint. Perfect for birthdays, corporate parties, and celebrations. Private room available." />
+                <title>Private Events, Christmas Parties & Corporate Functions | Monty’s Joint</title>
+                <meta name="description" content="Host your Christmas party, corporate event, or birthday bash at Monty’s Joint. Full venue buyouts available for private functions in Thunder Bay." />
                 <link rel="canonical" href="https://montysjoint.com/private-events" />
-                <meta property="og:title" content="Private Events | Monty’s Joint, Thunder Bay" />
-                <meta property="og:description" content="Host your next event at Monty’s Joint. Perfect for birthdays, corporate parties, and celebrations." />
+                <meta property="og:title" content="Private Events, Christmas Parties & Corporate Functions | Monty’s Joint" />
+                <meta property="og:description" content="Host your Christmas party, corporate event, or birthday bash at Monty’s Joint. Full venue buyouts available." />
                 <meta property="og:image" content="https://montysjoint.com/assets/private-events-hero.webp" />
                 <meta property="og:url" content="https://montysjoint.com/private-events" />
                 <meta property="og:type" content="website" />
@@ -80,7 +80,7 @@ const PrivateEvents = () => {
                         {
                             "@context": "https://schema.org",
                             "@type": "EventVenue",
-                            "name": "Monty's Joint Private Room",
+                            "name": "Monty's Joint Events",
                             "address": {
                                 "@type": "PostalAddress",
                                 "streetAddress": "513 Victoria Ave E",
@@ -90,7 +90,8 @@ const PrivateEvents = () => {
                                 "addressCountry": "CA"
                             },
                             "telephone": "+18073430001",
-                            "image": "https://montysjoint.com/assets/private-events-hero.webp"
+                            "image": "https://montysjoint.com/assets/private-events-hero.webp",
+                            "description": "The perfect venue for Christmas parties, corporate events, and birthday celebrations in Thunder Bay."
                         }
                     `}
                 </script>
@@ -105,9 +106,9 @@ const PrivateEvents = () => {
                 textAlign: 'center',
                 marginBottom: '4rem'
             }}>
-                <h1 style={{ fontSize: '3.5rem', color: '#fff', marginBottom: '1rem' }}>Private Events at Monty’s Joint</h1>
+                <h1 style={{ fontSize: '3.5rem', color: '#fff', marginBottom: '1rem' }}>Host Your Next Event</h1>
                 <p style={{ fontSize: '1.5rem', color: '#ccc', maxWidth: '800px', margin: '0 auto' }}>
-                    Birthdays, corporate parties, celebrations, and private gatherings.
+                    The ideal spot for Christmas parties, corporate gatherings, and birthday celebrations.
                 </p>
             </div>
 
@@ -117,17 +118,19 @@ const PrivateEvents = () => {
                 <MotionSection>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '4rem', alignItems: 'center', marginBottom: '6rem' }}>
                         <div>
-                            <h2 style={{ fontSize: '2.5rem', color: 'var(--color-yellow)', marginBottom: '1.5rem' }}>The Private Room</h2>
+                            <h2 style={{ fontSize: '2.5rem', color: 'var(--color-yellow)', marginBottom: '1.5rem' }}>The Perfect Venue</h2>
                             <p style={{ fontSize: '1.1rem', color: '#ccc', marginBottom: '2rem', lineHeight: '1.6' }}>
-                                Our private event space is designed to offer an intimate yet lively atmosphere for your gathering.
-                                Whether it's a sit-down dinner or a cocktail mixer, we can configure the room to suit your needs.
+                                Monty's Joint offers a unique atmosphere for any occasion. From intimate <strong>birthday dinners</strong> to large <strong>corporate Christmas parties</strong>, our venue can be tailored to your needs. We offer full venue buyouts for complete privacy and customization.
                             </p>
                             <ul style={{ listStyle: 'none', padding: 0, color: '#fff' }}>
                                 <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                    <span style={{ color: 'var(--color-yellow)', fontWeight: 'bold' }}>Capacity:</span> Up to 40 Seated / 60 Standing
+                                    <span style={{ color: 'var(--color-yellow)', fontWeight: 'bold' }}>Best For:</span> Christmas Parties, Staff Events, Birthdays
                                 </li>
                                 <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                                    <span style={{ color: 'var(--color-yellow)', fontWeight: 'bold' }}>Room Size:</span> 800 sq. ft.
+                                    <span style={{ color: 'var(--color-yellow)', fontWeight: 'bold' }}>Capacity:</span> Inquire for details
+                                </li>
+                                <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                                    <span style={{ color: 'var(--color-yellow)', fontWeight: 'bold' }}>Space:</span> Full Restaurant & Bar
                                 </li>
                                 <li style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                                     <span style={{ color: 'var(--color-yellow)', fontWeight: 'bold' }}>A/V:</span> 75" TV, HDMI Input, Independent Sound System
@@ -135,7 +138,7 @@ const PrivateEvents = () => {
                             </ul>
                         </div>
                         <div>
-                            <img src="/assets/interior-dining-01.jpg" alt="Private Room" style={{ width: '100%', borderRadius: '8px', border: '1px solid #333' }} />
+                            <img src="/assets/interior-dining-01.jpg" alt="Monty's Joint Interior" style={{ width: '100%', borderRadius: '8px', border: '1px solid #333' }} />
                         </div>
                     </div>
                 </MotionSection>

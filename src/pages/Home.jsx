@@ -155,7 +155,7 @@ const Home = () => {
                         }}>
                             <h2 style={{ color: '#fff', fontSize: '2.5rem', marginBottom: '1rem' }}>HOST YOUR NEXT EVENT</h2>
                             <p style={{ color: '#ccc', maxWidth: '600px', margin: '0 auto 2rem', fontSize: '1.1rem' }}>
-                                From birthday bashes to corporate gatherings, our private room is the perfect spot.
+                                From birthday bashes to corporate gatherings, our venue is the perfect spot.
                                 Custom menus, dedicated service, and a vibe you won't find anywhere else.
                             </p>
                             <a href="https://go.montysjoint.com/widget/form/EEy6e5HE9WudRN8PzSJC" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{
