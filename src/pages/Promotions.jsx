@@ -55,21 +55,57 @@ const Promotions = () => {
                     </div>
                 </div>
 
-                <div style={{ textAlign: 'center', padding: '4rem', background: '#1a1a1a', borderRadius: '8px' }}>
-                    <h2 style={{ color: '#fff', marginBottom: '1rem' }}>Weekly Features</h2>
-                    <p style={{ color: '#ccc', fontSize: '1.2rem', marginBottom: '2rem' }}>
-                        Stop by to see what's new on the board! We rotate our specials regularly to bring you fresh flavours.
-                    </p>
+                {/* New Specials */}
+                <div style={{ marginBottom: '4rem' }}>
+                    <h2 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '2rem', color: 'var(--color-yellow)' }}>Chef's Specials</h2>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                        <div style={{ background: '#1a1a1a', padding: '2rem', borderRadius: '8px', border: '1px solid #333' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '1rem' }}>
+                                <h3 style={{ fontSize: '1.5rem', color: '#fff', margin: 0 }}>Gnocchi Al Sugo De Peperoni</h3>
+                                <span style={{ color: 'var(--color-yellow)', fontSize: '1.25rem', fontWeight: 'bold' }}>$17.00</span>
+                            </div>
+                            <p style={{ color: '#ccc', lineHeight: '1.6' }}>
+                                Gnocchi with rose red pepper sauce. Red peppers and Italian sausage. With some cayenne and parmesan.
+                            </p>
+                        </div>
 
-                    <div style={{ display: 'grid', gap: '2rem', maxWidth: '600px', margin: '0 auto' }}>
-                        <div style={{ border: '1px solid #333', padding: '1.5rem', borderRadius: '8px' }}>
-                            <h3 style={{ color: 'var(--color-yellow)' }}>Happy Hour</h3>
-                            <p style={{ color: '#ccc' }}>Join us daily from 2pm - 5pm for drink specials and half-price apps.</p>
+                        <div style={{ background: '#1a1a1a', padding: '2rem', borderRadius: '8px', border: '1px solid #333' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '1rem' }}>
+                                <h3 style={{ fontSize: '1.5rem', color: '#fff', margin: 0 }}>Broilers</h3>
+                                <span style={{ color: 'var(--color-yellow)', fontSize: '1.25rem', fontWeight: 'bold' }}>$15.00</span>
+                            </div>
+                            <p style={{ color: '#ccc', lineHeight: '1.6' }}>
+                                Sausage meatballs stuffed with spinach and goat cheese. Wrapped in bacon and broiled. Served over marinara and bread for dipping.
+                            </p>
                         </div>
-                        <div style={{ border: '1px solid #333', padding: '1.5rem', borderRadius: '8px' }}>
-                            <h3 style={{ color: 'var(--color-yellow)' }}>Wing Night</h3>
-                            <p style={{ color: '#ccc' }}>Thursdays are for wings! Special pricing on our famous wings.</p>
+
+                        <div style={{ background: '#1a1a1a', padding: '2rem', borderRadius: '8px', border: '1px solid #333' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '1rem' }}>
+                                <h3 style={{ fontSize: '1.5rem', color: '#fff', margin: 0 }}>Butternut Squash Ravioli</h3>
+                                <span style={{ color: 'var(--color-yellow)', fontSize: '1.25rem', fontWeight: 'bold' }}>$18.00</span>
+                            </div>
+                            <p style={{ color: '#ccc', lineHeight: '1.6' }}>
+                                Squash and ricotta filled Ravioli. On a bed of sweet potato puree. Drizzled with maple brown butter sauce topped with crispy sage and gremalata.
+                            </p>
                         </div>
+                    </div>
+                </div>
+
+                {/* Friday Band Event */}
+                <div style={{ background: '#1a1a1a', borderRadius: '8px', overflow: 'hidden', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <div style={{ padding: '3rem 2rem', textAlign: 'center' }}>
+                        <h2 style={{ fontSize: '2.5rem', marginBottom: '0.5rem', color: 'var(--color-yellow)' }}>The Mark Potvin Trio</h2>
+                        <h3 style={{ fontSize: '1.5rem', color: '#fff', marginBottom: '1.5rem' }}>Vintage Jazz and Blues</h3>
+                        
+                        <div style={{ display: 'inline-block', background: '#333', padding: '1rem 2rem', borderRadius: '50px', marginBottom: '2rem' }}>
+                            <p style={{ margin: 0, fontSize: '1.2rem', color: '#fff', fontWeight: 'bold' }}>
+                                FRIDAYS • 6-9 PM • NO COVER
+                            </p>
+                        </div>
+
+                        <p style={{ fontSize: '1.2rem', color: '#ccc', maxWidth: '600px', margin: '0 auto' }}>
+                            Join us for an evening of vintage jazz and blues for your listening pleasure.
+                        </p>
                     </div>
                 </div>
             </div>

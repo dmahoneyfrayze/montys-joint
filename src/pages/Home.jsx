@@ -57,6 +57,43 @@ const Home = () => {
                         </div>
                     </MotionSection>
                 </div>
+                {/* Mark Potvin Feature */}
+                <div style={{ marginBottom: '4rem' }}>
+                    <MotionSection delay={0.25}>
+                        <div style={{
+                            background: '#1a1a1a',
+                            borderRadius: '12px',
+                            overflow: 'hidden',
+                            border: '1px solid #333',
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                            alignItems: 'center'
+                        }}>
+                            <div style={{ height: '100%', minHeight: '300px' }}>
+                                <img
+                                    src="/assets/mark-potvin.jpg"
+                                    alt="The Mark Potvin Trio"
+                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                />
+                            </div>
+                            <div style={{ padding: '2rem', textAlign: 'left' }}>
+                                <h2 style={{ fontSize: '2rem', marginBottom: '0.5rem', color: 'var(--color-yellow)' }}>The Mark Potvin Trio</h2>
+                                <h3 style={{ fontSize: '1.25rem', color: '#fff', marginBottom: '1rem', fontWeight: 'normal' }}>Vintage Jazz and Blues</h3>
+
+                                <p style={{ fontSize: '1rem', color: '#ccc', marginBottom: '1.5rem', lineHeight: '1.6' }}>
+                                    Join us for an evening of vintage jazz and blues for your listening pleasure.
+                                </p>
+
+                                <div style={{ display: 'inline-block', background: '#333', padding: '0.75rem 1.5rem', borderRadius: '50px' }}>
+                                    <p style={{ margin: 0, fontSize: '1rem', color: '#fff', fontWeight: 'bold' }}>
+                                        FRIDAYS • 6-9 PM • NO COVER
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </MotionSection>
+                </div>
+
                 {/* Private Events Mini-Landing */}
                 <div id="private-events" style={{ marginBottom: '4rem' }}>
                     <MotionSection delay={0.25}>
@@ -127,7 +164,7 @@ const ReviewWidget = () => {
                     observer.disconnect();
                 }
             },
-            { rootMargin: '200px' } // Load slightly before it comes into view
+            { rootMargin: '200px' }
         );
 
         if (widgetRef.current) {
@@ -137,17 +174,58 @@ const ReviewWidget = () => {
         return () => observer.disconnect();
     }, []);
 
+    React.useEffect(() => {
+        if (isVisible) {
+            // Load script for mobile widget
+            const script = document.createElement('script');
+            script.src = 'https://go.montysjoint.com/reputation/assets/review-widget.js';
+            script.async = true;
+            document.body.appendChild(script);
+
+            return () => {
+                document.body.removeChild(script);
+            };
+        }
+    }, [isVisible]);
+
     return (
-        <div ref={widgetRef} style={{ minHeight: '800px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <div ref={widgetRef} style={{ minHeight: '800px' }}>
             {isVisible ? (
-                <iframe
-                    src="https://go.montysjoint.com/reputation/widgets/review_widget/l8CVOHqx40wEE90Dx7g2"
-                    style={{ minWidth: '100%', width: '100%', border: 'none', minHeight: '800px', overflow: 'hidden' }}
-                    title="Reviews"
-                    scrolling="no"
-                ></iframe>
+                <>
+                    {/* Desktop Widget */}
+                    <div className="desktop-only">
+                        <iframe
+                            src="https://go.montysjoint.com/reputation/widgets/review_widget/l8CVOHqx40wEE90Dx7g2"
+                            style={{ minWidth: '100%', width: '100%', border: 'none', minHeight: '800px', overflow: 'hidden' }}
+                            title="Reviews Desktop"
+                            scrolling="no"
+                        ></iframe>
+                    </div>
+
+                    {/* Mobile Widget */}
+                    <div className="mobile-only">
+                        <iframe
+                            className="lc_reviews_widget"
+                            src="https://go.montysjoint.com/reputation/widgets/review_widget/l8CVOHqx40wEE90Dx7g2?widgetId=692d418b97baf0403c3a7758"
+                            frameBorder="0"
+                            scrolling="no"
+                            style={{ minWidth: '100%', width: '100%', minHeight: '800px' }}
+                            title="Reviews Mobile"
+                        ></iframe>
+                    </div>
+
+                    <style>{`
+                        .desktop-only { display: block; }
+                        .mobile-only { display: none; }
+                        
+                        @media (max-width: 768px) {
+                            .desktop-only { display: none; }
+                            .mobile-only { display: block; }
+                        }
+                    `}</style>
+                </>
             ) : (
-                <div style={{ color: '#666' }}>Loading reviews...</div>
+                <div style={{ color: '#666', textAlign: 'center', padding: '2rem' }}>Loading reviews...</div>
             )}
         </div>
     );

@@ -8,6 +8,17 @@ import './Menu.css';
 const Menu = () => {
     const menuCategories = [
         {
+            id: 'specials',
+            title: "Chef's Specials",
+            icon: <Star size={24} className="text-yellow" />,
+            description: 'Limited time creations from our kitchen.',
+            items: [
+                { name: 'Gnocchi Al Sugo De Peperoni', price: '$17.00', description: 'Gnocchi with rose red pepper sauce. Red peppers and Italian sausage. With some cayenne and parmesan.' },
+                { name: 'Broilers', price: '$15.00', description: 'Sausage meatballs stuffed with spinach and goat cheese. Wrapped in bacon and broiled. Served over marinara and bread for dipping.' },
+                { name: 'Butternut Squash Ravioli', price: '$18.00', description: 'Squash and ricotta filled Ravioli. On a bed of sweet potato puree. Drizzled with maple brown butter sauce topped with crispy sage and gremalata.' }
+            ]
+        },
+        {
             id: 'small-plates',
             title: 'Small Plates',
             icon: <Utensils size={24} className="text-yellow" />,
