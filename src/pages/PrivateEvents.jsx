@@ -87,17 +87,17 @@ const PrivateEvents = () => {
         },
         {
             question: "Is A/V equipment included?",
-            answer: "Yes, we have a 75\" TV with HDMI input and an independent sound system available for your use at no extra charge."
+            answer: "Yes, we have a large HD TV with HDMI input and an independent sound system available for your use at no extra charge."
         }
     ];
 
     const galleryImages = [
         '/assets/private-events-hero.webp',
-        '/assets/gallery-5.webp',
-        '/assets/gallery-4.webp',
-        '/assets/gallery-1.webp',
-        '/assets/gallery-2.webp',
-        '/assets/montys-interior-gallery-6.webp'
+        '/assets/venue-private.webp',
+        '/assets/montys-interior-venue-2.webp',
+        '/assets/montys-interior-live-music.webp',
+        '/assets/montys-interior-live-sports.webp',
+        '/assets/montys-interior-story.webp'
     ];
 
     return (
@@ -293,9 +293,12 @@ const PrivateEvents = () => {
                 <MotionSection delay={0.4}>
                     <h2 style={{ textAlign: 'center', fontSize: '2.5rem', color: '#fff', marginBottom: '3rem' }}>Event Gallery</h2>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '6rem' }}>
-                        {galleryImages.map((img, index) => (
-                            <img key={index} src={img} alt={`Event Gallery ${index + 1}`} style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
-                        ))}
+                        <img src="/assets/montys-interior-live-music.webp" alt="Live Music Atmosphere" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
+                        <img src="/assets/montys-interior-venue-2.webp" alt="Venue Interior" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
+                        <img src="/assets/montys-interior-live-sports.webp" alt="Live Sports" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
+                        <img src="/assets/montys-interior-gallery-6.webp" alt="Dining Atmosphere" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
+                        <img src="/assets/venue-private.webp" alt="Private Event Setup" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
+                        <img src="/assets/montys-interior-story.webp" alt="Venue Details" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
                     </div>
                 </MotionSection>
 
