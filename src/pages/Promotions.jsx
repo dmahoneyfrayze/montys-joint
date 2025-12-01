@@ -60,8 +60,8 @@ const Promotions = () => {
 
     const upcomingEvents = [
         {
-            date: '2025-12-20', // Keeping a future date for visibility, or I can use the "Holiday Classic" generic date if it's a season
-            time: 'Tournament Dates',
+            date: '2025-12-05',
+            time: 'Dec 5 - Dec 8',
             artist: 'Holiday Classic Tournament',
             description: 'Northwood Hockey League. Welcome players and families! Sign up to receive a 10% discount on all food orders.',
             cta: 'https://go.montysjoint.com/widget/form/il02Xf37ptnFTbR5pJ2z',
