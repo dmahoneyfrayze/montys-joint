@@ -53,15 +53,22 @@ const CountdownTimer = ({ targetDate }) => {
 
 const Promotions = () => {
     const recurringSpecials = [
-        { title: 'Wing Wednesday', day: 'Wednesday', time: '4pm - Close', image: '/assets/food-special-wings.webp', cta: '/menu' },
-        { title: 'Thirsty Thursday', day: 'Thursday', time: 'All Day', image: '/assets/gallery-1.webp', cta: '/menu' },
+        { title: 'Happy Hour', day: 'Daily', time: '2pm - 5pm', image: '/assets/interior-bar-01.jpg', cta: '/menu', description: 'Drink specials and half-price apps.' },
+        { title: 'Wing Night', day: 'Thursday', time: '4pm - Close', image: '/assets/food-special-wings.webp', cta: '/menu', description: 'Special pricing on our famous wings.' },
         { title: 'Live Music Friday', day: 'Friday', time: '6pm - 9pm', image: '/assets/gallery-6.webp', cta: '/reservations' },
         { title: 'Hockey Night', day: 'Game Nights', time: 'Live', image: '/assets/live-sports.webp', cta: '/reservations' },
-        { title: 'Novemburger', day: 'November', time: 'Limited Time', image: '/assets/novemburger.jpg', cta: '/menu' }
+        { title: 'Novemburger: The Jam Session', day: 'November', time: 'Limited Time', image: '/assets/novemburger.jpg', cta: '/menu', description: 'Try our signature creation! A perfect harmony of flavours.' }
     ];
 
     const upcomingEvents = [
-        { date: '2025-02-22', time: '6:00 PM', artist: 'Youth Hockey Fundraiser', description: 'Support our local youth team! Great food, prizes, and community spirit.', cta: '/reservations' }
+        {
+            date: '2025-12-20', // Keeping a future date for visibility, or I can use the "Holiday Classic" generic date if it's a season
+            time: 'Tournament Dates',
+            artist: 'Holiday Classic Tournament',
+            description: 'Northwood Hockey League. Welcome players and families! Sign up to receive a 10% discount on all food orders.',
+            cta: 'https://go.montysjoint.com/widget/form/il02Xf37ptnFTbR5pJ2z',
+            isExternal: true
+        }
     ];
 
     const pastSpecials = [];
@@ -117,8 +124,9 @@ const Promotions = () => {
                                 <div style={{ padding: '1.5rem' }}>
                                     <h3 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>{special.title}</h3>
                                     <p style={{ color: '#fff', fontWeight: 'bold', marginBottom: '0.5rem' }}>{special.day} • {special.time}</p>
+                                    {special.description && <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>{special.description}</p>}
                                     {special.cta && (
-                                        <Link to={special.cta} className="btn-outline" style={{ display: 'inline-block', marginTop: '1rem', padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
+                                        <Link to={special.cta} className="btn-outline" style={{ display: 'inline-block', marginTop: 'auto', padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
                                             Learn More
                                         </Link>
                                     )}
@@ -143,9 +151,15 @@ const Promotions = () => {
                                         <h3 style={{ color: '#fff', margin: 0, fontSize: '1.2rem' }}>{event.artist}</h3>
                                         <p style={{ color: '#ccc', margin: '0.25rem 0 0 0' }}>{event.description}</p>
                                     </div>
-                                    <Link to={event.cta} className="btn" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none', padding: '0.5rem 1rem', textDecoration: 'none', borderRadius: '4px', fontWeight: 'bold' }}>
-                                        Book Now
-                                    </Link>
+                                    {event.isExternal ? (
+                                        <a href={event.cta} target="_blank" rel="noopener noreferrer" className="btn" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none', padding: '0.5rem 1rem', textDecoration: 'none', borderRadius: '4px', fontWeight: 'bold' }}>
+                                            Get Discount
+                                        </a>
+                                    ) : (
+                                        <Link to={event.cta} className="btn" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none', padding: '0.5rem 1rem', textDecoration: 'none', borderRadius: '4px', fontWeight: 'bold' }}>
+                                            Book Now
+                                        </Link>
+                                    )}
                                 </div>
                             ))}
                         </div>
