@@ -99,9 +99,8 @@ const Home = () => {
                     <MotionSection delay={0.2}>
                         <h3 style={{ color: '#fff', marginBottom: '2rem' }}>Order Online</h3>
                         <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
-                            <a href="https://www.ubereats.com" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#06C167', color: '#fff', border: 'none', padding: '1rem 2rem', borderRadius: '4px', fontWeight: 'bold', textDecoration: 'none' }}>Uber Eats</a>
-                            <a href="https://www.skipthedishes.com" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#D21243', color: '#fff', border: 'none', padding: '1rem 2rem', borderRadius: '4px', fontWeight: 'bold', textDecoration: 'none' }}>SkipTheDishes</a>
-                            <a href="https://www.doordash.com" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#FF3008', color: '#fff', border: 'none', padding: '1rem 2rem', borderRadius: '4px', fontWeight: 'bold', textDecoration: 'none' }}>DoorDash</a>
+                            <a href="https://www.ubereats.com/ca/store/montys-joint-513-victoria-e/w2fMzhYDW7qzrF_d4y3GSw" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#06C167', color: '#fff', border: 'none', padding: '1rem 2rem', borderRadius: '4px', fontWeight: 'bold', textDecoration: 'none' }}>Uber Eats</a>
+                            <a href="https://www.skipthedishes.com/montys-joint-513" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#D21243', color: '#fff', border: 'none', padding: '1rem 2rem', borderRadius: '4px', fontWeight: 'bold', textDecoration: 'none' }}>SkipTheDishes</a>
                         </div>
                     </MotionSection>
                 </div>
