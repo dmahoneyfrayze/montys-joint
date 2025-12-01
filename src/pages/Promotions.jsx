@@ -53,8 +53,6 @@ const CountdownTimer = ({ targetDate }) => {
 
 const Promotions = () => {
     const recurringSpecials = [
-        { title: 'Happy Hour', day: 'Daily', time: '2pm - 5pm', image: '/assets/interior-bar-01.jpg', cta: '/menu', description: 'Drink specials and half-price apps.' },
-        { title: 'Wing Night', day: 'Thursday', time: '4pm - Close', image: '/assets/food-special-wings.webp', cta: '/menu', description: 'Special pricing on our famous wings.' },
         { title: 'Live Music Friday', day: 'Friday', time: '6pm - 9pm', image: '/assets/gallery-6.webp', cta: '/reservations' },
         { title: 'Hockey Night', day: 'Game Nights', time: 'Live', image: '/assets/live-sports.webp', cta: '/reservations' },
         { title: 'Novemburger: The Jam Session', day: 'November', time: 'Limited Time', image: '/assets/novemburger.jpg', cta: '/menu', description: 'Try our signature creation! A perfect harmony of flavours.' }
