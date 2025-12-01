@@ -108,7 +108,7 @@ const PrivateEvents = () => {
                 <link rel="canonical" href="https://montysjoint.com/private-events" />
                 <meta property="og:title" content="Private Events, Christmas Parties & Corporate Functions | Monty’s Joint" />
                 <meta property="og:description" content="Host your Christmas party, corporate event, or birthday bash at Monty’s Joint. Full venue buyouts available." />
-                <meta property="og:image" content="https://montysjoint.com/assets/private-events-hero.webp" />
+                <meta property="og:image" content="https://montysjoint.com/assets/montys-interior-live-music.webp" />
                 <meta property="og:url" content="https://montysjoint.com/private-events" />
                 <meta property="og:type" content="website" />
                 <script type="application/ld+json">
@@ -126,7 +126,7 @@ const PrivateEvents = () => {
                                 "addressCountry": "CA"
                             },
                             "telephone": "+18073430001",
-                            "image": "https://montysjoint.com/assets/private-events-hero.webp",
+                            "image": "https://montysjoint.com/assets/montys-interior-live-music.webp",
                             "description": "The perfect venue for Christmas parties, corporate events, and birthday celebrations in Thunder Bay."
                         }
                     `}
@@ -135,7 +135,7 @@ const PrivateEvents = () => {
 
             {/* Hero Section */}
             <div style={{
-                background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/assets/private-events-hero.webp)',
+                background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/assets/montys-interior-live-music.webp)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 padding: '150px 2rem 100px',
