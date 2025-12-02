@@ -8,7 +8,9 @@ const Footer = () => {
         <footer className="footer">
             <div className="container footer-container">
                 <div className="footer-section">
-                    <h3 className="footer-title">Monty's Joint</h3>
+                    <Link to="/">
+                        <img src="/assets/logo-white-official.webp" alt="Monty's Joint" style={{ maxWidth: '180px', marginBottom: '1rem' }} />
+                    </Link>
                     <p className="footer-tagline">Big Flavour, Bigger Impact.</p>
                     <div className="social-links">
                         <a href="https://www.facebook.com/montysjoint/" target="_blank" rel="noopener noreferrer" className="social-icon"><Facebook /></a>

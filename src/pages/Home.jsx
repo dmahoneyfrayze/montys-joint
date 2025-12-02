@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Layout from '../components/Layout/Layout';
 import Hero from '../components/Home/Hero';
 import MotionSection from '../components/UI/MotionSection';
+import './Home.css';
 
 const Home = () => {
     return (
@@ -183,7 +184,7 @@ const Home = () => {
 
                 {/* Reviews Widget */}
                 <MotionSection delay={0.4}>
-                    <div style={{ padding: '2rem', background: '#fff', borderRadius: '8px' }}>
+                    <div className="review-widget-container">
                         <h2 style={{ textAlign: 'center', color: '#000', marginBottom: '2rem' }}>What People Are Saying</h2>
                         <ReviewWidget />
                     </div>
