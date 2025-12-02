@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Utensils, Star, Sandwich, Salad, Drumstick, Pizza } from 'lucide-react';
 import MotionSection from '../components/UI/MotionSection';
 import Layout from '../components/Layout/Layout';
@@ -148,6 +149,16 @@ const Menu = () => {
 
     return (
         <Layout>
+            <Helmet>
+                <title>Our Menu | Monty’s Joint, Thunder Bay</title>
+                <meta name="description" content="Explore our menu featuring locally sourced burgers, shareable appetizers, fresh salads, and more. Gluten-free and vegetarian options available." />
+                <link rel="canonical" href="https://montysjoint.com/menu" />
+                <meta property="og:title" content="Our Menu | Monty’s Joint, Thunder Bay" />
+                <meta property="og:description" content="Explore our menu featuring locally sourced burgers, shareable appetizers, fresh salads, and more." />
+                <meta property="og:image" content="https://montysjoint.com/assets/montys-interior-food-3.webp" />
+                <meta property="og:url" content="https://montysjoint.com/menu" />
+                <meta property="og:type" content="website" />
+            </Helmet>
             <div className="page-container menu-page">
                 <div className="container section-padding">
                     <MotionSection className="menu-header">

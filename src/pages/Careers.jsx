@@ -32,6 +32,12 @@ const Careers = () => {
                 <Helmet>
                     <title>Careers | Monty’s Joint</title>
                     <meta name="description" content="Join the team at Monty’s Joint! We're always looking for talented cooks, servers, and bartenders to join our Thunder Bay family." />
+                    <link rel="canonical" href="https://montysjoint.com/careers" />
+                    <meta property="og:title" content="Careers | Monty’s Joint" />
+                    <meta property="og:description" content="Join the team at Monty’s Joint! We're always looking for talented cooks, servers, and bartenders." />
+                    <meta property="og:image" content="https://montysjoint.com/assets/montys-interior-gallery-6.webp" />
+                    <meta property="og:url" content="https://montysjoint.com/careers" />
+                    <meta property="og:type" content="website" />
                 </Helmet>
 
                 <div className="container section-padding">

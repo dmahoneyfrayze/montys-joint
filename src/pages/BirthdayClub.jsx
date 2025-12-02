@@ -9,6 +9,12 @@ const BirthdayClub = () => {
             <Helmet>
                 <title>Birthday Club | Monty’s Joint</title>
                 <meta name="description" content="Join the Monty’s Joint Birthday Club! Coming soon." />
+                <link rel="canonical" href="https://montysjoint.com/birthday-club" />
+                <meta property="og:title" content="Birthday Club | Monty’s Joint" />
+                <meta property="og:description" content="Join the Monty’s Joint Birthday Club! Coming soon." />
+                <meta property="og:image" content="https://montysjoint.com/assets/logo-main.png" />
+                <meta property="og:url" content="https://montysjoint.com/birthday-club" />
+                <meta property="og:type" content="website" />
             </Helmet>
             <div style={{ paddingTop: '150px', paddingBottom: '8rem', textAlign: 'center' }} className="container">
                 <Gift size={64} color="var(--color-yellow)" style={{ marginBottom: '2rem' }} />

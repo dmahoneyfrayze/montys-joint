@@ -20,6 +20,12 @@ const Reservations = () => {
             <Helmet>
                 <title>Book a Table | Monty’s Joint Thunder Bay</title>
                 <meta name="description" content="Reserve your table at Monty’s Joint. For groups larger than 8, please call us directly." />
+                <link rel="canonical" href="https://montysjoint.com/reservations" />
+                <meta property="og:title" content="Book a Table | Monty’s Joint Thunder Bay" />
+                <meta property="og:description" content="Reserve your table at Monty’s Joint. For groups larger than 8, please call us directly." />
+                <meta property="og:image" content="https://montysjoint.com/assets/montys-interior-live-music.webp" />
+                <meta property="og:url" content="https://montysjoint.com/reservations" />
+                <meta property="og:type" content="website" />
             </Helmet>
             <div style={{ paddingTop: '100px', paddingBottom: '4rem' }} className="container">
                 <h1 style={{ textAlign: 'center', fontSize: '3rem', marginBottom: '1rem', color: 'var(--color-yellow)' }}>Book a Table</h1>

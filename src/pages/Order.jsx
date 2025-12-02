@@ -9,6 +9,12 @@ const Order = () => {
             <Helmet>
                 <title>Order Online | Monty’s Joint Thunder Bay</title>
                 <meta name="description" content="Order takeout or delivery from Monty’s Joint. Available on SkipTheDishes and Uber Eats." />
+                <link rel="canonical" href="https://montysjoint.com/order" />
+                <meta property="og:title" content="Order Online | Monty’s Joint Thunder Bay" />
+                <meta property="og:description" content="Order takeout or delivery from Monty’s Joint. Available on SkipTheDishes and Uber Eats." />
+                <meta property="og:image" content="https://montysjoint.com/assets/montys-interior-food-1.webp" />
+                <meta property="og:url" content="https://montysjoint.com/order" />
+                <meta property="og:type" content="website" />
             </Helmet>
             <div style={{ paddingTop: '120px', paddingBottom: '6rem' }} className="container">
                 <h1 style={{ textAlign: 'center', fontSize: '3rem', marginBottom: '1rem', color: 'var(--color-yellow)' }}>Order Online</h1>
