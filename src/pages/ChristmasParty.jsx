@@ -251,11 +251,21 @@ const ChristmasParty = () => {
                             <h2 style={{ textAlign: 'center', color: '#000', marginBottom: '0.5rem' }}>Book Your Christmas Party</h2>
                             <p style={{ textAlign: 'center', color: '#666', marginBottom: '2rem' }}>Fill out the form below to check availability and get a quote.</p>
                             <iframe
-                                src="https://go.montysjoint.com/widget/form/EEy6e5HE9WudRN8PzSJC"
-                                style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px' }}
-                                scrolling="no"
-                                id="EEy6e5HE9WudRN8PzSJC_1764388439947"
-                                title="Private Event Inquiry"
+                                src="https://go.montysjoint.com/widget/form/ODUN1AsBh3NG8WVVbhDY"
+                                style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px', minHeight: '958px' }}
+                                id="inline-ODUN1AsBh3NG8WVVbhDY"
+                                data-layout="{'id':'INLINE'}"
+                                data-trigger-type="alwaysShow"
+                                data-trigger-value=""
+                                data-activation-type="alwaysActivated"
+                                data-activation-value=""
+                                data-deactivation-type="neverDeactivate"
+                                data-deactivation-value=""
+                                data-form-name="Christmas - basic"
+                                data-height="958"
+                                data-layout-iframe-id="inline-ODUN1AsBh3NG8WVVbhDY"
+                                data-form-id="ODUN1AsBh3NG8WVVbhDY"
+                                title="Christmas - basic"
                             ></iframe>
                         </div>
                     </MotionSection>
