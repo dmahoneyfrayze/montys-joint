@@ -66,9 +66,23 @@ const ChristmasParty = () => {
     return (
         <Layout>
             <Helmet>
-                <title>Christmas Party Packages | Monty’s Joint</title>
-                <meta name="description" content="Celebrate the holidays at Monty's Joint with our festive Christmas Party Packages. Food, drinks, and entertainment for groups of all sizes." />
+                <title>Christmas Party Packages | Monty’s Joint Thunder Bay</title>
+                <meta name="description" content="Host your Christmas party at Monty's Joint. Featuring festive food packages from $35/pp, drink tiers, and full venue buyout options in Thunder Bay." />
                 <link rel="canonical" href="https://montysjoint.com/christmas-party" />
+
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://montysjoint.com/christmas-party" />
+                <meta property="og:title" content="Christmas Party Packages | Monty’s Joint" />
+                <meta property="og:description" content="Host your Christmas party at Monty's Joint. Festive food packages, drink tiers, and full venue options available." />
+                <meta property="og:image" content="https://montysjoint.com/assets/Monty's Christmas background.png" />
+
+                {/* Twitter */}
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://montysjoint.com/christmas-party" />
+                <meta property="twitter:title" content="Christmas Party Packages | Monty’s Joint" />
+                <meta property="twitter:description" content="Host your Christmas party at Monty's Joint. Festive food packages, drink tiers, and full venue options available." />
+                <meta property="twitter:image" content="https://montysjoint.com/assets/Monty's Christmas background.png" />
             </Helmet>
 
             {/* Hero Section */}

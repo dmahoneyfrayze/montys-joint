@@ -10,6 +10,7 @@ const Sitemap = () => {
         { name: 'Menu', path: '/menu' },
         { name: 'Specials & Events', path: '/promotions' },
         { name: 'Private Events', path: '/private-events' },
+        { name: 'Christmas Party Packages', path: '/christmas-party' },
         { name: 'Blog', path: '/blog' },
         { name: 'Birthday Club', path: '/birthday-club' },
         { name: 'Contact', path: '/contact' },
