@@ -11,12 +11,13 @@ const Sitemap = () => {
         { name: 'Specials & Events', path: '/promotions' },
         { name: 'Private Events', path: '/private-events' },
         { name: 'Blog', path: '/blog' },
+        { name: 'Birthday Club', path: '/birthday-club' },
         { name: 'Contact', path: '/contact' },
         { name: 'Reservations', path: '/reservations' },
         { name: 'Order Online', path: '/order' },
         { name: 'Careers', path: '/careers' },
-        { name: 'Privacy Policy', path: '/privacy' },
-        { name: 'Terms of Service', path: '/terms' },
+        { name: 'Privacy Policy', path: '/privacy-policy' },
+        { name: 'Terms of Service', path: '/terms-of-service' },
     ];
 
     return (
