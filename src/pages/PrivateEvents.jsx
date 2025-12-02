@@ -41,6 +41,21 @@ const PrivateEvents = () => {
 
     const packages = [
         {
+            title: 'Christmas Party Packages',
+            price: 'From $35/pp',
+            perPerson: true,
+            popular: true,
+            idealFor: 'Holiday Celebrations',
+            features: [
+                'Festive Menus',
+                'Drink Packages',
+                'Private & Semi-Private Options',
+                'Full Venue Buyouts Available'
+            ],
+            link: '/christmas-party',
+            ctaText: 'View Packages'
+        },
+        {
             title: 'Private Dinner / Corporate',
             price: 'Custom Quote',
             perPerson: false,
@@ -263,9 +278,17 @@ const PrivateEvents = () => {
                                             </li>
                                         ))}
                                     </ul>
-                                    <a href="#inquiry-form" className="btn" style={{ background: 'var(--color-yellow)', color: '#000', textAlign: 'center', padding: '1rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold', marginTop: '2rem' }}>
-                                        Check Availability
-                                    </a>
+                                    {
+                                        pkg.link ? (
+                                            <a href={pkg.link} className="btn" style={{ background: 'var(--color-yellow)', color: '#000', textAlign: 'center', padding: '1rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold', marginTop: '2rem' }}>
+                                                {pkg.ctaText || 'View Details'}
+                                            </a>
+                                        ) : (
+                                            <a href="#inquiry-form" className="btn" style={{ background: 'var(--color-yellow)', color: '#000', textAlign: 'center', padding: '1rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold', marginTop: '2rem' }}>
+                                                Check Availability
+                                            </a>
+                                        )
+                                    }
                                 </div>
                             ))}
                         </div>
@@ -349,8 +372,8 @@ const PrivateEvents = () => {
                     </MotionSection>
                 </div>
 
-            </div>
-        </Layout>
+            </div >
+        </Layout >
     );
 };
 
