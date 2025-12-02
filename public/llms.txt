@@ -24,8 +24,16 @@ Monty's Joint is a premier gastropub and local restaurant in Thunder Bay, Ontari
 - **Promotions** (`/promotions`): Current specials, tournaments, and events.
 - **Blog** (`/blog`): News and updates.
 - **Contact** (`/contact`): Location map, contact form, and hours.
+- **Private Events** (`/private-events`): Information on booking private parties and functions.
+- **Birthday Club** (`/birthday-club`): Sign up for our birthday club.
+- **Careers** (`/careers`): Job opportunities.
+- **Terms of Service** (`/terms-of-service`): Legal terms.
+- **Privacy Policy** (`/privacy-policy`): Privacy policy.
+- **Sitemap** (`/sitemap`): HTML sitemap.
 
 ## Key Features
 - **Live Music & Sports**: We host regular live entertainment and screen major sports events.
 - **Private Events**: Available for booking private parties and functions.
+    - **Monty's Capacity**: Max 120 guests.
+    - **Armani's Capacity**: Max 378 guests.
 - **Novemburger**: Participating in the local burger competition.

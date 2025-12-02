@@ -2,67 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://montysjoint.com</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://montysjoint.com/menu</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://montysjoint.com/promotions</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://montysjoint.com/reservations</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://montysjoint.com/order</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://montysjoint.com/contact</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://montysjoint.com/blog</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://montysjoint.com/birthday-club</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://montysjoint.com/careers</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://montysjoint.com/terms-of-service</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://montysjoint.com/privacy-policy</loc>
-    <lastmod>2025-12-01</lastmod>
+    <lastmod>2025-12-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://montysjoint.com/private-events</loc>
+    <lastmod>2025-12-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://montysjoint.com/sitemap</loc>
+    <lastmod>2025-12-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -5,6 +5,29 @@ import MotionSection from '../components/UI/MotionSection';
 import Layout from '../components/Layout/Layout';
 import './Menu.css';
 
+const DietaryBadge = ({ type }) => {
+    const colors = {
+        GF: '#eab308', // Yellow
+        V: '#22c55e',  // Green
+        VE: '#16a34a'  // Dark Green
+    };
+    return (
+        <span style={{
+            display: 'inline-block',
+            padding: '2px 6px',
+            borderRadius: '4px',
+            fontSize: '0.7rem',
+            fontWeight: 'bold',
+            backgroundColor: colors[type] || '#666',
+            color: '#000',
+            marginLeft: '8px',
+            verticalAlign: 'middle'
+        }}>
+            {type}
+        </span>
+    );
+};
+
 const Menu = () => {
     const menuCategories = [
         {
@@ -121,28 +144,7 @@ const Menu = () => {
         }
     ];
 
-    const DietaryBadge = ({ type }) => {
-        const colors = {
-            GF: '#eab308', // Yellow
-            V: '#22c55e',  // Green
-            VE: '#16a34a'  // Dark Green
-        };
-        return (
-            <span style={{
-                display: 'inline-block',
-                padding: '2px 6px',
-                borderRadius: '4px',
-                fontSize: '0.7rem',
-                fontWeight: 'bold',
-                backgroundColor: colors[type] || '#666',
-                color: '#000',
-                marginLeft: '8px',
-                verticalAlign: 'middle'
-            }}>
-                {type}
-            </span>
-        );
-    };
+
 
     return (
         <Layout>

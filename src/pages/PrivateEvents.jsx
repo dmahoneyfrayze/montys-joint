@@ -4,6 +4,28 @@ import Layout from '../components/Layout/Layout';
 import MotionSection from '../components/UI/MotionSection';
 import { Check, Star, Users, Music, Wine, Mic, MapPin, Award, ChevronDown, ChevronUp } from 'lucide-react';
 
+const DietaryBadge = ({ type }) => {
+    const colors = {
+        GF: '#eab308', // Yellow
+        V: '#22c55e',  // Green
+        VE: '#16a34a', // Dark Green
+        DF: '#3b82f6'  // Blue
+    };
+    return (
+        <span style={{
+            background: colors[type] || '#666',
+            color: '#000',
+            padding: '2px 6px',
+            borderRadius: '4px',
+            fontSize: '0.7rem',
+            fontWeight: 'bold',
+            marginLeft: '4px'
+        }}>
+            {type}
+        </span>
+    );
+};
+
 const PrivateEvents = () => {
     useEffect(() => {
         const script = document.createElement('script');
@@ -91,14 +113,7 @@ const PrivateEvents = () => {
         }
     ];
 
-    const galleryImages = [
-        '/assets/private-events-hero.webp',
-        '/assets/venue-private.webp',
-        '/assets/montys-interior-venue-2.webp',
-        '/assets/montys-interior-live-music.webp',
-        '/assets/montys-interior-live-sports.webp',
-        '/assets/montys-interior-story.webp'
-    ];
+
 
     return (
         <Layout>
@@ -159,7 +174,7 @@ const PrivateEvents = () => {
                     <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Award size={16} color="var(--color-yellow)" /> Birthdays</span>
                     <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Users size={16} color="var(--color-yellow)" /> Team Events</span>
                     <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Wine size={16} color="var(--color-yellow)" /> Holiday Parties</span>
-                    <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 'bold', color: '#fff' }}>Up to 200 Guests</span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 'bold', color: '#fff' }}>Up to 378 Guests</span>
                 </div>
             </div>
 
@@ -174,7 +189,7 @@ const PrivateEvents = () => {
                                 Located in the heart of downtown Thunder Bay, Monty's Joint offers a versatile venue for any occasion. Whether you're planning a corporate event, a staff Christmas party, or a milestone birthday, we provide the perfect backdrop.
                             </p>
                             <p style={{ fontSize: '1.1rem', color: '#ccc', marginBottom: '2rem', lineHeight: '1.6' }}>
-                                Our space can accommodate <strong>up to 200 guests</strong> (ideal for groups of 20–120) with flexible layouts, full A/V capabilities, and a dedicated team to ensure everything runs smoothly.
+                                Our venues can accommodate groups of all sizes: <strong>Monty's (up to 120)</strong> and <strong>Armani's (up to 378)</strong>. We offer flexible layouts, full A/V capabilities, and a dedicated team to ensure everything runs smoothly.
                             </p>
 
                             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>

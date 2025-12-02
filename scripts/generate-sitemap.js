@@ -19,7 +19,9 @@ const STATIC_ROUTES = [
     '/birthday-club',
     '/careers',
     '/terms-of-service',
-    '/privacy-policy'
+    '/privacy-policy',
+    '/private-events',
+    '/sitemap'
 ];
 
 const fetchRSS = async () => {
@@ -63,12 +65,8 @@ const extractBlogPosts = (xml) => {
 };
 
 const generateSitemap = async () => {
-    console.log('Generating sitemap...');
-
     const rssXml = await fetchRSS();
     const blogPosts = rssXml ? extractBlogPosts(rssXml) : [];
-
-    console.log(`Found ${blogPosts.length} blog posts.`);
 
     const staticUrls = STATIC_ROUTES.map(route => ({
         url: `${BASE_URL}${route === '/' ? '' : route}`,
@@ -90,7 +88,6 @@ ${allUrls.map(url => `  <url>
 </urlset>`;
 
     fs.writeFileSync(SITEMAP_PATH, sitemapContent);
-    console.log(`Sitemap generated at ${SITEMAP_PATH}`);
 };
 
 generateSitemap();

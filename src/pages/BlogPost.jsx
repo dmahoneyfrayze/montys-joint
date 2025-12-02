@@ -172,7 +172,7 @@ const BlogPost = () => {
                     <div className="container">
                         <h3 style={{ color: '#fff', fontSize: '2rem', marginBottom: '2rem', textAlign: 'center' }}>Related Posts</h3>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
-                            {relatedPosts.map((related, index) => (
+                            {relatedPosts.map((related) => (
                                 <Link key={related.id} to={`/blog/${related.slug}`} style={{ textDecoration: 'none' }}>
                                     <div style={{ background: '#1a1a1a', borderRadius: '8px', overflow: 'hidden', border: '1px solid #333', height: '100%', display: 'flex', flexDirection: 'column' }}>
                                         <div style={{ height: '200px', overflow: 'hidden' }}>
