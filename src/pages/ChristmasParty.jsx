@@ -75,19 +75,19 @@ const ChristmasParty = () => {
                 <meta property="og:url" content="https://montysjoint.com/christmas-party" />
                 <meta property="og:title" content="Christmas Party Packages | Monty’s Joint" />
                 <meta property="og:description" content="Host your Christmas party at Monty's Joint. Festive food packages, drink tiers, and full venue options available." />
-                <meta property="og:image" content="https://montysjoint.com/assets/Monty's Christmas background.png" />
+                <meta property="og:image" content="https://montysjoint.com/assets/montys-christmas-background.png" />
 
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://montysjoint.com/christmas-party" />
                 <meta property="twitter:title" content="Christmas Party Packages | Monty’s Joint" />
                 <meta property="twitter:description" content="Host your Christmas party at Monty's Joint. Festive food packages, drink tiers, and full venue options available." />
-                <meta property="twitter:image" content="https://montysjoint.com/assets/Monty's Christmas background.png" />
+                <meta property="twitter:image" content="https://montysjoint.com/assets/montys-christmas-background.png" />
             </Helmet>
 
             {/* Hero Section */}
             <div style={{
-                background: "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\"/assets/Monty's Christmas background.png\")",
+                background: "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/assets/montys-christmas-background.png')",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 padding: '150px 2rem 100px',
