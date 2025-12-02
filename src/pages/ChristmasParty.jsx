@@ -73,7 +73,7 @@ const ChristmasParty = () => {
 
             {/* Hero Section */}
             <div style={{
-                background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/assets/montys-interior-live-music.webp)', // Using existing asset as placeholder/fallback
+                background: "linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(\"/assets/Monty's Christmas background.png\")",
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 padding: '150px 2rem 100px',
