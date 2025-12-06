@@ -9,8 +9,7 @@ const Offer = () => {
     const [formData, setFormData] = useState({
         firstName: '',
         email: '',
-        phone: '',
-        birthday: ''
+        phone: ''
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -146,24 +145,7 @@ const Offer = () => {
                                 }}
                             />
 
-                            <div style={{ textAlign: 'left' }}>
-                                <label style={{ color: '#888', fontSize: '0.8rem', marginLeft: '0.5rem', marginBottom: '0.25rem', display: 'block' }}>Birthday (Optional - for free dessert!)</label>
-                                <input
-                                    type="date"
-                                    name="birthday"
-                                    value={formData.birthday}
-                                    onChange={handleChange}
-                                    style={{
-                                        width: '100%',
-                                        padding: '1rem',
-                                        borderRadius: '8px',
-                                        border: '1px solid #333',
-                                        background: '#222',
-                                        color: '#fff',
-                                        fontSize: '1rem'
-                                    }}
-                                />
-                            </div>
+
 
                             <button
                                 type="submit"
