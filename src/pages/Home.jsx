@@ -21,6 +21,13 @@ const Home = () => {
             </Helmet>
             <Hero />
 
+            {/* New Guest Offer Banner */}
+            <div style={{ background: 'var(--color-yellow)', padding: '1rem', textAlign: 'center' }}>
+                <p style={{ margin: 0, color: '#000', fontWeight: 'bold', fontSize: '1.2rem' }}>
+                    FIRST TIME VISITING? <Link to="/offer" style={{ textDecoration: 'underline', color: '#000', marginLeft: '0.5rem' }}>GET $10 OFF YOUR BILL</Link>
+                </p>
+            </div>
+
             {/* Social Proof & Intro */}
             <section className="container" style={{ padding: '4rem 1rem', textAlign: 'center' }}>
                 <MotionSection>
@@ -138,6 +145,37 @@ const Home = () => {
                                     </p>
                                 </div>
                             </div>
+                        </div>
+                    </MotionSection>
+                </div>
+
+                {/* VIP Club Join CTA */}
+                <div style={{ marginBottom: '4rem' }}>
+                    <MotionSection delay={0.25}>
+                        <div style={{
+                            background: '#111',
+                            padding: '3rem 2rem',
+                            borderRadius: '16px',
+                            border: '1px solid #333',
+                            textAlign: 'center'
+                        }}>
+                            <h2 style={{ color: 'var(--color-yellow)', fontSize: '2rem', marginBottom: '1rem' }}>Join the Monty's VIP Club</h2>
+                            <p style={{ color: '#ccc', maxWidth: '600px', margin: '0 auto 2rem', fontSize: '1.1rem' }}>
+                                Get exclusive updates on live music, secret menu items, and a special treat on your birthday.
+                            </p>
+                            <Link to="/birthday-club" className="btn btn-primary" style={{
+                                background: 'transparent',
+                                color: 'var(--color-yellow)',
+                                border: '1px solid var(--color-yellow)',
+                                padding: '1rem 2rem',
+                                fontSize: '1.1rem',
+                                fontWeight: 'bold',
+                                textDecoration: 'none',
+                                borderRadius: '4px',
+                                display: 'inline-block'
+                            }}>
+                                Join VIP List
+                            </Link>
                         </div>
                     </MotionSection>
                 </div>

@@ -48,6 +48,15 @@ const Navbar = () => {
                     </a>
                 </div>
                 <div className="navbar-actions" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                    <Link to="/offer" className="nav-btn btn" style={{
+                        background: '#fff',
+                        color: '#000',
+                        border: 'none',
+                        fontWeight: 'bold',
+                        boxShadow: '0 0 10px rgba(255,255,255,0.3)'
+                    }}>
+                        Get $10 OFF
+                    </Link>
                     <Link to="/reservations" className="nav-btn btn" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none' }}>
                         Book Table
                     </Link>
