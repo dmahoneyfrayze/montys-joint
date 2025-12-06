@@ -26,14 +26,30 @@ const Offer = () => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // TODO: INTEGRATE GHL WEBHOOK OR FORM SUBMISSION HERE
-        // For now, simulate a delay and redirect
-        console.log('Form submitted:', formData);
+        try {
+            // Send data to GHL Webhook
+            await fetch('https://services.leadconnectorhq.com/hooks/l8CVOHqx40wEE90Dx7g2/webhook-trigger/29bfd79d-1c1f-4920-8590-29c85730964c', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    ...formData,
+                    source: 'website_offer_page',
+                    timestamp: new Date().toISOString()
+                })
+            });
 
-        setTimeout(() => {
-            setIsSubmitting(false);
+            // Redirect regardless of response to ensure user flow continues
+            // (Webhooks sometimes return opaque responses or we just want to move on)
             navigate('/offer/claimed');
-        }, 1000);
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            // Fallback redirect even on error so user isn't stuck
+            navigate('/offer/claimed');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (

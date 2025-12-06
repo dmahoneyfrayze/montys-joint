@@ -21,13 +21,6 @@ const Home = () => {
             </Helmet>
             <Hero />
 
-            {/* New Guest Offer Banner */}
-            <div style={{ background: 'var(--color-yellow)', padding: '1rem', textAlign: 'center' }}>
-                <p style={{ margin: 0, color: '#000', fontWeight: 'bold', fontSize: '1.2rem' }}>
-                    FIRST TIME VISITING? <Link to="/offer" style={{ textDecoration: 'underline', color: '#000', marginLeft: '0.5rem' }}>GET $10 OFF YOUR BILL</Link>
-                </p>
-            </div>
-
             {/* Social Proof & Intro */}
             <section className="container" style={{ padding: '4rem 1rem', textAlign: 'center' }}>
                 <MotionSection>
