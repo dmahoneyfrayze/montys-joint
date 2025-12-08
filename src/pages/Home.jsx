@@ -41,7 +41,7 @@ const Home = () => {
                             <p style={{ fontSize: '1.1rem', color: '#ccc', marginBottom: '2rem', lineHeight: '1.6' }}>
                                 Monty’s Joint is your local spot for good food, cold draught, and a relaxed atmosphere. From comfort classics to our new kids menu, we serve up dishes that hit the table hot. We believe in great food, cold beer, live music, and a place to feel at home. Come join us and see what makes us Thunder Bay's favourite neighbourhood gastropub.
                             </p>
-                            <Link to="/blog/the-story-behind-montys-joint" className="btn btn-primary" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none', padding: '0.8rem 1.5rem', fontSize: '1rem', fontWeight: 'bold', textDecoration: 'none', borderRadius: '4px' }}>
+                            <Link to="/blog/welcome-to-montys-new-blog" className="btn btn-primary" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none', padding: '0.8rem 1.5rem', fontSize: '1rem', fontWeight: 'bold', textDecoration: 'none', borderRadius: '4px' }}>
                                 Read Full Story
                             </Link>
                         </div>
