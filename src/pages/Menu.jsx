@@ -147,6 +147,50 @@ const Menu = () => {
 
 
 
+    const [searchQuery, setSearchQuery] = React.useState('');
+    const [activeCategory, setActiveCategory] = React.useState('');
+
+    // Filter Logic
+    const filteredCategories = menuCategories.map(cat => {
+        // If the category itself matches (e.g. "Burgers"), show all items.
+        // Otherwise, filter items individually.
+        const catMatches = cat.title.toLowerCase().includes(searchQuery.toLowerCase());
+        const filteredItems = cat.items.filter(item =>
+            item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.description.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+
+        return {
+            ...cat,
+            items: catMatches ? cat.items : filteredItems
+        };
+    }).filter(cat => cat.items.length > 0);
+
+    const scrollToCategory = (id) => {
+        const el = document.getElementById(id);
+        if (el) {
+            // Offset for sticky header
+            const y = el.getBoundingClientRect().top + window.scrollY - 180;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+            setActiveCategory(id);
+        }
+    };
+
+    // Scroll spy effect to set active category
+    React.useEffect(() => {
+        const handleScroll = () => {
+            const scrollPos = window.scrollY + 200;
+            for (const cat of menuCategories) {
+                const el = document.getElementById(cat.id);
+                if (el && el.offsetTop <= scrollPos && (el.offsetTop + el.offsetHeight) > scrollPos) {
+                    setActiveCategory(cat.id);
+                }
+            }
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
         <Layout>
             <Helmet>
@@ -159,12 +203,39 @@ const Menu = () => {
                 <meta property="og:url" content="https://montysjoint.com/menu" />
                 <meta property="og:type" content="website" />
             </Helmet>
-            <div className="page-container menu-page">
+            <div className="page-container menu-page" style={{ paddingBottom: '80px' }}> {/* Add padding for sticky footer */}
                 <div className="container section-padding">
                     <MotionSection className="menu-header">
                         <h1 className="page-title">OUR <span className="text-yellow">MENU</span></h1>
                         <p className="page-subtitle">Big flavours, locally sourced ingredients, and something for everyone.</p>
                     </MotionSection>
+
+                    {/* Sticky Controls Container */}
+                    <div className="menu-controls-sticky">
+                        {/* Search Bar */}
+                        <div className="menu-search-container">
+                            <input
+                                type="text"
+                                placeholder="Search menu items..."
+                                value={searchQuery}
+                                onChange={(e) => setSearchQuery(e.target.value)}
+                                className="menu-search-input"
+                            />
+                        </div>
+
+                        {/* Category Navigation */}
+                        <div className="category-nav-scroll">
+                            {menuCategories.map(cat => (
+                                <button
+                                    key={cat.id}
+                                    onClick={() => scrollToCategory(cat.id)}
+                                    className={`category-nav-pill ${activeCategory === cat.id ? 'active' : ''}`}
+                                >
+                                    {cat.title}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
 
                     {/* Novemburger Promo Banner */}
                     <MotionSection delay={0.1}>
@@ -181,51 +252,57 @@ const Menu = () => {
                     </MotionSection>
 
                     <div className="menu-grid">
-                        {menuCategories.map((category, index) => (
-                            <MotionSection key={category.id} delay={index * 0.1} className="menu-category">
-                                <div className="category-header">
-                                    {category.icon}
-                                    <div>
-                                        <h2>{category.title}</h2>
-                                        <p>{category.description}</p>
-                                    </div>
-                                </div>
-                                <div className="menu-items-grid">
-                                    {category.items.map((item, idx) => (
-                                        <div key={idx} className="menu-item-card">
-                                            {item.image && (
-                                                <img src={item.image} alt={item.name} loading="lazy" className="menu-item-image" />
-                                            )}
-                                            <div className="menu-item-content">
-                                                <div className="menu-item-header">
-                                                    <h3 className="menu-item-title">
-                                                        {item.name}
-                                                        {item.dietary && item.dietary.map(d => <DietaryBadge key={d} type={d} />)}
-                                                    </h3>
-                                                    <span className="menu-item-price">{item.price}</span>
-                                                </div>
-                                                <p className="menu-item-desc">{item.description}</p>
-
-                                                {item.availableUntil && (
-                                                    <div style={{ fontSize: '0.85rem', color: 'var(--color-yellow)', marginTop: '0.5rem', fontWeight: 'bold' }}>
-                                                        Available Until: {item.availableUntil}
-                                                    </div>
-                                                )}
-
-                                                {item.allergens && (
-                                                    <div style={{ fontSize: '0.75rem', color: '#888', marginTop: '0.5rem', display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                                                        {item.allergens.containsNuts && <span>Contains Nuts</span>}
-                                                        {item.allergens.containsDairy && <span>Contains Dairy</span>}
-                                                        {item.allergens.containsGluten && <span>Contains Gluten</span>}
-                                                        {item.allergens.containsShellfish && <span>Contains Shellfish</span>}
-                                                    </div>
-                                                )}
-                                            </div>
+                        {filteredCategories.length > 0 ? (
+                            filteredCategories.map((category, index) => (
+                                <MotionSection key={category.id} delay={index * 0.1} className="menu-category" id={category.id}>
+                                    <div className="category-header">
+                                        {category.icon}
+                                        <div>
+                                            <h2>{category.title}</h2>
+                                            <p>{category.description}</p>
                                         </div>
-                                    ))}
-                                </div>
-                            </MotionSection>
-                        ))}
+                                    </div>
+                                    <div className="menu-items-grid">
+                                        {category.items.map((item, idx) => (
+                                            <div key={idx} className="menu-item-card">
+                                                {item.image && (
+                                                    <img src={item.image} alt={item.name} loading="lazy" className="menu-item-image" />
+                                                )}
+                                                <div className="menu-item-content">
+                                                    <div className="menu-item-header">
+                                                        <h3 className="menu-item-title">
+                                                            {item.name}
+                                                            {item.dietary && item.dietary.map(d => <DietaryBadge key={d} type={d} />)}
+                                                        </h3>
+                                                        <span className="menu-item-price">{item.price}</span>
+                                                    </div>
+                                                    <p className="menu-item-desc">{item.description}</p>
+
+                                                    {item.availableUntil && (
+                                                        <div style={{ fontSize: '0.85rem', color: 'var(--color-yellow)', marginTop: '0.5rem', fontWeight: 'bold' }}>
+                                                            Available Until: {item.availableUntil}
+                                                        </div>
+                                                    )}
+
+                                                    {item.allergens && (
+                                                        <div style={{ fontSize: '0.75rem', color: '#888', marginTop: '0.5rem', display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                                                            {item.allergens.containsNuts && <span>Contains Nuts</span>}
+                                                            {item.allergens.containsDairy && <span>Contains Dairy</span>}
+                                                            {item.allergens.containsGluten && <span>Contains Gluten</span>}
+                                                            {item.allergens.containsShellfish && <span>Contains Shellfish</span>}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </MotionSection>
+                            ))
+                        ) : (
+                            <div style={{ textAlign: 'center', padding: '4rem', color: '#ccc' }}>
+                                <h3>No items found matching "{searchQuery}"</h3>
+                            </div>
+                        )}
                     </div>
 
                     <MotionSection delay={0.4} className="dietary-section">
@@ -239,6 +316,16 @@ const Menu = () => {
                         </div>
                         <Link to="/contact" className="btn-outline" style={{ marginTop: '2rem', display: 'inline-block' }}>Contact Us</Link>
                     </MotionSection>
+                </div>
+
+                {/* Sticky Bottom CTA */}
+                <div className="sticky-menu-cta">
+                    <a href="https://www.skipthedishes.com/montys-joint-513" target="_blank" rel="noopener noreferrer" className="cta-btn order-btn">
+                        Order Online
+                    </a>
+                    <a href="tel:+18073430001" className="cta-btn call-btn">
+                        Call Now
+                    </a>
                 </div>
             </div>
         </Layout>

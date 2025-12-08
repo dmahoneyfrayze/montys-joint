@@ -221,3 +221,124 @@
     background: var(--color-yellow);
     color: #000;
 }
+
+/* --- Sticky Menu Controls --- */
+.menu-controls-sticky {
+    position: sticky;
+    top: 80px;
+    /* Adjust based on your main header height */
+    background: #000;
+    z-index: 90;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #333;
+}
+
+.menu-search-container {
+    margin-bottom: 1rem;
+}
+
+.menu-search-input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.menu-search-input:focus {
+    outline: none;
+    border-color: var(--color-yellow);
+}
+
+.category-nav-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.category-nav-scroll::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.category-nav-pill {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #ccc;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.category-nav-pill.active,
+.category-nav-pill:hover {
+    background: var(--color-yellow);
+    color: #000;
+    border-color: var(--color-yellow);
+    font-weight: bold;
+}
+
+/* --- Sticky Bottom CTA --- */
+.sticky-menu-cta {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    border-top: 1px solid #333;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 100;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+    /* Ensure it sits above other content but below full-screen modals if any */
+}
+
+.cta-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-btn {
+    background: var(--color-yellow);
+    color: #000;
+}
+
+.call-btn {
+    background: #fff;
+    color: #000;
+}
+
+@media (min-width: 768px) {
+
+    /* On desktop, maybe make the sticky CTA less obtrusive or hide it if preferred. 
+       For now, we keep it but style it smaller or cornered? 
+       Actually user asked for it, likely mobile-first logic, but useful on desktop too. 
+       We can limit the max-width. */
+    .sticky-menu-cta {
+        padding: 1rem 2rem;
+        justify-content: center;
+    }
+
+    .cta-btn {
+        max-width: 300px;
+    }
+}
