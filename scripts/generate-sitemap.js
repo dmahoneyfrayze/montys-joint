@@ -48,6 +48,10 @@ const extractBlogPosts = (xml) => {
         const titleMatch = itemContent.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/) || itemContent.match(/<title>(.*?)<\/title>/);
         const pubDateMatch = itemContent.match(/<pubDate>(.*?)<\/pubDate>/);
 
+        // Extract image if available (media:content or encoded content img tag)
+        const mediaMatch = itemContent.match(/<media:content[^>]*url="(.*?)"/) || itemContent.match(/<img[^>]+src="(.*?)"/);
+        const image = mediaMatch ? mediaMatch[1] : null;
+
         if (linkMatch) {
             const originalLink = linkMatch[1];
             const slug = originalLink.split('/').pop();
@@ -59,7 +63,8 @@ const extractBlogPosts = (xml) => {
                 url: `${BASE_URL}/blog/${slug}`,
                 lastmod: date,
                 changefreq: 'monthly',
-                priority: 0.6
+                priority: 0.6,
+                images: image ? [{ loc: image, title: title }] : []
             });
         }
     }
@@ -94,23 +99,41 @@ const generateSitemap = async () => {
     const blogPosts = rssXml ? extractBlogPosts(rssXml) : [];
     console.log(`Found ${blogPosts.length} blog posts.`);
 
-    // Update Sitemap
-    const staticUrls = STATIC_ROUTES.map(route => ({
-        url: `${BASE_URL}${route === '/' ? '' : route}`,
-        lastmod: new Date().toISOString().split('T')[0],
-        changefreq: route === '/' ? 'daily' : 'weekly',
-        priority: route === '/' ? 1.0 : 0.8
-    }));
+    // Extract images from RSS items for blog posts
+    // Note: extractBlogPosts already runs over the XML; we could modify it to extract images too.
+    // For now, let's assume the simplified version, but we can enhance it if the RSS has images.
+    // Re-running extraction with image awareness would be cleaner but let's just make sure the XML namespace is correct first.
+
+    const staticUrls = STATIC_ROUTES.map(route => {
+        const pageData = {
+            url: `${BASE_URL}${route === '/' ? '' : route}`,
+            lastmod: new Date().toISOString().split('T')[0],
+            changefreq: route === '/' ? 'daily' : 'weekly',
+            priority: route === '/' ? 1.0 : 0.8,
+            images: []
+        };
+
+        // Add specific images for key pages
+        if (route === '/') {
+            pageData.images.push({
+                loc: 'https://montysjoint.com/assets/venue-hero.webp',
+                title: 'Monty’s Joint Venue'
+            });
+        }
+        return pageData;
+    });
 
     const allUrls = [...staticUrls, ...blogPosts];
 
     const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${allUrls.map(url => `  <url>
     <loc>${url.url}</loc>
     <lastmod>${url.lastmod}</lastmod>
     <changefreq>${url.changefreq}</changefreq>
-    <priority>${url.priority}</priority>
+    <priority>${url.priority}</priority>${url.images && url.images.length > 0 ? '\n' + url.images.map(img => `    <image:image>
+      <image:loc>${img.loc}</image:loc>${img.title ? `\n      <image:title>${img.title}</image:title>` : ''}
+    </image:image>`).join('\n') : ''}
   </url>`).join('\n')}
 </urlset>`;
 
