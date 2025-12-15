@@ -57,18 +57,22 @@ const Promotions = () => {
         { title: 'Hockey Night', day: 'Game Nights', time: 'Live', image: '/assets/montys-interior-live-sports.webp', cta: '/reservations' }
     ];
 
-    const upcomingEvents = [
+    const upcomingEvents = [];
+
+    const pastSpecials = [
         {
-            date: '2025-12-05',
-            time: 'Dec 5 - Dec 8',
-            artist: 'Holiday Classic Tournament',
-            description: 'Northwood Hockey League. Welcome players and families! Sign up to receive a 10% discount on all food orders.',
-            cta: 'https://go.montysjoint.com/widget/form/il02Xf37ptnFTbR5pJ2z',
-            isExternal: true
+            title: 'Holiday Classic Tournament',
+            date: 'Dec 5 - Dec 8',
+            description: 'Northwood Hockey League. Welcome players and families!',
+            image: '/assets/montys-interior-live-sports.webp'
+        },
+        {
+            title: 'Novemburger: The Jam Session',
+            date: 'November 2025',
+            description: "Try our signature creation for this year's Novemburger! A perfect harmony of flavours that will rock your tastebuds.",
+            image: '/assets/novemburger.jpg'
         }
     ];
-
-    const pastSpecials = [];
 
     return (
         <Layout>
