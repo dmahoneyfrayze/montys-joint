@@ -18,14 +18,34 @@ const Contact = () => {
     return (
         <Layout>
             <Helmet>
-                <title>Contact Us | Monty’s Joint, Thunder Bay</title>
-                <meta name="description" content="Get in touch with Monty’s Joint. Find our location, hours, phone number, and email. We look forward to seeing you!" />
+                <title>Contact Us | Monty's Joint, Thunder Bay</title>
+                <meta name="description" content="Get in touch with Monty's Joint. Find our location, hours, phone number, and email. We look forward to seeing you!" />
+                <meta name="robots" content="index, follow" />
                 <link rel="canonical" href="https://montysjoint.com/contact" />
-                <meta property="og:title" content="Contact Us | Monty’s Joint, Thunder Bay" />
-                <meta property="og:description" content="Get in touch with Monty’s Joint. Find our location, hours, phone number, and email." />
-                <meta property="og:image" content="https://montysjoint.com/assets/logo-main.png" />
+
+                {/* Geo Tags */}
+                <meta name="geo.region" content="CA-ON" />
+                <meta name="geo.placename" content="Thunder Bay" />
+                <meta name="geo.position" content="48.3809;-89.2477" />
+
+                {/* Open Graph */}
+                <meta property="og:title" content="Contact Us | Monty's Joint, Thunder Bay" />
+                <meta property="og:description" content="Get in touch with Monty's Joint. Find our location, hours, phone number, and email." />
+                <meta property="og:image" content="https://montysjoint.com/assets/montys-exterior.webp" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
+                <meta property="og:image:alt" content="Monty's Joint Thunder Bay Location" />
                 <meta property="og:url" content="https://montysjoint.com/contact" />
                 <meta property="og:type" content="website" />
+                <meta property="og:locale" content="en_CA" />
+                <meta property="og:site_name" content="Monty's Joint" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Contact Us | Monty's Joint, Thunder Bay" />
+                <meta name="twitter:description" content="Get in touch with Monty's Joint. Find our location, hours, phone number, and email." />
+                <meta name="twitter:image" content="https://montysjoint.com/assets/montys-exterior.webp" />
+                <meta name="twitter:image:alt" content="Monty's Joint Thunder Bay Location" />
             </Helmet>
             <div style={{ paddingTop: '100px', paddingBottom: '4rem' }} className="container">
                 <h1 style={{ textAlign: 'center', fontSize: '3rem', marginBottom: '3rem', color: 'var(--color-yellow)' }}>Contact Us</h1>

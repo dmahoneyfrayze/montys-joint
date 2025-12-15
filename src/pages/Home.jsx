@@ -10,14 +10,118 @@ const Home = () => {
     return (
         <Layout>
             <Helmet>
-                <title>Thunder Bay Gastropub | Monty’s Joint</title>
-                <meta name="description" content="Monty’s Joint is Thunder Bay’s neighbourhood gastropub serving great food, the coldest draught, and a relaxed pub atmosphere. Enjoy dine-in, takeout, catering, and private bookings." />
+                <title>Thunder Bay Gastropub | Monty's Joint</title>
+                <meta name="description" content="Monty's Joint is Thunder Bay's neighbourhood gastropub serving great food, the coldest draught, and a relaxed pub atmosphere. Enjoy dine-in, takeout, catering, and private bookings." />
+                <meta name="robots" content="index, follow, max-image-preview:large" />
                 <link rel="canonical" href="https://montysjoint.com/" />
-                <meta property="og:title" content="Thunder Bay Gastropub | Monty’s Joint" />
-                <meta property="og:description" content="Monty’s Joint is Thunder Bay’s neighbourhood gastropub serving great food, the coldest draught, and a relaxed pub atmosphere." />
-                <meta property="og:image" content="https://montysjoint.com/assets/logo-main.png" />
+
+                {/* Open Graph */}
+                <meta property="og:title" content="Thunder Bay Gastropub | Monty's Joint" />
+                <meta property="og:description" content="Monty's Joint is Thunder Bay's neighbourhood gastropub serving great food, the coldest draught, and a relaxed pub atmosphere." />
+                <meta property="og:image" content="https://montysjoint.com/assets/venue-hero.webp" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
+                <meta property="og:image:alt" content="Monty's Joint - Thunder Bay's Premier Gastropub" />
                 <meta property="og:url" content="https://montysjoint.com/" />
                 <meta property="og:type" content="website" />
+                <meta property="og:locale" content="en_CA" />
+                <meta property="og:site_name" content="Monty's Joint" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Thunder Bay Gastropub | Monty's Joint" />
+                <meta name="twitter:description" content="Monty's Joint is Thunder Bay's neighbourhood gastropub serving great food, the coldest draught, and a relaxed pub atmosphere." />
+                <meta name="twitter:image" content="https://montysjoint.com/assets/venue-hero.webp" />
+                <meta name="twitter:image:alt" content="Monty's Joint - Thunder Bay's Premier Gastropub" />
+
+                {/* Schema.org Structured Data */}
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": ["Restaurant", "LocalBusiness"],
+                        "name": "Monty's Joint",
+                        "image": [
+                            "https://montysjoint.com/assets/venue-hero.webp",
+                            "https://montysjoint.com/assets/montys-exterior.webp",
+                            "https://montysjoint.com/assets/logo-main.png"
+                        ],
+                        "logo": "https://montysjoint.com/assets/logo-main.png",
+                        "@id": "https://montysjoint.com",
+                        "url": "https://montysjoint.com",
+                        "telephone": "+18073430001",
+                        "email": "montysjoint@icloud.com",
+                        "priceRange": "$$",
+                        "address": {
+                            "@type": "PostalAddress",
+                            "streetAddress": "513 Victoria Ave E",
+                            "addressLocality": "Thunder Bay",
+                            "addressRegion": "ON",
+                            "postalCode": "P7C 1B1",
+                            "addressCountry": "CA"
+                        },
+                        "geo": {
+                            "@type": "GeoCoordinates",
+                            "latitude": 48.3809,
+                            "longitude": -89.2477
+                        },
+                        "openingHoursSpecification": [
+                            {
+                                "@type": "OpeningHoursSpecification",
+                                "dayOfWeek": "Monday",
+                                "opens": "17:00",
+                                "closes": "22:00"
+                            },
+                            {
+                                "@type": "OpeningHoursSpecification",
+                                "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+                                "opens": "11:30",
+                                "closes": "22:00"
+                            },
+                            {
+                                "@type": "OpeningHoursSpecification",
+                                "dayOfWeek": "Saturday",
+                                "opens": "12:00",
+                                "closes": "22:00"
+                            }
+                        ],
+                        "servesCuisine": ["Canadian", "American", "Gastropub", "Pub Food"],
+                        "hasMenu": "https://montysjoint.com/menu",
+                        "acceptsReservations": "True",
+                        "sameAs": [
+                            "https://www.facebook.com/MontyJointTBay",
+                            "https://www.instagram.com/montysjoint/"
+                        ],
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": "4.8",
+                            "ratingCount": "500",
+                            "bestRating": "5",
+                            "worstRating": "1"
+                        },
+                        "amenityFeature": [
+                            {
+                                "@type": "LocationFeatureSpecification",
+                                "name": "Live Music",
+                                "value": true
+                            },
+                            {
+                                "@type": "LocationFeatureSpecification",
+                                "name": "Sports Viewing",
+                                "value": true
+                            },
+                            {
+                                "@type": "LocationFeatureSpecification",
+                                "name": "Private Events",
+                                "value": true
+                            },
+                            {
+                                "@type": "LocationFeatureSpecification",
+                                "name": "Wheelchair Accessible",
+                                "value": true
+                            }
+                        ]
+                    })}
+                </script>
             </Helmet>
             <Hero />
 

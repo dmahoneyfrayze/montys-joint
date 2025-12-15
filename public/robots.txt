@@ -1,5 +1,18 @@
+# Allow all bots to crawl the site
 User-agent: *
 Allow: /
 Disallow:
+Crawl-delay: 1
 
+# Specific directives for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Sitemap location
 Sitemap: https://montysjoint.com/sitemap.xml

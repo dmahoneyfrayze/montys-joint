@@ -111,22 +111,7 @@ const Promotions = () => {
                 {/* Countdown Timer */}
                 <CountdownTimer targetDate="2025-12-31T00:00:00" />
 
-                {/* Novemburger Promotion */}
-                <MotionSection>
-                    <div style={{ background: '#1a1a1a', borderRadius: '8px', overflow: 'hidden', marginBottom: '4rem', display: 'flex', flexDirection: 'column', alignItems: 'center', border: '1px solid #333' }}>
-                        <img src="/assets/novemburger.jpg" alt="Novemburger - The Jam Session" style={{ width: '100%', maxWidth: '800px', height: 'auto' }} />
-                        <div style={{ padding: '2rem', textAlign: 'center' }}>
-                            <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'var(--color-yellow)' }}>Novemburger: The Jam Session</h2>
-                            <p style={{ fontSize: '1.2rem', color: '#ccc', maxWidth: '700px', margin: '0 auto 1rem auto' }}>
-                                Try our signature creation for this year's Novemburger! A perfect harmony of flavours that will rock your tastebuds.
-                            </p>
-                            <p style={{ color: 'var(--color-yellow)', fontWeight: 'bold', fontSize: '1.2rem', marginBottom: '1.5rem' }}>Available for a Limited Time Only!</p>
-                            <Link to="/order" className="btn" style={{ background: 'var(--color-yellow)', color: '#000', padding: '1rem 2rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold', display: 'inline-block' }}>
-                                Order it before it's too late &rarr;
-                            </Link>
-                        </div>
-                    </div>
-                </MotionSection>
+
 
                 {/* Recurring Specials Grid */}
                 <MotionSection>

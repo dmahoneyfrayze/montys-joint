@@ -194,14 +194,29 @@ const Menu = () => {
     return (
         <Layout>
             <Helmet>
-                <title>Our Menu | Monty’s Joint, Thunder Bay</title>
+                <title>Our Menu | Monty's Joint, Thunder Bay</title>
                 <meta name="description" content="Explore our menu featuring locally sourced burgers, shareable appetizers, fresh salads, and more. Gluten-free and vegetarian options available." />
+                <meta name="robots" content="index, follow, max-image-preview:large" />
                 <link rel="canonical" href="https://montysjoint.com/menu" />
-                <meta property="og:title" content="Our Menu | Monty’s Joint, Thunder Bay" />
+
+                {/* Open Graph */}
+                <meta property="og:title" content="Our Menu | Monty's Joint, Thunder Bay" />
                 <meta property="og:description" content="Explore our menu featuring locally sourced burgers, shareable appetizers, fresh salads, and more." />
                 <meta property="og:image" content="https://montysjoint.com/assets/montys-interior-food-3.webp" />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
+                <meta property="og:image:alt" content="Delicious food at Monty's Joint" />
                 <meta property="og:url" content="https://montysjoint.com/menu" />
                 <meta property="og:type" content="website" />
+                <meta property="og:locale" content="en_CA" />
+                <meta property="og:site_name" content="Monty's Joint" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Our Menu | Monty's Joint, Thunder Bay" />
+                <meta name="twitter:description" content="Explore our menu featuring locally sourced burgers, shareable appetizers, fresh salads, and more." />
+                <meta name="twitter:image" content="https://montysjoint.com/assets/montys-interior-food-3.webp" />
+                <meta name="twitter:image:alt" content="Delicious food at Monty's Joint" />
             </Helmet>
             <div className="page-container menu-page" style={{ paddingBottom: '80px' }}> {/* Add padding for sticky footer */}
                 <div className="container section-padding">
@@ -237,19 +252,7 @@ const Menu = () => {
                         </div>
                     </div>
 
-                    {/* Novemburger Promo Banner */}
-                    <MotionSection delay={0.1}>
-                        <Link to="/promotions" className="promo-banner">
-                            <div className="promo-overlay">
-                                <div className="promo-content">
-                                    <h3>TRY THE JAM SESSION</h3>
-                                    <p>NOVEMBURGER EXCLUSIVE</p>
-                                    <span className="promo-btn">View Details</span>
-                                </div>
-                            </div>
-                            <img src="/assets/novemburger.jpg" alt="Novemburger" loading="lazy" />
-                        </Link>
-                    </MotionSection>
+
 
                     <div className="menu-grid">
                         {filteredCategories.length > 0 ? (

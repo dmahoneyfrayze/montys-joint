@@ -5,10 +5,16 @@ Monty's Joint is a premier gastropub and local restaurant in Thunder Bay, Ontari
 
 ## Key Information
 - **Name**: Monty's Joint
-- **Address**: 513 Victoria Ave E, Thunder Bay, ON
+- **Address**: 513 Victoria Ave E, Thunder Bay, ON P7C 1B1
 - **Phone**: 1-807-343-0001
 - **Email**: montysjoint@icloud.com
 - **Website**: https://montysjoint.com
+- **Coordinates**: 48.3809° N, 89.2477° W
+
+## Social Media
+- **Facebook**: https://www.facebook.com/MontyJointTBay
+- **Instagram**: https://www.instagram.com/montysjoint/
+- **Google Business**: https://g.page/montys-joint-thunder-bay
 
 ## Hours of Operation
 - **Monday**: 5:00 PM - 10:00 PM
@@ -25,19 +31,38 @@ Monty's Joint is a premier gastropub and local restaurant in Thunder Bay, Ontari
 - **Blog** (`/blog`): News and updates.
 - **Contact** (`/contact`): Location map, contact form, and hours.
 - **Private Events** (`/private-events`): Information on booking private parties and functions.
+- **Christmas Party** (`/christmas-party`): Seasonal party packages and bookings.
 - **Birthday Club** (`/birthday-club`): Sign up for our birthday club.
 - **Careers** (`/careers`): Job opportunities.
 - **Terms of Service** (`/terms-of-service`): Legal terms.
 - **Privacy Policy** (`/privacy-policy`): Privacy policy.
 - **Sitemap** (`/sitemap`): HTML sitemap.
 
+## Menu Highlights
+- **Burgers**: Gourmet burgers including Monty's Signature Burger, BBQ Bacon Burger
+- **Handhelds**: Buttermilk Chicken Sandwich, Philly Cheesesteak, Fish & Chips
+- **Appetizers**: Wings (multiple flavours), Poutine, Nachos, Calamari
+- **Bowls**: Buddha Bowl, Chicken Caesar Bowl
+- **Drinks**: Craft beers, cocktails, wine selection
+- **Desserts**: Cheesecake, Brownie Sundae
+- **Kids Menu**: Available for families
+
 ## Key Features
 - **Live Music & Sports**: We host regular live entertainment and screen major sports events.
+- **The Mark Potvin Trio**: Live vintage jazz and blues every Friday, 6-9 PM, no cover charge.
 - **Private Events**: Available for booking private parties and functions.
     - **Monty's Capacity**: Max 120 guests.
     - **Armani's Capacity**: Max 378 guests.
+    - Custom menus, dedicated service, full bar available.
 - **Novemburger**: Participating in the local burger competition.
+- **VIP Birthday Club**: Exclusive updates and birthday treats for members.
+
+## Current Promotions
+- **Live Music Fridays**: The Mark Potvin Trio, 6-9 PM, no cover
+- **Daily Specials**: Check /promotions for current offers
+- **Private Event Packages**: Customizable for groups of 20-378 guests
 
 ## Latest from the Blog
+- [Why Monty’s Joint Has Some of the Best Wings in Thunder Bay](https://montysjoint.com/blog/best-wings-thunder-bay-montys-joint) (2025-12-08)
 - [Why Monty’s Joint Is Thunder Bay’s Go-To Spot for Events, Parties, and Private Gatherings](https://montysjoint.com/blog/events-parties-private-gatherings-thunder-bay) (2025-12-08)
 - [Welcome to Monty’s New Blog: Specials, Events, and Thunder Bay Stories](https://montysjoint.com/blog/welcome-to-montys-new-blog) (2025-12-01)
