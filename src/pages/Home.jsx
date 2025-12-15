@@ -4,9 +4,20 @@ import { Link } from 'react-router-dom';
 import Layout from '../components/Layout/Layout';
 import Hero from '../components/Home/Hero';
 import MotionSection from '../components/UI/MotionSection';
+import { fetchBlogPosts } from '../utils/rss';
 import './Home.css';
 
 const Home = () => {
+    const [latestPosts, setLatestPosts] = React.useState([]);
+
+    React.useEffect(() => {
+        const loadPosts = async () => {
+            const posts = await fetchBlogPosts();
+            setLatestPosts(posts.slice(0, 3));
+        };
+        loadPosts();
+    }, []);
+
     return (
         <Layout>
             <Helmet>
@@ -151,6 +162,35 @@ const Home = () => {
                         </div>
                     </div>
                 </MotionSection>
+
+                {/* What's Happening at Monty's */}
+                {latestPosts.length > 0 && (
+                    <div style={{ marginBottom: '4rem' }}>
+                        <MotionSection delay={0.2}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'end', marginBottom: '2rem', flexWrap: 'wrap', gap: '1rem' }}>
+                                <h2 style={{ color: '#fff', fontSize: '2rem', margin: 0 }}>What's Happening at Monty's</h2>
+                                <Link to="/blog" className="btn-outline" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem' }}>View All News</Link>
+                            </div>
+
+                            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+                                {latestPosts.map((post) => (
+                                    <Link key={post.id} to={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
+                                        <div style={{ background: '#1a1a1a', borderRadius: '8px', overflow: 'hidden', border: '1px solid #333', height: '100%', transition: 'transform 0.3s ease' }} className="blog-card-home">
+                                            <div style={{ height: '200px', overflow: 'hidden' }}>
+                                                <img src={post.image} alt={post.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                            </div>
+                                            <div style={{ padding: '1.5rem' }}>
+                                                <p style={{ color: 'var(--color-yellow)', fontSize: '0.85rem', marginBottom: '0.5rem' }}>{post.date}</p>
+                                                <h4 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '0.5rem', lineHeight: '1.4' }}>{post.title}</h4>
+                                                <p style={{ color: '#ccc', fontSize: '0.9rem', display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{post.excerpt}</p>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                ))}
+                            </div>
+                        </MotionSection>
+                    </div>
+                )}
 
                 {/* Menu Highlights */}
                 <div style={{ marginBottom: '4rem' }}>
