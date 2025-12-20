@@ -197,7 +197,7 @@ const Menu = () => {
                 <title>Our Menu | Monty's Joint, Thunder Bay</title>
                 <meta name="description" content="Explore our menu featuring locally sourced burgers, shareable appetizers, fresh salads, and more. Gluten-free and vegetarian options available." />
                 <meta name="robots" content="index, follow, max-image-preview:large" />
-                <link rel="canonical" href="https://montysjoint.com/menu" />
+                <link rel="canonical" href="https://montysjoint.com/menu/" />
 
                 {/* Open Graph */}
                 <meta property="og:title" content="Our Menu | Monty's Joint, Thunder Bay" />

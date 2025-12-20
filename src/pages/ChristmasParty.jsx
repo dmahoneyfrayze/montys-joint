@@ -68,7 +68,7 @@ const ChristmasParty = () => {
             <Helmet>
                 <title>Christmas Party Packages | Monty’s Joint Thunder Bay</title>
                 <meta name="description" content="Host your Christmas party at Monty's Joint. Featuring festive food packages from $35/pp, drink tiers, and full venue buyout options in Thunder Bay." />
-                <link rel="canonical" href="https://montysjoint.com/christmas-party" />
+                <link rel="canonical" href="https://montysjoint.com/christmas-party/" />
 
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="website" />

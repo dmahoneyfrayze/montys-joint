@@ -79,7 +79,7 @@ const Promotions = () => {
             <Helmet>
                 <title>Specials & Events | Monty’s Joint, Thunder Bay</title>
                 <meta name="description" content="Check out our recurring specials, upcoming events, and past celebrations at Monty’s Joint." />
-                <link rel="canonical" href="https://montysjoint.com/promotions" />
+                <link rel="canonical" href="https://montysjoint.com/promotions/" />
                 <meta property="og:title" content="Specials & Events | Monty’s Joint, Thunder Bay" />
                 <meta property="og:description" content="Check out our recurring specials, upcoming events, and past celebrations at Monty’s Joint." />
                 <meta property="og:image" content="https://montysjoint.com/assets/gallery-6.webp" />

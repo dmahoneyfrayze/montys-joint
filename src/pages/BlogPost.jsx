@@ -80,7 +80,7 @@ const BlogPost = () => {
                 <meta property="og:title" content={post.title} />
                 <meta property="og:description" content={post.excerpt} />
                 <meta property="og:image" content={post.image} />
-                <link rel="canonical" href={`https://montysjoint.com/blog/${post.slug}`} />
+                <link rel="canonical" href={`https://montysjoint.com/blog/${post.slug}/`} />
                 <script type="application/ld+json">
                     {`
                         {

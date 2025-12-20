@@ -31,7 +31,7 @@ const Blog = () => {
             <Helmet>
                 <title>Blog | Monty’s Joint, Thunder Bay</title>
                 <meta name="description" content="Read the latest news, stories, and updates from Monty’s Joint. Food, community, and culture in Thunder Bay." />
-                <link rel="canonical" href="https://montysjoint.com/blog" />
+                <link rel="canonical" href="https://montysjoint.com/blog/" />
                 <meta property="og:title" content="Blog | Monty’s Joint, Thunder Bay" />
                 <meta property="og:description" content="Read the latest news, stories, and updates from Monty’s Joint." />
                 <meta property="og:image" content="https://montysjoint.com/assets/logo-main.png" />

@@ -8,7 +8,7 @@ const Privacy = () => {
             <Helmet>
                 <title>Privacy Policy | Monty’s Joint</title>
                 <meta name="description" content="Read the Privacy Policy for Monty’s Joint. Learn how we collect, use, and protect your data." />
-                <link rel="canonical" href="https://montysjoint.com/privacy-policy" />
+                <link rel="canonical" href="https://montysjoint.com/privacy-policy/" />
                 <meta property="og:title" content="Privacy Policy | Monty’s Joint" />
                 <meta property="og:description" content="Read the Privacy Policy for Monty’s Joint. Learn how we collect, use, and protect your data." />
                 <meta property="og:image" content="https://montysjoint.com/assets/logo-main.png" />

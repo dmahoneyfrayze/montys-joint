@@ -26,7 +26,7 @@ const Sitemap = () => {
             <Helmet>
                 <title>Sitemap | Monty’s Joint, Thunder Bay</title>
                 <meta name="description" content="Sitemap for Monty’s Joint website. Find links to all our pages including Menu, Specials, Private Events, and more." />
-                <link rel="canonical" href="https://montysjoint.com/sitemap" />
+                <link rel="canonical" href="https://montysjoint.com/sitemap/" />
             </Helmet>
             <div className="container" style={{ paddingTop: '100px', paddingBottom: '4rem' }}>
                 <MotionSection>

@@ -21,7 +21,7 @@ const Contact = () => {
                 <title>Contact Us | Monty's Joint, Thunder Bay</title>
                 <meta name="description" content="Get in touch with Monty's Joint. Find our location, hours, phone number, and email. We look forward to seeing you!" />
                 <meta name="robots" content="index, follow" />
-                <link rel="canonical" href="https://montysjoint.com/contact" />
+                <link rel="canonical" href="https://montysjoint.com/contact/" />
 
                 {/* Geo Tags */}
                 <meta name="geo.region" content="CA-ON" />

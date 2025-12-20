@@ -60,7 +60,7 @@ const extractBlogPosts = (xml) => {
 
             posts.push({
                 title,
-                url: `${BASE_URL}/blog/${slug}`,
+                url: `${BASE_URL}/blog/${slug}/`,
                 lastmod: date,
                 changefreq: 'monthly',
                 priority: 0.6,
@@ -106,7 +106,7 @@ const generateSitemap = async () => {
 
     const staticUrls = STATIC_ROUTES.map(route => {
         const pageData = {
-            url: `${BASE_URL}${route === '/' ? '' : route}`,
+            url: `${BASE_URL}${route === '/' ? '/' : route.endsWith('/') ? route : route + '/'}`,
             lastmod: new Date().toISOString().split('T')[0],
             changefreq: route === '/' ? 'daily' : 'weekly',
             priority: route === '/' ? 1.0 : 0.8,

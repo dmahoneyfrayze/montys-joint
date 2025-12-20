@@ -135,7 +135,7 @@ const PrivateEvents = () => {
             <Helmet>
                 <title>Private Events, Christmas Parties & Corporate Functions | Monty’s Joint</title>
                 <meta name="description" content="Host your Christmas party, corporate event, or birthday bash at Monty’s Joint. Full venue buyouts available for private functions in Thunder Bay." />
-                <link rel="canonical" href="https://montysjoint.com/private-events" />
+                <link rel="canonical" href="https://montysjoint.com/private-events/" />
                 <meta property="og:title" content="Private Events, Christmas Parties & Corporate Functions | Monty’s Joint" />
                 <meta property="og:description" content="Host your Christmas party, corporate event, or birthday bash at Monty’s Joint. Full venue buyouts available." />
                 <meta property="og:image" content="https://montysjoint.com/assets/montys-interior-live-music.webp" />

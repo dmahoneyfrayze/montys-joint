@@ -20,7 +20,7 @@ const Reservations = () => {
             <Helmet>
                 <title>Book a Table | Monty’s Joint Thunder Bay</title>
                 <meta name="description" content="Reserve your table at Monty’s Joint. For groups larger than 8, please call us directly." />
-                <link rel="canonical" href="https://montysjoint.com/reservations" />
+                <link rel="canonical" href="https://montysjoint.com/reservations/" />
                 <meta property="og:title" content="Book a Table | Monty’s Joint Thunder Bay" />
                 <meta property="og:description" content="Reserve your table at Monty’s Joint. For groups larger than 8, please call us directly." />
                 <meta property="og:image" content="https://montysjoint.com/assets/montys-interior-live-music.webp" />

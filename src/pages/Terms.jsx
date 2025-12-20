@@ -8,7 +8,7 @@ const Terms = () => {
             <Helmet>
                 <title>Terms of Service | Monty’s Joint</title>
                 <meta name="description" content="Read the Terms of Service for Monty’s Joint website and services." />
-                <link rel="canonical" href="https://montysjoint.com/terms-of-service" />
+                <link rel="canonical" href="https://montysjoint.com/terms-of-service/" />
                 <meta property="og:title" content="Terms of Service | Monty’s Joint" />
                 <meta property="og:description" content="Read the Terms of Service for Monty’s Joint website and services." />
                 <meta property="og:image" content="https://montysjoint.com/assets/logo-main.png" />
