@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
-import { trackCallClick, trackNewsletterSignup } from '../utils/tracking';
+import { trackCallClick, trackNewsletterSignup } from '../../utils/tracking';
 import './Footer.css';
 
 const Footer = () => {
