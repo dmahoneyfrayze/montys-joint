@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Clock, Utensils } from 'lucide-react';
 import Layout from '../components/Layout/Layout';
 import MotionSection from '../components/UI/MotionSection';
 import { Link } from 'react-router-dom';
+import { trackLunchMenuView, trackNewsletterSignup } from '../utils/tracking';
 
 const LunchMenu = () => {
+    // Track page view on mount
+    useEffect(() => {
+        trackLunchMenuView('direct');
+    }, []);
+
     return (
         <Layout>
             <Helmet>
