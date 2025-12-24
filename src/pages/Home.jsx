@@ -199,13 +199,13 @@ const Home = () => {
                         <h3 style={{ color: '#fff', marginBottom: '2rem' }}>Guest Favourites</h3>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
                             <div style={{ background: '#1a1a1a', padding: '1.5rem', borderRadius: '8px', border: '1px solid #333' }}>
-                                <img src="/assets/montys-cigars.jpg" alt="Monty's Cigars" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }} />
+                                <img src="/assets/montys-cigars.webp" alt="Monty's Cigars" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }} width="800" height="200" loading="lazy" />
                                 <h4 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Monty's Cigars</h4>
                                 <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Premium selection available.</p>
                                 <Link to="/menu" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
                             </div>
                             <div style={{ background: '#1a1a1a', padding: '1.5rem', borderRadius: '8px', border: '1px solid #333' }}>
-                                <img src="/assets/buttermilk-chicken.jpg" alt="Buttermilk Chicken Sandwich" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }} />
+                                <img src="/assets/buttermilk-chicken.webp" alt="Buttermilk Chicken Sandwich" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }} width="800" height="200" loading="lazy" />
                                 <h4 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Buttermilk Chicken Sandwich</h4>
                                 <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Crispy buttermilk chicken breast.</p>
                                 <Link to="/menu" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
