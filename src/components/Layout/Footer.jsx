@@ -69,6 +69,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
+                <div className="footer-section">
                     <h3 className="footer-title">Quick Links</h3>
                     <ul className="footer-links">
                         <li><Link to="/menu">Menu</Link></li>
