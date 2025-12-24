@@ -56,7 +56,7 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-                <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
+                <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle navigation menu">
                     {isOpen ? <X size={28} color="var(--color-yellow)" /> : <Menu size={28} color="var(--color-yellow)" />}
                 </button>
             </div>

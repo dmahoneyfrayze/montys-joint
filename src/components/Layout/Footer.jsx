@@ -14,8 +14,8 @@ const Footer = () => {
                     </Link>
                     <p className="footer-tagline">Big Flavour, Bigger Impact.</p>
                     <div className="social-links">
-                        <a href="https://www.facebook.com/montysjoint/" target="_blank" rel="noopener noreferrer" className="social-icon"><Facebook /></a>
-                        <a href="https://www.instagram.com/montysjoint" target="_blank" rel="noopener noreferrer" className="social-icon"><Instagram /></a>
+                        <a href="https://www.facebook.com/montysjoint/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Visit our Facebook page"><Facebook /></a>
+                        <a href="https://www.instagram.com/montysjoint" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Visit our Instagram page"><Instagram /></a>
                     </div>
 
                     <div style={{ marginTop: '1.5rem' }}>
