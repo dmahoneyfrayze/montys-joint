@@ -336,6 +336,9 @@ const Menu = () => {
                     </a>
                 </div>
             </div>
+            
+            {/* Add spacing to prevent sticky CTA from overlapping footer */}
+            <div style={{ height: '100px' }}></div>
         </Layout>
     );
 };

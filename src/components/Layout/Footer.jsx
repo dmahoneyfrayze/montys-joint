@@ -69,10 +69,10 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                <div className="footer-section">
                     <h3 className="footer-title">Quick Links</h3>
                     <ul className="footer-links">
                         <li><Link to="/menu">Menu</Link></li>
+                        <li><Link to="/lunch-menu">Lunch Menu</Link></li>
                         <li><Link to="/promotions">Specials</Link></li>
                         <li><Link to="/blog" className="footer-link">Blog</Link></li>
                         <li><Link to="/birthday-club" className="footer-link">Birthday Club</Link></li>
