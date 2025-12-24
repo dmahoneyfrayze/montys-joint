@@ -21,6 +21,7 @@ const BirthdayClub = lazy(() => import('./pages/BirthdayClub'));
 const Careers = lazy(() => import('./pages/Careers'));
 const Sitemap = lazy(() => import('./pages/Sitemap'));
 const ChristmasParty = lazy(() => import('./pages/ChristmasParty'));
+const LunchMenu = lazy(() => import('./pages/LunchMenu'));
 const Offer = lazy(() => import('./pages/Offer'));
 const OfferClaimed = lazy(() => import('./pages/OfferClaimed'));
 const NotFound = lazy(() => import('./pages/NotFoundPage'));
@@ -61,6 +62,7 @@ function App() {
           <Route path="/privacy-policy" element={<Privacy />} />
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/christmas-party" element={<ChristmasParty />} />
+          <Route path="/lunch-menu" element={<LunchMenu />} />
           <Route path="/offer" element={<Offer />} />
           <Route path="/offer/claimed" element={<OfferClaimed />} />
           <Route path="*" element={<NotFound />} />
