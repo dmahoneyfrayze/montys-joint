@@ -229,3 +229,34 @@ export const trackNewsletterSignup = () => {
 
     console.log('[Tracking] Newsletter signup');
 };
+
+/**
+ * Track lunch menu page view
+ * @param {string} source - Where the click originated (e.g., 'footer', 'home_cta', 'direct')
+ */
+export const trackLunchMenuView = (source = 'direct') => {
+    if (typeof window !== 'undefined') {
+        // GA4 Event
+        if (window.gtag) {
+            window.gtag('event', 'lunch_menu_view', {
+                event_category: 'navigation',
+                event_label: source,
+                page_location: window.location.href,
+                page_title: 'Lunch Menu - Coming Soon',
+                source: source
+            });
+        }
+
+        // Meta Pixel Event
+        if (window.fbq) {
+            window.fbq('track', 'ViewContent', {
+                content_name: 'Lunch Menu',
+                content_category: 'menu',
+                content_type: 'coming_soon',
+                source: source
+            });
+        }
+
+        console.log('🍽️ Lunch menu view tracked:', source);
+    }
+};
