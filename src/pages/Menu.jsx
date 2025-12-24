@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Utensils, Star, Sandwich, Salad, Drumstick, Pizza } from 'lucide-react';
 import MotionSection from '../components/UI/MotionSection';
 import Layout from '../components/Layout/Layout';
+import { trackMenuView, trackTakeoutClick, trackCallClick } from '../utils/tracking';
 import './Menu.css';
 
 const DietaryBadge = ({ type }) => {
@@ -149,6 +150,10 @@ const Menu = () => {
 
     const [searchQuery, setSearchQuery] = React.useState('');
     const [activeCategory, setActiveCategory] = React.useState('');
+
+    React.useEffect(() => {
+        trackMenuView();
+    }, []);
 
     // Filter Logic
     const filteredCategories = menuCategories.map(cat => {
@@ -323,10 +328,10 @@ const Menu = () => {
 
                 {/* Sticky Bottom CTA */}
                 <div className="sticky-menu-cta">
-                    <a href="https://www.skipthedishes.com/montys-joint-513" target="_blank" rel="noopener noreferrer" className="cta-btn order-btn">
+                    <a href="https://www.skipthedishes.com/montys-joint-513" target="_blank" rel="noopener noreferrer" className="cta-btn order-btn" onClick={() => trackTakeoutClick('skipthedishes', 'delivery', 'menu_sticky_cta', 'https://www.skipthedishes.com/montys-joint-513')}>
                         Order Online
                     </a>
-                    <a href="tel:+18073430001" className="cta-btn call-btn">
+                    <a href="tel:+18073430001" className="cta-btn call-btn" onClick={() => trackCallClick('menu_sticky_cta')}>
                         Call Now
                     </a>
                 </div>

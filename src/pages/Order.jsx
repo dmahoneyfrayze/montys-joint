@@ -2,8 +2,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Layout from '../components/Layout/Layout';
 import { ShoppingBag, Truck } from 'lucide-react';
+import { trackTakeoutClick, trackOrderPageView } from '../utils/tracking';
 
 const Order = () => {
+    React.useEffect(() => {
+        trackOrderPageView();
+    }, []);
+
     return (
         <Layout>
             <Helmet>
@@ -35,6 +40,7 @@ const Order = () => {
                                 rel="noopener noreferrer"
                                 className="btn"
                                 style={{ background: '#fff', color: '#000', border: 'none', fontWeight: 'bold' }}
+                                onClick={() => trackTakeoutClick('skipthedishes', 'pickup', 'order_page', 'https://www.skipthedishes.com/montys-joint-513?serviceType=collection')}
                             >
                                 Order on SkipTheDishes
                             </a>
@@ -44,6 +50,7 @@ const Order = () => {
                                 rel="noopener noreferrer"
                                 className="btn"
                                 style={{ background: '#06C167', color: '#fff', border: 'none', fontWeight: 'bold' }}
+                                onClick={() => trackTakeoutClick('ubereats', 'pickup', 'order_page', 'https://www.ubereats.com/ca/store/montys-joint-513-victoria-e/w2fMzhYDW7qzrF_d4y3GSw?diningMode=PICKUP')}
                             >
                                 Order on Uber Eats
                             </a>
@@ -61,6 +68,7 @@ const Order = () => {
                                 rel="noopener noreferrer"
                                 className="btn"
                                 style={{ background: '#fff', color: '#000', border: 'none', fontWeight: 'bold' }}
+                                onClick={() => trackTakeoutClick('skipthedishes', 'delivery', 'order_page', 'https://www.skipthedishes.com/montys-joint-513?serviceType=delivery')}
                             >
                                 Order on SkipTheDishes
                             </a>
@@ -70,6 +78,7 @@ const Order = () => {
                                 rel="noopener noreferrer"
                                 className="btn"
                                 style={{ background: '#06C167', color: '#fff', border: 'none', fontWeight: 'bold' }}
+                                onClick={() => trackTakeoutClick('ubereats', 'delivery', 'order_page', 'https://www.ubereats.com/ca/store/montys-joint-513-victoria-e/w2fMzhYDW7qzrF_d4y3GSw')}
                             >
                                 Order on Uber Eats
                             </a>

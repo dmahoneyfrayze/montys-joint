@@ -5,6 +5,7 @@ import Layout from '../components/Layout/Layout';
 import Hero from '../components/Home/Hero';
 import MotionSection from '../components/UI/MotionSection';
 import { fetchBlogPosts } from '../utils/rss';
+import { trackCallClick, trackBookingStart, trackTakeoutClick } from '../utils/tracking';
 import './Home.css';
 
 const Home = () => {
@@ -217,7 +218,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="hero-actions" style={{ marginTop: '2rem' }}>
-                            <Link to="/reservations" className="btn btn-primary" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none', padding: '1rem 2rem', fontSize: '1.2rem', fontWeight: 'bold', textDecoration: 'none', borderRadius: '4px' }}>
+                            <Link to="/reservations" className="btn btn-primary" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none', padding: '1rem 2rem', fontSize: '1.2rem', fontWeight: 'bold', textDecoration: 'none', borderRadius: '4px' }} onClick={() => trackBookingStart('home_guest_favourites')}>
                                 Book a Table
                             </Link>
                         </div>
@@ -244,8 +245,8 @@ const Home = () => {
                     <MotionSection delay={0.2}>
                         <h3 style={{ color: '#fff', marginBottom: '2rem' }}>Order Online</h3>
                         <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
-                            <a href="https://www.ubereats.com/ca/store/montys-joint-513-victoria-e/w2fMzhYDW7qzrF_d4y3GSw" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#06C167', color: '#fff', border: 'none', padding: '1rem 2rem', borderRadius: '4px', fontWeight: 'bold', textDecoration: 'none' }}>Uber Eats</a>
-                            <a href="https://www.skipthedishes.com/montys-joint-513" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#D21243', color: '#fff', border: 'none', padding: '1rem 2rem', borderRadius: '4px', fontWeight: 'bold', textDecoration: 'none' }}>SkipTheDishes</a>
+                            <a href="https://www.ubereats.com/ca/store/montys-joint-513-victoria-e/w2fMzhYDW7qzrF_d4y3GSw" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#06C167', color: '#fff', border: 'none', padding: '1rem 2rem', borderRadius: '4px', fontWeight: 'bold', textDecoration: 'none' }} onClick={() => trackTakeoutClick('ubereats', 'delivery', 'home_page', 'https://www.ubereats.com/ca/store/montys-joint-513-victoria-e/w2fMzhYDW7qzrF_d4y3GSw')}>Uber Eats</a>
+                            <a href="https://www.skipthedishes.com/montys-joint-513" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#D21243', color: '#fff', border: 'none', padding: '1rem 2rem', borderRadius: '4px', fontWeight: 'bold', textDecoration: 'none' }} onClick={() => trackTakeoutClick('skipthedishes', 'delivery', 'home_page', 'https://www.skipthedishes.com/montys-joint-513')}>SkipTheDishes</a>
                         </div>
                     </MotionSection>
                 </div>
@@ -352,7 +353,7 @@ const Home = () => {
                 </div>
                 <MotionSection delay={0.3}>
                     <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', marginBottom: '4rem' }}>
-                        <a href="tel:18073430001" style={{ background: '#fff', color: '#000', padding: '0.8rem 1.5rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold' }}>Call Now</a>
+                        <a href="tel:18073430001" style={{ background: '#fff', color: '#000', padding: '0.8rem 1.5rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold' }} onClick={() => trackCallClick('home_cta')}>Call Now</a>
                         <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" style={{ background: 'var(--color-yellow)', color: '#000', padding: '0.8rem 1.5rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold' }}>Get Directions</a>
                     </div>
                 </MotionSection>

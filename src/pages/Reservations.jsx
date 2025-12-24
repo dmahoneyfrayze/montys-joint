@@ -1,9 +1,13 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Layout from '../components/Layout/Layout';
+import { trackBookingStart, trackCallClick } from '../utils/tracking';
 
 const Reservations = () => {
     useEffect(() => {
+        // Track booking start when user lands on reservations page
+        trackBookingStart('direct_page_visit');
+
         const script = document.createElement('script');
         script.src = "https://go.montysjoint.com/js/form_embed.js";
         script.type = "text/javascript";
@@ -32,7 +36,7 @@ const Reservations = () => {
 
                 <div style={{ maxWidth: '800px', margin: '0 auto', background: '#fff', padding: '1rem', borderRadius: '8px' }}>
                     <div style={{ marginBottom: '1rem', padding: '1rem', background: '#fff3cd', color: '#856404', border: '1px solid #ffeeba', borderRadius: '4px', textAlign: 'center' }}>
-                        <strong>Note:</strong> For groups larger than 8, please call us at <a href="tel:18073430001" style={{ color: '#856404', textDecoration: 'underline' }}>(807) 343-0001</a>.
+                        <strong>Note:</strong> For groups larger than 8, please call us at <a href="tel:18073430001" style={{ color: '#856404', textDecoration: 'underline' }} onClick={() => trackCallClick('reservations_page')}>(807) 343-0001</a>.
                     </div>
 
                     <iframe

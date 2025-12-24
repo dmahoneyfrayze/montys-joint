@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
+import { trackCallClick, trackNewsletterSignup } from '../utils/tracking';
 import './Footer.css';
 
 const Footer = () => {
@@ -19,7 +20,7 @@ const Footer = () => {
 
                     <div style={{ marginTop: '1.5rem' }}>
                         <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '0.5rem' }}>Subscribe for specials & updates:</p>
-                        <form onSubmit={(e) => e.preventDefault()} style={{ display: 'flex', gap: '0.5rem' }}>
+                        <form onSubmit={(e) => { e.preventDefault(); trackNewsletterSignup(); }} style={{ display: 'flex', gap: '0.5rem' }}>
                             <input
                                 type="email"
                                 placeholder="Enter your email"
@@ -59,7 +60,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <Phone size={18} className="icon" />
-                            <a href="tel:18073430001" className="footer-link-text">1 (807) 343-0001</a>
+                            <a href="tel:18073430001" className="footer-link-text" onClick={() => trackCallClick('footer')}>1 (807) 343-0001</a>
                         </li>
                         <li>
                             <Mail size={18} className="icon" />
