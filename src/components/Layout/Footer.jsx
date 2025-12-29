@@ -16,6 +16,7 @@ const Footer = () => {
                     <div className="social-links">
                         <a href="https://www.facebook.com/montysjoint/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Visit our Facebook page"><Facebook /></a>
                         <a href="https://www.instagram.com/montysjoint" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Visit our Instagram page"><Instagram /></a>
+                        <a href="https://maps.app.goo.gl/HZXoUYCxSpnzfn5L8" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Find us on Google Maps"><MapPin /></a>
                     </div>
 
                     <div style={{ marginTop: '1.5rem' }}>
