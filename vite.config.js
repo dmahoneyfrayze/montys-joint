@@ -17,7 +17,7 @@ export default defineConfig(async () => {
         routes: routes,
         renderer: new PuppeteerRenderer({
           maxConcurrentRoutes: 1,
-          renderAfterTime: 500,
+          renderAfterTime: 5000,
         }),
         postProcess(renderedRoute) {
           // Optional: Add any post-processing logic here
