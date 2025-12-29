@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO/SEO';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout/Layout';
 import MotionSection from '../components/UI/MotionSection';
@@ -7,10 +7,13 @@ import MotionSection from '../components/UI/MotionSection';
 const OfferClaimed = () => {
     return (
         <Layout>
-            <Helmet>
-                <title>Offer Claimed! | Monty’s Joint</title>
+            <SEO
+                title="Offer Claimed!"
+                description="You're all set! Check your messages for your voucher."
+                url="https://montysjoint.com/offer-claimed/"
+            >
                 <meta name="robots" content="noindex" />
-            </Helmet>
+            </SEO>
 
             <div style={{
                 minHeight: '80vh',

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO/SEO';
 import Layout from '../components/Layout/Layout';
 import { fetchBlogPosts } from '../utils/rss';
 import MotionSection from '../components/UI/MotionSection';
@@ -74,13 +74,13 @@ const BlogPost = () => {
 
     return (
         <Layout>
-            <Helmet>
-                <title>{post.title} | Monty’s Joint, Thunder Bay</title>
-                <meta name="description" content={post.excerpt} />
-                <meta property="og:title" content={post.title} />
-                <meta property="og:description" content={post.excerpt} />
-                <meta property="og:image" content={post.image} />
-                <link rel="canonical" href={`https://montysjoint.com/blog/${post.slug}/`} />
+            <SEO
+                title={post.title}
+                description={post.excerpt}
+                url={`https://montysjoint.com/blog/${post.slug}/`}
+                image={post.image}
+                type="article"
+            >
                 <script type="application/ld+json">
                     {`
                         {
@@ -105,7 +105,7 @@ const BlogPost = () => {
                         }
                     `}
                 </script>
-            </Helmet>
+            </SEO>
 
             <article className="blog-post-page">
                 {/* Hero Image */}

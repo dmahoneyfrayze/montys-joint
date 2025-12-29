@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO/SEO';
 import { Mail, MapPin, ChefHat, Beer, Users } from 'lucide-react';
 import Layout from '../components/Layout/Layout';
 import MotionSection from '../components/UI/MotionSection';
@@ -31,16 +31,12 @@ const Careers = () => {
 
     return (
         <Layout>
-            <Helmet>
-                <title>Careers | Monty's Joint</title>
-                <meta name="description" content="Join the team at Monty's Joint! We're always looking for talented cooks, servers, and bartenders to join our Thunder Bay family." />
-                <link rel="canonical" href="https://montysjoint.com/careers/" />
-                <meta property="og:title" content="Careers | Monty's Joint" />
-                <meta property="og:description" content="Join the team at Monty's Joint! We're always looking for talented cooks, servers, and bartenders." />
-                <meta property="og:image" content="https://montysjoint.com/assets/montys-interior-gallery-6.webp" />
-                <meta property="og:url" content="https://montysjoint.com/careers" />
-                <meta property="og:type" content="website" />
-            </Helmet>
+            <SEO
+                title="Careers"
+                description="Join the team at Monty's Joint! We're always looking for talented cooks, servers, and bartenders to join our Thunder Bay family."
+                url="https://montysjoint.com/careers/"
+                image="https://montysjoint.com/assets/montys-interior-gallery-6.webp"
+            />
 
             {/* Hero Section */}
             <div style={{
@@ -51,19 +47,19 @@ const Careers = () => {
                 borderBottom: '3px solid var(--color-yellow)'
             }}>
                 <MotionSection>
-                    <h1 style={{ 
-                        fontSize: 'clamp(2.5rem, 6vw, 4rem)', 
-                        color: '#fff', 
+                    <h1 style={{
+                        fontSize: 'clamp(2.5rem, 6vw, 4rem)',
+                        color: '#fff',
                         marginBottom: '1rem',
                         fontWeight: 'bold'
                     }}>
                         JOIN THE <span style={{ color: 'var(--color-yellow)' }}>TEAM</span>
                     </h1>
-                    <p style={{ 
-                        fontSize: 'clamp(1.1rem, 2vw, 1.5rem)', 
-                        color: '#ccc', 
-                        maxWidth: '700px', 
-                        margin: '0 auto' 
+                    <p style={{
+                        fontSize: 'clamp(1.1rem, 2vw, 1.5rem)',
+                        color: '#ccc',
+                        maxWidth: '700px',
+                        margin: '0 auto'
                     }}>
                         Big flavour, bigger opportunities. Work with us.
                     </p>
@@ -121,13 +117,13 @@ const Careers = () => {
                         </MotionSection>
 
                         {positions.map((job, index) => (
-                            <MotionSection 
-                                key={index} 
-                                delay={0.3 + (index * 0.1)} 
-                                style={{ 
-                                    background: '#1a1a1a', 
-                                    padding: '1.5rem', 
-                                    borderRadius: '12px', 
+                            <MotionSection
+                                key={index}
+                                delay={0.3 + (index * 0.1)}
+                                style={{
+                                    background: '#1a1a1a',
+                                    padding: '1.5rem',
+                                    borderRadius: '12px',
                                     border: '1px solid #333',
                                     transition: 'all 0.3s ease'
                                 }}
@@ -145,12 +141,12 @@ const Careers = () => {
                                         {job.icon}
                                         <h3 style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#fff' }}>{job.title}</h3>
                                     </div>
-                                    <span style={{ 
-                                        fontSize: '0.7rem', 
-                                        fontWeight: 'bold', 
-                                        background: 'rgba(255, 193, 7, 0.1)', 
-                                        color: 'var(--color-yellow)', 
-                                        padding: '0.4rem 0.8rem', 
+                                    <span style={{
+                                        fontSize: '0.7rem',
+                                        fontWeight: 'bold',
+                                        background: 'rgba(255, 193, 7, 0.1)',
+                                        color: 'var(--color-yellow)',
+                                        padding: '0.4rem 0.8rem',
                                         borderRadius: '20px',
                                         textTransform: 'uppercase',
                                         letterSpacing: '0.05em',
@@ -160,12 +156,12 @@ const Careers = () => {
                                     </span>
                                 </div>
                                 <p style={{ color: '#aaa', fontSize: '0.95rem', marginBottom: '1rem', lineHeight: '1.5' }}>{job.description}</p>
-                                <a 
-                                    href="mailto:montysjoint@icloud.com" 
-                                    style={{ 
-                                        fontSize: '0.9rem', 
-                                        fontWeight: 'bold', 
-                                        color: '#fff', 
+                                <a
+                                    href="mailto:montysjoint@icloud.com"
+                                    style={{
+                                        fontSize: '0.9rem',
+                                        fontWeight: 'bold',
+                                        color: '#fff',
                                         textDecoration: 'underline',
                                         textDecorationColor: 'var(--color-yellow)',
                                         transition: 'color 0.3s'

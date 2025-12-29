@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO/SEO';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../components/Layout/Layout';
 import MotionSection from '../components/UI/MotionSection';
@@ -53,10 +53,11 @@ const Offer = () => {
 
     return (
         <Layout>
-            <Helmet>
-                <title>Get $10 OFF Your First Visit | Monty’s Joint</title>
-                <meta name="description" content="Claim your $10 off voucher for your first visit to Monty's Joint. Experience the best gastropub in Thunder Bay." />
-            </Helmet>
+            <SEO
+                title="Get $10 OFF Your First Visit"
+                description="Claim your $10 off voucher for your first visit to Monty's Joint. Experience the best gastropub in Thunder Bay."
+                url="https://montysjoint.com/offer/"
+            />
 
             <div style={{
                 minHeight: '90vh',

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO/SEO';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout/Layout';
 import MotionSection from '../components/UI/MotionSection';
@@ -76,15 +76,12 @@ const Promotions = () => {
 
     return (
         <Layout>
-            <Helmet>
-                <title>Specials & Events | Monty’s Joint, Thunder Bay</title>
-                <meta name="description" content="Check out our recurring specials, upcoming events, and past celebrations at Monty’s Joint." />
-                <link rel="canonical" href="https://montysjoint.com/promotions/" />
-                <meta property="og:title" content="Specials & Events | Monty’s Joint, Thunder Bay" />
-                <meta property="og:description" content="Check out our recurring specials, upcoming events, and past celebrations at Monty’s Joint." />
-                <meta property="og:image" content="https://montysjoint.com/assets/gallery-6.webp" />
-                <meta property="og:url" content="https://montysjoint.com/promotions" />
-                <meta property="og:type" content="website" />
+            <SEO
+                title="Specials & Events"
+                description="Check out our recurring specials, upcoming events, and past celebrations at Monty’s Joint."
+                url="https://montysjoint.com/promotions/"
+                image="https://montysjoint.com/assets/gallery-6.webp"
+            >
                 <script type="application/ld+json">
                     {`
                         {
@@ -108,7 +105,7 @@ const Promotions = () => {
                         }
                     `}
                 </script>
-            </Helmet>
+            </SEO>
             <div style={{ paddingTop: '100px', paddingBottom: '4rem' }} className="container">
                 <h1 style={{ textAlign: 'center', fontSize: '3rem', marginBottom: '2rem', color: 'var(--color-yellow)' }}>Specials & Events</h1>
 

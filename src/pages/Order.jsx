@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO/SEO';
 import Layout from '../components/Layout/Layout';
 import { ShoppingBag, Truck } from 'lucide-react';
 import { trackTakeoutClick, trackOrderPageView } from '../utils/tracking';
@@ -11,16 +11,12 @@ const Order = () => {
 
     return (
         <Layout>
-            <Helmet>
-                <title>Order Online | Monty’s Joint Thunder Bay</title>
-                <meta name="description" content="Order takeout or delivery from Monty’s Joint. Available on SkipTheDishes and Uber Eats." />
-                <link rel="canonical" href="https://montysjoint.com/order/" />
-                <meta property="og:title" content="Order Online | Monty’s Joint Thunder Bay" />
-                <meta property="og:description" content="Order takeout or delivery from Monty’s Joint. Available on SkipTheDishes and Uber Eats." />
-                <meta property="og:image" content="https://montysjoint.com/assets/montys-interior-food-1.webp" />
-                <meta property="og:url" content="https://montysjoint.com/order" />
-                <meta property="og:type" content="website" />
-            </Helmet>
+            <SEO
+                title="Order Online"
+                description="Order takeout or delivery from Monty’s Joint. Available on SkipTheDishes and Uber Eats."
+                url="https://montysjoint.com/order/"
+                image="https://montysjoint.com/assets/montys-interior-food-1.webp"
+            />
             <div style={{ paddingTop: '120px', paddingBottom: '6rem' }} className="container">
                 <h1 style={{ textAlign: 'center', fontSize: '3rem', marginBottom: '1rem', color: 'var(--color-yellow)' }}>Order Online</h1>
                 <p style={{ textAlign: 'center', color: '#ccc', fontSize: '1.2rem', marginBottom: '4rem' }}>

@@ -1,5 +1,4 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO/SEO';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout/Layout';
 import Hero from '../components/Home/Hero';
@@ -21,31 +20,11 @@ const Home = () => {
 
     return (
         <Layout>
-            <Helmet>
-                <title>Thunder Bay Gastropub | Monty's Joint</title>
-                <meta name="description" content="Monty's Joint is Thunder Bay's neighbourhood gastropub serving great food, the coldest draught, and a relaxed pub atmosphere. Enjoy dine-in, takeout, catering, and private bookings." />
-                <meta name="robots" content="index, follow, max-image-preview:large" />
-                <link rel="canonical" href="https://montysjoint.com/" />
-
-                {/* Open Graph */}
-                <meta property="og:title" content="Thunder Bay Gastropub | Monty's Joint" />
-                <meta property="og:description" content="Monty's Joint is Thunder Bay's neighbourhood gastropub serving great food, the coldest draught, and a relaxed pub atmosphere." />
-                <meta property="og:image" content="https://montysjoint.com/assets/venue-hero.webp" />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
-                <meta property="og:image:alt" content="Monty's Joint - Thunder Bay's Premier Gastropub" />
-                <meta property="og:url" content="https://montysjoint.com/" />
-                <meta property="og:type" content="website" />
-                <meta property="og:locale" content="en_CA" />
-                <meta property="og:site_name" content="Monty's Joint" />
-
-                {/* Twitter Card */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Thunder Bay Gastropub | Monty's Joint" />
-                <meta name="twitter:description" content="Monty's Joint is Thunder Bay's neighbourhood gastropub serving great food, the coldest draught, and a relaxed pub atmosphere." />
-                <meta name="twitter:image" content="https://montysjoint.com/assets/venue-hero.webp" />
-                <meta name="twitter:image:alt" content="Monty's Joint - Thunder Bay's Premier Gastropub" />
-
+            <SEO
+                title="Thunder Bay Gastropub"
+                description="Monty's Joint is Thunder Bay's neighbourhood gastropub serving great food, the coldest draught, and a relaxed pub atmosphere. Enjoy dine-in, takeout, catering, and private bookings."
+                url="https://montysjoint.com/"
+            >
                 {/* Schema.org Structured Data */}
                 <script type="application/ld+json">
                     {JSON.stringify({
@@ -134,7 +113,7 @@ const Home = () => {
                         ]
                     })}
                 </script>
-            </Helmet>
+            </SEO>
             <Hero />
 
             {/* Social Proof & Intro */}

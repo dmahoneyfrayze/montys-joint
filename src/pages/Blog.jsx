@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO/SEO';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout/Layout';
 import { fetchBlogPosts } from '../utils/rss';
@@ -28,16 +28,12 @@ const Blog = () => {
 
     return (
         <Layout>
-            <Helmet>
-                <title>Blog | Monty’s Joint, Thunder Bay</title>
-                <meta name="description" content="Read the latest news, stories, and updates from Monty’s Joint. Food, community, and culture in Thunder Bay." />
-                <link rel="canonical" href="https://montysjoint.com/blog/" />
-                <meta property="og:title" content="Blog | Monty’s Joint, Thunder Bay" />
-                <meta property="og:description" content="Read the latest news, stories, and updates from Monty’s Joint." />
-                <meta property="og:image" content="https://montysjoint.com/assets/logo-main.png" />
-                <meta property="og:url" content="https://montysjoint.com/blog" />
-                <meta property="og:type" content="website" />
-            </Helmet>
+            <SEO
+                title="Blog"
+                description="Read the latest news, stories, and updates from Monty’s Joint. Food, community, and culture in Thunder Bay."
+                url="https://montysjoint.com/blog/"
+                image="https://montysjoint.com/assets/logo-main.png"
+            />
             <div style={{ paddingTop: '100px', paddingBottom: '4rem' }} className="container">
                 <MotionSection>
                     <h1 style={{ textAlign: 'center', fontSize: '3rem', marginBottom: '1rem', color: 'var(--color-yellow)' }}>The Monty's Blog</h1>

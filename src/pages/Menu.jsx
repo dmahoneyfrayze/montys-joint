@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO/SEO';
 import { Utensils, Star, Sandwich, Salad, Drumstick, Pizza } from 'lucide-react';
 import MotionSection from '../components/UI/MotionSection';
 import Layout from '../components/Layout/Layout';
@@ -198,31 +198,12 @@ const Menu = () => {
 
     return (
         <Layout>
-            <Helmet>
-                <title>Our Menu | Monty's Joint, Thunder Bay</title>
-                <meta name="description" content="Explore our menu featuring locally sourced burgers, shareable appetizers, fresh salads, and more. Gluten-free and vegetarian options available." />
-                <meta name="robots" content="index, follow, max-image-preview:large" />
-                <link rel="canonical" href="https://montysjoint.com/menu/" />
-
-                {/* Open Graph */}
-                <meta property="og:title" content="Our Menu | Monty's Joint, Thunder Bay" />
-                <meta property="og:description" content="Explore our menu featuring locally sourced burgers, shareable appetizers, fresh salads, and more." />
-                <meta property="og:image" content="https://montysjoint.com/assets/montys-interior-food-3.webp" />
-                <meta property="og:image:width" content="1200" />
-                <meta property="og:image:height" content="630" />
-                <meta property="og:image:alt" content="Delicious food at Monty's Joint" />
-                <meta property="og:url" content="https://montysjoint.com/menu" />
-                <meta property="og:type" content="website" />
-                <meta property="og:locale" content="en_CA" />
-                <meta property="og:site_name" content="Monty's Joint" />
-
-                {/* Twitter Card */}
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Our Menu | Monty's Joint, Thunder Bay" />
-                <meta name="twitter:description" content="Explore our menu featuring locally sourced burgers, shareable appetizers, fresh salads, and more." />
-                <meta name="twitter:image" content="https://montysjoint.com/assets/montys-interior-food-3.webp" />
-                <meta name="twitter:image:alt" content="Delicious food at Monty's Joint" />
-            </Helmet>
+            <SEO
+                title="Our Menu"
+                description="Explore our menu featuring locally sourced burgers, shareable appetizers, fresh salads, and more. Gluten-free and vegetarian options available."
+                url="https://montysjoint.com/menu/"
+                image="https://montysjoint.com/assets/montys-interior-food-3.webp"
+            />
             <div className="page-container menu-page" style={{ paddingBottom: '80px' }}> {/* Add padding for sticky footer */}
                 <div className="container section-padding">
                     <MotionSection className="menu-header">
@@ -336,7 +317,7 @@ const Menu = () => {
                     </a>
                 </div>
             </div>
-            
+
             {/* Add spacing to prevent sticky CTA from overlapping footer */}
             <div style={{ height: '100px' }}></div>
         </Layout>

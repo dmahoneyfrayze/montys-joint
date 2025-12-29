@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO/SEO';
 import Layout from '../components/Layout/Layout';
 import MotionSection from '../components/UI/MotionSection';
 import { Check, Star, Users, Music, Wine, Mic, MapPin, Award, ChevronDown, ChevronUp } from 'lucide-react';
@@ -132,15 +132,12 @@ const PrivateEvents = () => {
 
     return (
         <Layout>
-            <Helmet>
-                <title>Private Events, Christmas Parties & Corporate Functions | Monty’s Joint</title>
-                <meta name="description" content="Host your Christmas party, corporate event, or birthday bash at Monty’s Joint. Full venue buyouts available for private functions in Thunder Bay." />
-                <link rel="canonical" href="https://montysjoint.com/private-events/" />
-                <meta property="og:title" content="Private Events, Christmas Parties & Corporate Functions | Monty’s Joint" />
-                <meta property="og:description" content="Host your Christmas party, corporate event, or birthday bash at Monty’s Joint. Full venue buyouts available." />
-                <meta property="og:image" content="https://montysjoint.com/assets/montys-interior-live-music.webp" />
-                <meta property="og:url" content="https://montysjoint.com/private-events" />
-                <meta property="og:type" content="website" />
+            <SEO
+                title="Private Events, Christmas Parties & Corporate Functions"
+                description="Host your Christmas party, corporate event, or birthday bash at Monty’s Joint. Full venue buyouts available in Thunder Bay."
+                url="https://montysjoint.com/private-events/"
+                image="https://montysjoint.com/assets/montys-interior-live-music.webp"
+            >
                 <script type="application/ld+json">
                     {`
                         {
@@ -161,7 +158,7 @@ const PrivateEvents = () => {
                         }
                     `}
                 </script>
-            </Helmet>
+            </SEO>
 
             {/* Hero Section */}
             <div style={{

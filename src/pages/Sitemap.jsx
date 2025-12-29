@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO/SEO';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout/Layout';
 import MotionSection from '../components/UI/MotionSection';
@@ -23,11 +23,11 @@ const Sitemap = () => {
 
     return (
         <Layout>
-            <Helmet>
-                <title>Sitemap | Monty’s Joint, Thunder Bay</title>
-                <meta name="description" content="Sitemap for Monty’s Joint website. Find links to all our pages including Menu, Specials, Private Events, and more." />
-                <link rel="canonical" href="https://montysjoint.com/sitemap/" />
-            </Helmet>
+            <SEO
+                title="Sitemap"
+                description="Sitemap for Monty’s Joint website. Find links to all our pages including Menu, Specials, Private Events, and more."
+                url="https://montysjoint.com/sitemap/"
+            />
             <div className="container" style={{ paddingTop: '100px', paddingBottom: '4rem' }}>
                 <MotionSection>
                     <h1 style={{ fontSize: '3rem', color: 'var(--color-yellow)', marginBottom: '2rem', textAlign: 'center' }}>Sitemap</h1>

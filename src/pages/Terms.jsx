@@ -1,20 +1,16 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO/SEO';
 import Layout from '../components/Layout/Layout';
 
 const Terms = () => {
     return (
         <Layout>
-            <Helmet>
-                <title>Terms of Service | Monty’s Joint</title>
-                <meta name="description" content="Read the Terms of Service for Monty’s Joint website and services." />
-                <link rel="canonical" href="https://montysjoint.com/terms-of-service/" />
-                <meta property="og:title" content="Terms of Service | Monty’s Joint" />
-                <meta property="og:description" content="Read the Terms of Service for Monty’s Joint website and services." />
-                <meta property="og:image" content="https://montysjoint.com/assets/logo-main.png" />
-                <meta property="og:url" content="https://montysjoint.com/terms-of-service" />
-                <meta property="og:type" content="website" />
-            </Helmet>
+            <SEO
+                title="Terms of Service"
+                description="Read the Terms of Service for Monty’s Joint website and services."
+                url="https://montysjoint.com/terms-of-service/"
+                image="https://montysjoint.com/assets/logo-main.png"
+            />
             <div className="container" style={{ padding: '100px 1rem 4rem', maxWidth: '800px' }}>
                 <h1 style={{ color: 'var(--color-yellow)', marginBottom: '2rem' }}>Terms of Service</h1>
 

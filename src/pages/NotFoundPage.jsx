@@ -1,15 +1,18 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO/SEO';
 import Layout from '../components/Layout/Layout';
 
 const NotFound = () => {
     return (
         <Layout>
-            <Helmet>
-                <title>Page Not Found | Monty’s Joint</title>
+            <SEO
+                title="Page Not Found"
+                description="Oops! The page you are looking for does not exist."
+                url="https://montysjoint.com/404"
+            >
                 <meta name="robots" content="noindex" />
-            </Helmet>
+            </SEO>
             <div style={{ paddingTop: '150px', paddingBottom: '8rem', textAlign: 'center' }} className="container">
                 <h1 style={{ fontSize: '5rem', color: 'var(--color-yellow)', marginBottom: '1rem' }}>404</h1>
                 <h2 style={{ fontSize: '2rem', color: '#fff', marginBottom: '2rem' }}>Page Not Found</h2>

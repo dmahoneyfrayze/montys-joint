@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO/SEO';
 import { Clock, Utensils } from 'lucide-react';
 import Layout from '../components/Layout/Layout';
 import MotionSection from '../components/UI/MotionSection';
@@ -14,16 +14,12 @@ const LunchMenu = () => {
 
     return (
         <Layout>
-            <Helmet>
-                <title>Lunch Menu - Coming Soon | Monty's Joint</title>
-                <meta name="description" content="Monty's Joint lunch menu coming soon! Stay tuned for delicious midday options in Thunder Bay." />
-                <link rel="canonical" href="https://montysjoint.com/lunch-menu/" />
-                <meta property="og:title" content="Lunch Menu - Coming Soon | Monty's Joint" />
-                <meta property="og:description" content="Monty's Joint lunch menu coming soon! Stay tuned for delicious midday options." />
-                <meta property="og:image" content="https://montysjoint.com/assets/montys-interior-food-1.webp" />
-                <meta property="og:url" content="https://montysjoint.com/lunch-menu" />
-                <meta property="og:type" content="website" />
-            </Helmet>
+            <SEO
+                title="Lunch Menu"
+                description="Monty's Joint lunch menu coming soon! Stay tuned for delicious midday options in Thunder Bay."
+                url="https://montysjoint.com/lunch-menu/"
+                image="https://montysjoint.com/assets/montys-interior-food-1.webp"
+            />
 
             {/* Hero Section */}
             <div style={{
@@ -39,27 +35,27 @@ const LunchMenu = () => {
                     <div style={{ marginBottom: '2rem' }}>
                         <Utensils size={64} style={{ color: 'var(--color-yellow)', margin: '0 auto' }} />
                     </div>
-                    <h1 style={{ 
-                        fontSize: 'clamp(2.5rem, 6vw, 4.5rem)', 
-                        color: '#fff', 
+                    <h1 style={{
+                        fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
+                        color: '#fff',
                         marginBottom: '1rem',
                         fontWeight: 'bold'
                     }}>
                         LUNCH MENU
                     </h1>
-                    <p style={{ 
-                        fontSize: 'clamp(1.2rem, 3vw, 2rem)', 
-                        color: 'var(--color-yellow)', 
+                    <p style={{
+                        fontSize: 'clamp(1.2rem, 3vw, 2rem)',
+                        color: 'var(--color-yellow)',
                         fontWeight: 'bold',
                         marginBottom: '1rem'
                     }}>
                         COMING SOON
                     </p>
-                    <p style={{ 
-                        fontSize: 'clamp(1rem, 2vw, 1.3rem)', 
-                        color: '#ccc', 
-                        maxWidth: '700px', 
-                        margin: '0 auto' 
+                    <p style={{
+                        fontSize: 'clamp(1rem, 2vw, 1.3rem)',
+                        color: '#ccc',
+                        maxWidth: '700px',
+                        margin: '0 auto'
                     }}>
                         We're crafting something special for your midday cravings
                     </p>
@@ -68,9 +64,9 @@ const LunchMenu = () => {
 
             <div className="container" style={{ paddingBottom: '6rem' }}>
                 <MotionSection delay={0.2}>
-                    <div style={{ 
-                        maxWidth: '800px', 
-                        margin: '0 auto', 
+                    <div style={{
+                        maxWidth: '800px',
+                        margin: '0 auto',
                         textAlign: 'center',
                         background: '#1a1a1a',
                         padding: '3rem 2rem',
@@ -82,14 +78,14 @@ const LunchMenu = () => {
                             What to Expect
                         </h2>
                         <p style={{ color: '#ccc', fontSize: '1.1rem', lineHeight: '1.8', marginBottom: '2rem' }}>
-                            Our lunch menu will feature quick, delicious options perfect for your lunch break. 
-                            From hearty sandwiches to fresh salads and daily specials, we're designing a menu 
+                            Our lunch menu will feature quick, delicious options perfect for your lunch break.
+                            From hearty sandwiches to fresh salads and daily specials, we're designing a menu
                             that brings the same bold flavors you love, optimized for midday dining.
                         </p>
-                        
-                        <div style={{ 
-                            display: 'grid', 
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
+
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
                             gap: '2rem',
                             marginTop: '3rem'
                         }}>
@@ -127,12 +123,12 @@ const LunchMenu = () => {
                             In the meantime, check out our full menu
                         </h3>
                         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-                            <Link 
-                                to="/menu" 
-                                style={{ 
-                                    background: 'var(--color-yellow)', 
-                                    color: '#000', 
-                                    padding: '1rem 2rem', 
+                            <Link
+                                to="/menu"
+                                style={{
+                                    background: 'var(--color-yellow)',
+                                    color: '#000',
+                                    padding: '1rem 2rem',
                                     borderRadius: '4px',
                                     textDecoration: 'none',
                                     fontWeight: 'bold',
@@ -144,12 +140,12 @@ const LunchMenu = () => {
                             >
                                 View Full Menu
                             </Link>
-                            <Link 
-                                to="/order" 
-                                style={{ 
-                                    background: 'transparent', 
-                                    color: '#fff', 
-                                    padding: '1rem 2rem', 
+                            <Link
+                                to="/order"
+                                style={{
+                                    background: 'transparent',
+                                    color: '#fff',
+                                    padding: '1rem 2rem',
                                     borderRadius: '4px',
                                     textDecoration: 'none',
                                     fontWeight: 'bold',
@@ -174,9 +170,9 @@ const LunchMenu = () => {
 
                 {/* Newsletter Signup */}
                 <MotionSection delay={0.6}>
-                    <div style={{ 
-                        maxWidth: '600px', 
-                        margin: '4rem auto 0', 
+                    <div style={{
+                        maxWidth: '600px',
+                        margin: '4rem auto 0',
                         textAlign: 'center',
                         background: 'linear-gradient(135deg, #1a1a1a, #0a0a0a)',
                         padding: '2.5rem 2rem',

@@ -1,21 +1,17 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO/SEO';
 import Layout from '../components/Layout/Layout';
 import { Gift } from 'lucide-react';
 
 const BirthdayClub = () => {
     return (
         <Layout>
-            <Helmet>
-                <title>Birthday Club | Monty’s Joint</title>
-                <meta name="description" content="Join the Monty’s Joint Birthday Club! Coming soon." />
-                <link rel="canonical" href="https://montysjoint.com/birthday-club/" />
-                <meta property="og:title" content="Birthday Club | Monty’s Joint" />
-                <meta property="og:description" content="Join the Monty’s Joint Birthday Club! Coming soon." />
-                <meta property="og:image" content="https://montysjoint.com/assets/logo-main.png" />
-                <meta property="og:url" content="https://montysjoint.com/birthday-club" />
-                <meta property="og:type" content="website" />
-            </Helmet>
+            <SEO
+                title="Birthday Club"
+                description="Join the Monty’s Joint Birthday Club! Coming soon."
+                url="https://montysjoint.com/birthday-club/"
+                image="https://montysjoint.com/assets/logo-main.png"
+            />
             <div style={{ paddingTop: '150px', paddingBottom: '8rem', textAlign: 'center' }} className="container">
                 <Gift size={64} color="var(--color-yellow)" style={{ marginBottom: '2rem' }} />
                 <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', color: 'var(--color-yellow)' }}>Birthday Club</h1>
