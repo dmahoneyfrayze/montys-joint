@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
+    "@prerenderer/renderer-puppeteer": "^1.2.4",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
@@ -30,6 +31,7 @@
     "globals": "^16.5.0",
     "sharp": "^0.34.5",
     "terser": "^5.44.1",
-    "vite": "^7.2.4"
+    "vite": "^7.2.4",
+    "vite-plugin-prerender": "^1.0.8"
   }
 }
