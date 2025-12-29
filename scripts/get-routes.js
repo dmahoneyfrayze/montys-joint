@@ -27,23 +27,36 @@ export const getBlogRoutes = async () => {
         if (!response.ok) throw new Error(`Failed to fetch RSS: ${response.statusText}`);
         const xml = await response.text();
 
-        const routes = [];
+        const posts = [];
         const itemRegex = /<item>([\s\S]*?)<\/item>/g;
         let match;
 
         while ((match = itemRegex.exec(xml)) !== null) {
             const itemContent = match[1];
             const linkMatch = itemContent.match(/<link>(.*?)<\/link>/);
+            const titleMatch = itemContent.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/) || itemContent.match(/<title>(.*?)<\/title>/);
+            const pubDateMatch = itemContent.match(/<pubDate>(.*?)<\/pubDate>/);
+
+            // Extract image if available
+            const mediaMatch = itemContent.match(/<media:content[^>]*url="(.*?)"/) || itemContent.match(/<img[^>]+src="(.*?)"/);
+            const image = mediaMatch ? mediaMatch[1] : null;
+
             if (linkMatch) {
                 const originalLink = linkMatch[1];
                 const slug = originalLink.split('/').pop();
-                // Ensure consistency with how the app handles routes. 
-                // Using /blog/slug (no trailing slash usually in react router unless configured, but sitemap enforced trailing slashes)
-                // Let's stick to /blog/slug for the prerenderer to match the link structure
-                routes.push(`/blog/${slug}`);
+                const date = pubDateMatch ? new Date(pubDateMatch[1]).toISOString().split('T')[0] : new Date().toISOString().split('T')[0];
+                const title = titleMatch ? titleMatch[1] : 'Untitled Post';
+
+                posts.push({
+                    url: `/blog/${slug}`, // Relative URL for prerenderer matches
+                    fullUrl: `${BASE_URL}/blog/${slug}/`, // Absolute URL for sitemap
+                    title,
+                    lastmod: date,
+                    images: image ? [{ loc: image, title: title }] : []
+                });
             }
         }
-        return routes;
+        return posts;
     } catch (error) {
         console.error('Error fetching dynamic routes:', error);
         return [];
@@ -51,6 +64,6 @@ export const getBlogRoutes = async () => {
 };
 
 export const getAllRoutes = async () => {
-    const blogRoutes = await getBlogRoutes();
-    return [...STATIC_ROUTES, ...blogRoutes];
+    const blogPosts = await getBlogRoutes();
+    return [...STATIC_ROUTES, ...blogPosts.map(p => p.url)];
 };
