@@ -3,8 +3,8 @@ index 8fc0df9..360fd5e 100644
 --- a/node_modules/vite-plugin-prerender/dist/index.mjs
 +++ b/node_modules/vite-plugin-prerender/dist/index.mjs
 @@ -1,3 +1,5 @@
-+import { createRequire } from "module";
-+const require = createRequire(import.meta.url);
++import { createRequire as _createRequire } from "module";
++const require = _createRequire(import.meta.url);
  import path from 'path';
  import Debug from 'debug';
  import fs from 'fs';
