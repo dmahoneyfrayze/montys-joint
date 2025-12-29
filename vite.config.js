@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import prerender from 'vite-plugin-prerender'
-import { PuppeteerRenderer } from '@prerenderer/renderer-puppeteer'
+import PuppeteerRenderer from '@prerenderer/renderer-puppeteer'
 import path from 'path'
 import { getAllRoutes } from './scripts/get-routes.js'
 
