@@ -1,10 +1,10 @@
 diff --git a/node_modules/vite-plugin-prerender/dist/index.mjs b/node_modules/vite-plugin-prerender/dist/index.mjs
-index 8fc0df9..79e46cb 100644
+index 8fc0df9..c4ecbbc 100644
 --- a/node_modules/vite-plugin-prerender/dist/index.mjs
 +++ b/node_modules/vite-plugin-prerender/dist/index.mjs
 @@ -1,12 +1,14 @@
-+import { createRequire } from "module";
-+const nodeRequire = createRequire(import.meta.url);
++import { createRequire as _createRequire } from "module";
++const nodeRequire = _createRequire(import.meta.url);
  import path from 'path';
  import Debug from 'debug';
  import fs from 'fs';
