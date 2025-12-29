@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import prerender from 'vite-plugin-prerender'
+import { PuppeteerRenderer } from '@prerenderer/renderer-puppeteer'
 import path from 'path'
 import { getAllRoutes } from './scripts/get-routes.js'
 
@@ -14,11 +15,10 @@ export default defineConfig(async () => {
       prerender({
         staticDir: path.join(__dirname, 'dist'),
         routes: routes,
-        renderer: '@prerenderer/renderer-puppeteer',
-        rendererOptions: {
+        renderer: new PuppeteerRenderer({
           maxConcurrentRoutes: 1,
           renderAfterTime: 500,
-        },
+        }),
         postProcess(renderedRoute) {
           // Optional: Add any post-processing logic here
           renderedRoute.html = renderedRoute.html
