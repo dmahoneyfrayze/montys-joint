@@ -143,7 +143,7 @@ const Home = () => {
                             <p style={{ fontSize: '1.1rem', color: '#ccc', marginBottom: '2rem', lineHeight: '1.6' }}>
                                 Monty’s Joint is your local spot for good food, cold draught, and a relaxed atmosphere. From comfort classics to our new kids menu, we serve up dishes that hit the table hot. We believe in great food, cold beer, live music, and a place to feel at home. Come join us and see what makes us Thunder Bay's favourite neighbourhood gastropub.
                             </p>
-                            <Link to="/blog/welcome-to-montys-new-blog" className="btn btn-primary" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none', padding: '0.8rem 1.5rem', fontSize: '1rem', fontWeight: 'bold', textDecoration: 'none', borderRadius: '4px' }}>
+                            <Link to="/blog/welcome-to-montys-new-blog/" className="btn btn-primary" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none', padding: '0.8rem 1.5rem', fontSize: '1rem', fontWeight: 'bold', textDecoration: 'none', borderRadius: '4px' }}>
                                 Read Full Story
                             </Link>
                         </div>
@@ -156,7 +156,7 @@ const Home = () => {
                         <MotionSection delay={0.2}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'end', marginBottom: '2rem', flexWrap: 'wrap', gap: '1rem' }}>
                                 <h2 style={{ color: '#fff', fontSize: '2rem', margin: 0 }}>What's Happening at Monty's</h2>
-                                <Link to="/blog" className="btn-outline" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem' }}>View All News</Link>
+                                <Link to="/blog/" className="btn-outline" style={{ fontSize: '0.9rem', padding: '0.5rem 1rem' }}>View All News</Link>
                             </div>
 
                             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
@@ -202,7 +202,7 @@ const Home = () => {
                                 />
                                 <h3 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Monty's Cigars</h3>
                                 <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Premium selection available.</p>
-                                <Link to="/menu" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
+                                <Link to="/menu/" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
                             </div>
                             <div style={{ background: '#1a1a1a', padding: '1.5rem', borderRadius: '8px', border: '1px solid #333' }}>
                                 <img
@@ -215,7 +215,7 @@ const Home = () => {
                                 />
                                 <h3 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Buttermilk Chicken Sandwich</h3>
                                 <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Crispy buttermilk chicken breast.</p>
-                                <Link to="/menu" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
+                                <Link to="/menu/" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
                             </div>
                             <div style={{ background: '#1a1a1a', padding: '1.5rem', borderRadius: '8px', border: '1px solid #333' }}>
                                 <img
@@ -228,7 +228,7 @@ const Home = () => {
                                 />
                                 <h3 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Classic Poutine</h3>
                                 <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Golden fries, gravy, curds and mozzarella.</p>
-                                <Link to="/menu" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
+                                <Link to="/menu/" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
                             </div>
                         </div>
                         <div className="hero-actions" style={{ marginTop: '2rem' }}>
@@ -318,7 +318,7 @@ const Home = () => {
                             <p style={{ color: '#ccc', maxWidth: '600px', margin: '0 auto 2rem', fontSize: '1.1rem' }}>
                                 Get exclusive updates on live music, secret menu items, and a special treat on your birthday.
                             </p>
-                            <Link to="/birthday-club" className="btn btn-primary" style={{
+                            <Link to="/birthday-club/" className="btn btn-primary" style={{
                                 background: 'transparent',
                                 color: 'var(--color-yellow)',
                                 border: '1px solid var(--color-yellow)',

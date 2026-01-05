@@ -304,7 +304,7 @@ const Menu = () => {
                             <DietaryBadge type="V" /> Vegetarian
                             <DietaryBadge type="VE" /> Vegan
                         </div>
-                        <Link to="/contact" className="btn-outline" style={{ marginTop: '2rem', display: 'inline-block' }}>Contact Us</Link>
+                        <Link to="/contact/" className="btn-outline" style={{ marginTop: '2rem', display: 'inline-block' }}>Contact Us</Link>
                     </MotionSection>
                 </div>
 

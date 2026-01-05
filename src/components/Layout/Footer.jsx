@@ -74,15 +74,14 @@ const Footer = () => {
                 <section className="footer-section">
                     <h2 className="footer-title">Quick Links</h2>
                     <ul className="footer-links">
-                        <li><Link to="/menu">Menu</Link></li>
-                        <li><Link to="/lunch-menu">Lunch Menu</Link></li>
-                        <li><Link to="/promotions">Specials</Link></li>
-                        <li><Link to="/blog" className="footer-link">Blog</Link></li>
-                        <li><Link to="/birthday-club" className="footer-link">Birthday Club</Link></li>
-                        <li><Link to="/careers" className="footer-link">Careers</Link></li>
-                        <li><Link to="/contact" className="footer-link">Contact Us</Link></li>
-                        <li><Link to="/order">Order Online</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
+                        <li><Link to="/menu/">Menu</Link></li>
+                        <li><Link to="/lunch-menu/">Lunch Menu</Link></li>
+                        <li><Link to="/promotions/">Specials</Link></li>
+                        <li><Link to="/blog/" className="footer-link">Blog</Link></li>
+                        <li><Link to="/birthday-club/" className="footer-link">Birthday Club</Link></li>
+                        <li><Link to="/careers/" className="footer-link">Careers</Link></li>
+                        <li><Link to="/contact/" className="footer-link">Contact Us</Link></li>
+                        <li><Link to="/order/" className="footer-link">Order Online</Link></li>
                     </ul>
                 </section>
 
@@ -111,12 +110,12 @@ const Footer = () => {
             <div className="footer-bottom">
                 <p>&copy; {new Date().getFullYear()} Monty's Joint. All rights reserved.</p>
                 <div style={{ marginTop: '0.5rem', fontSize: '0.8rem' }}>
-                    <a href="/privacy-policy" style={{ color: '#999', marginRight: '1rem' }}>Privacy Policy</a>
-                    <a href="/terms-of-service" style={{ color: '#999', marginRight: '1rem' }}>Terms of Service</a>
-                    <Link to="/sitemap" style={{ color: '#999' }}>Sitemap</Link>
+                    <Link to="/privacy-policy/" style={{ color: '#999', marginRight: '1rem' }}>Privacy Policy</Link>
+                    <Link to="/terms-of-service/" style={{ color: '#999', marginRight: '1rem' }}>Terms of Service</Link>
+                    <Link to="/sitemap/" style={{ color: '#999' }}>Sitemap</Link>
                 </div>
             </div>
-        </footer >
+        </footer>
     );
 };
 

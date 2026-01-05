@@ -124,7 +124,7 @@ const LunchMenu = () => {
                         </h3>
                         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
                             <Link
-                                to="/menu"
+                                to="/menu/"
                                 style={{
                                     background: 'var(--color-yellow)',
                                     color: '#000',
@@ -141,7 +141,7 @@ const LunchMenu = () => {
                                 View Full Menu
                             </Link>
                             <Link
-                                to="/order"
+                                to="/order/"
                                 style={{
                                     background: 'transparent',
                                     color: '#fff',

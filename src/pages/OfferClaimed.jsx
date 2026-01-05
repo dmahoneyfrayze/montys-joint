@@ -87,7 +87,7 @@ const OfferClaimed = () => {
                             </a>
 
                             <Link
-                                to="/reservations"
+                                to="/reservations/"
                                 style={{
                                     display: 'block',
                                     padding: '1rem',
@@ -106,7 +106,7 @@ const OfferClaimed = () => {
                         <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid #333' }}>
                             <p style={{ color: '#888', marginBottom: '1rem' }}>Want exclusive updates on live music?</p>
                             <Link
-                                to="/birthday-club"
+                                to="/birthday-club/"
                                 style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}
                             >
                                 Join our VIP Club

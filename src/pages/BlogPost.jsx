@@ -64,7 +64,7 @@ const BlogPost = () => {
                 <div style={{ paddingTop: '100px', paddingBottom: '4rem', textAlign: 'center', minHeight: '60vh' }} className="container">
                     <h1 style={{ color: 'var(--color-yellow)', marginBottom: '1rem' }}>Post Not Found</h1>
                     <p style={{ color: '#ccc', marginBottom: '2rem' }}>The article you are looking for does not exist or has been moved.</p>
-                    <Link to="/blog" className="btn btn-primary" style={{ background: 'var(--color-yellow)', color: '#000', padding: '0.8rem 1.5rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold' }}>
+                    <Link to="/blog/" className="btn btn-primary" style={{ background: 'var(--color-yellow)', color: '#000', padding: '0.8rem 1.5rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold' }}>
                         Back to Blog
                     </Link>
                 </div>
@@ -121,7 +121,7 @@ const BlogPost = () => {
                 }}>
                     <div className="container">
                         <MotionSection>
-                            <Link to="/blog" style={{ color: 'var(--color-yellow)', textDecoration: 'none', marginBottom: '1rem', display: 'inline-block', fontWeight: 'bold' }}>
+                            <Link to="/blog/" style={{ color: 'var(--color-yellow)', textDecoration: 'none', marginBottom: '1rem', display: 'inline-block', fontWeight: 'bold' }}>
                                 &larr; Back to Blog
                             </Link>
                             <div style={{ marginBottom: '1rem' }}>
@@ -162,8 +162,8 @@ const BlogPost = () => {
                         <h3 style={{ color: 'var(--color-yellow)', marginBottom: '1rem' }}>Enjoyed this article?</h3>
                         <p style={{ color: '#ccc', marginBottom: '2rem' }}>Stop by Monty's Joint to experience it for yourself!</p>
                         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-                            <Link to="/menu" className="btn" style={{ background: '#fff', color: '#000', padding: '0.8rem 1.5rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold' }}>
-                                View Menu
+                            <Link to="/menu/" className="btn" style={{ background: '#fff', color: '#000', padding: '0.8rem 1.5rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold' }}>
+                                View Our Menu
                             </Link>
                             <a href="tel:18073430001" className="btn" style={{ background: 'var(--color-yellow)', color: '#000', padding: '0.8rem 1.5rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold' }} onClick={() => trackBookingStart('blog_post_cta')}>
                                 Book a Table

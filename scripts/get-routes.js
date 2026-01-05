@@ -4,19 +4,19 @@ export const RSS_URL = 'https://rss-link.com/feed/l8CVOHqx40wEE90Dx7g2?blogId=x7
 
 export const STATIC_ROUTES = [
     '/',
-    '/menu',
-    '/promotions',
-    '/reservations',
-    '/order',
-    '/contact',
-    '/blog',
-    '/birthday-club',
-    '/careers',
-    '/terms-of-service',
-    '/privacy-policy',
-    '/private-events',
-    '/thank-you',
-    '/offer-claimed'
+    '/menu/',
+    '/promotions/',
+    '/reservations/',
+    '/order/',
+    '/contact/',
+    '/blog/',
+    '/birthday-club/',
+    '/careers/',
+    '/terms-of-service/',
+    '/privacy-policy/',
+    '/private-events/',
+    '/thank-you/',
+    '/offer-claimed/'
 ];
 
 export const getBlogRoutes = async () => {
@@ -48,8 +48,8 @@ export const getBlogRoutes = async () => {
                 const title = titleMatch ? titleMatch[1] : 'Untitled Post';
 
                 posts.push({
-                    url: `/blog/${slug}`, // Relative URL for prerenderer matches
-                    fullUrl: `${BASE_URL}/blog/${slug}`, // Absolute URL for sitemap
+                    url: `/blog/${slug}/`, // Relative URL for prerenderer matches
+                    fullUrl: `${BASE_URL}/blog/${slug}/`, // Absolute URL for sitemap
                     title,
                     lastmod: date,
                     images: image ? [{ loc: image, title: title }] : []

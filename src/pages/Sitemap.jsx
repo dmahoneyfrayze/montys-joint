@@ -7,18 +7,18 @@ import MotionSection from '../components/UI/MotionSection';
 const Sitemap = () => {
     const links = [
         { name: 'Home', path: '/' },
-        { name: 'Menu', path: '/menu' },
-        { name: 'Specials & Events', path: '/promotions' },
-        { name: 'Private Events', path: '/private-events' },
-        { name: 'Christmas Party Packages', path: '/christmas-party' },
-        { name: 'Blog', path: '/blog' },
-        { name: 'Birthday Club', path: '/birthday-club' },
-        { name: 'Contact', path: '/contact' },
-        { name: 'Reservations', path: '/reservations' },
-        { name: 'Order Online', path: '/order' },
-        { name: 'Careers', path: '/careers' },
-        { name: 'Privacy Policy', path: '/privacy-policy' },
-        { name: 'Terms of Service', path: '/terms-of-service' },
+        { name: 'Menu', path: '/menu/' },
+        { name: 'Specials & Events', path: '/promotions/' },
+        { name: 'Private Events', path: '/private-events/' },
+        { name: 'Christmas Party Packages', path: '/christmas-party/' },
+        { name: 'Blog', path: '/blog/' },
+        { name: 'Birthday Club', path: '/birthday-club/' },
+        { name: 'Contact', path: '/contact/' },
+        { name: 'Reservations', path: '/reservations/' },
+        { name: 'Order Online', path: '/order/' },
+        { name: 'Careers', path: '/careers/' },
+        { name: 'Privacy Policy', path: '/privacy-policy/' },
+        { name: 'Terms of Service', path: '/terms-of-service/' },
     ];
 
     return (

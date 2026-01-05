@@ -19,12 +19,12 @@ const Hero = () => {
                     Great food, cold beer, live music, and a place to feel at home.
                 </p>
                 <div className="hero-actions">
-                    <Link to="/menu" className="btn" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none' }}>View Menu</Link>
+                    <Link to="/menu/" className="btn" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none' }}>View Menu</Link>
                     <a href="tel:18073430001" className="btn btn-outline" onClick={() => trackBookingStart('hero_cta')}>Book a Table</a>
                 </div>
 
                 <div style={{ marginTop: '1.5rem' }}>
-                    <Link to="/offer" className="btn" style={{
+                    <Link to="/offer/" className="btn" style={{
                         background: '#fff',
                         color: '#000',
                         border: 'none',

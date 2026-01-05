@@ -8,10 +8,8 @@ const SEO = ({ title, description, image, url, type = 'website', children }) => 
     const defaultDescription = "Monty's Joint is Thunder Bay's neighbourhood gastropub serving great food, the coldest draught, and a relaxed pub atmosphere.";
     const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
 
-    // Ensure URL is absolute and consistent (no trailing slash except for root)
-    const cleanUrl = url && url.endsWith('/') && url !== 'https://montysjoint.com/'
-        ? url.slice(0, -1)
-        : url;
+    // Ensure URL is absolute and consistent (enforce trailing slash)
+    const cleanUrl = url && !url.endsWith('/') ? `${url}/` : url;
 
     return (
         <Helmet>

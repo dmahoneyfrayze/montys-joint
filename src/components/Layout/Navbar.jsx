@@ -39,10 +39,10 @@ const Navbar = () => {
 
                 <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
 
-                    <Link to="/menu" className="nav-link">Menu</Link>
-                    <Link to="/promotions" className="nav-link">Specials</Link>
-                    <Link to="/private-events" className="nav-link">Private Events</Link>
-                    <Link to="/contact" className="nav-link">Contact</Link>
+                    <Link to="/menu/" className="nav-link">Menu</Link>
+                    <Link to="/promotions/" className="nav-link">Specials</Link>
+                    <Link to="/private-events/" className="nav-link">Private Events</Link>
+                    <Link to="/contact/" className="nav-link">Contact</Link>
 
                     {/* Mobile Only Call Button */}
                     <a href="tel:8073430001" className="nav-link mobile-call-link" style={{ display: 'none', alignItems: 'center', gap: '0.5rem' }}>
@@ -53,7 +53,7 @@ const Navbar = () => {
                     <a href="tel:18073430001" className="nav-btn btn" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none' }}>
                         Book Table
                     </a>
-                    <Link to="/order" className="nav-btn btn" style={{ background: 'transparent', border: '1px solid var(--color-yellow)', color: 'var(--color-yellow)' }}>
+                    <Link to="/order/" className="nav-btn btn" style={{ background: 'transparent', border: '1px solid var(--color-yellow)', color: 'var(--color-yellow)' }}>
                         Order Online
                     </Link>
                 </div>

@@ -71,7 +71,7 @@ const Blog = () => {
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '3rem' }}>
                         {filteredPosts.map((post, index) => (
                             <MotionSection key={post.id} delay={index * 0.1}>
-                                <Link to={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
+                                <Link to={`/blog/${post.slug}/`} style={{ textDecoration: 'none' }}>
                                     <article style={{ background: '#1a1a1a', borderRadius: '8px', overflow: 'hidden', border: '1px solid #333', height: '100%', display: 'flex', flexDirection: 'column', transition: 'transform 0.3s ease' }} className="blog-card">
                                         <div style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
                                             <img

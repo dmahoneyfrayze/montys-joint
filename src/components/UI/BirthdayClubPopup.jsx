@@ -3,14 +3,17 @@ import { X } from 'lucide-react';
 
 const BirthdayClubPopup = () => {
     const [isVisible, setIsVisible] = useState(false);
-    const [hasSeenPopup, setHasSeenPopup] = useState(() => {
-        if (typeof window !== 'undefined') {
-            return !!localStorage.getItem('montys_birthday_popup_seen');
-        }
-        return false;
-    });
+    const [hasSeenPopup, setHasSeenPopup] = useState(false);
+    const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
+        setIsClient(true);
+        const seen = localStorage.getItem('montys_birthday_popup_seen');
+        if (seen) setHasSeenPopup(true);
+    }, []);
+
+    useEffect(() => {
+        if (!isClient) return;
 
         const handleMouseLeave = (e) => {
             if (e.clientY <= 0 && !hasSeenPopup) {

@@ -37,7 +37,7 @@ const generateSitemap = async () => {
 
     const staticUrls = STATIC_ROUTES.map(route => {
         const pageData = {
-            url: `${BASE_URL}${route === '/' ? '/' : (route.endsWith('/') ? route.slice(0, -1) : route)}`,
+            url: `${BASE_URL}${route.endsWith('/') ? route : route + '/'}`,
             lastmod: new Date().toISOString().split('T')[0],
             changefreq: route === '/' ? 'daily' : 'weekly',
             priority: route === '/' ? 1.0 : 0.8,

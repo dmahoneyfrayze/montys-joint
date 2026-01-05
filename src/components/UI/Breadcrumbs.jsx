@@ -19,7 +19,7 @@ const Breadcrumbs = () => {
                     <Home size={16} />
                 </Link>
                 {pathnames.map((value, index) => {
-                    const to = `/${pathnames.slice(0, index + 1).join('/')}`;
+                    const to = `/${pathnames.slice(0, index + 1).join('/')}/`;
                     const isLast = index === pathnames.length - 1;
 
                     return (
