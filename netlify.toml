@@ -4,19 +4,37 @@
 
 [[redirects]]
   from = "https://blog.montysjoint.com/post/*"
-  to = "/blog/:splat"
+  to = "https://montysjoint.com/blog/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://blog.montysjoint.com/post/*"
+  to = "https://montysjoint.com/blog/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://blog.montysjoint.com/blog/*"
-  to = "/blog/:splat"
+  to = "https://montysjoint.com/blog/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://blog.montysjoint.com/blog/*"
+  to = "https://montysjoint.com/blog/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://blog.montysjoint.com/*"
-  to = "/blog/:splat"
+  to = "https://montysjoint.com/blog/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://blog.montysjoint.com/*"
+  to = "https://montysjoint.com/blog/:splat"
   status = 301
   force = true
 
