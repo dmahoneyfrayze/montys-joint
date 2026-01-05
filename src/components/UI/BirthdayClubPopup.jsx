@@ -59,6 +59,7 @@ const BirthdayClubPopup = () => {
             }}>
                 <button
                     onClick={closePopup}
+                    aria-label="Close popup"
                     style={{
                         position: 'absolute',
                         top: '1rem',

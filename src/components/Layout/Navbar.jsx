@@ -30,7 +30,9 @@ const Navbar = () => {
                         <img
                             src="/assets/logo-white-official.webp"
                             alt="Monty's Joint"
-                            style={{ maxHeight: '60px' }}
+                            width="176"
+                            height="60"
+                            style={{ height: '60px', width: 'auto' }}
                         />
                     </Link>
                 </div>

@@ -46,9 +46,7 @@ export const fetchBlogPosts = async () => {
 
             // Description often contains HTML, we might want to strip it for the excerpt
             const descriptionHtml = item.querySelector('description')?.textContent || '';
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = descriptionHtml;
-            const excerpt = tempDiv.textContent.substring(0, 150) + '...';
+            const excerpt = descriptionHtml.replace(/<[^>]*>/g, '').substring(0, 150) + '...';
 
             // Content might be in content:encoded or just description if loadContent=true
             // The feed sample shows content in description mostly for now, but let's check both
@@ -82,7 +80,7 @@ export const fetchBlogPosts = async () => {
             const category = item.querySelector('category')?.textContent || 'Community';
 
             // Read Time Calculation
-            const textContent = tempDiv.textContent || '';
+            const textContent = descriptionHtml.replace(/<[^>]*>/g, '');
             const wordCount = textContent.split(/\s+/).length;
             const readTime = Math.ceil(wordCount / 200) + ' min read';
 

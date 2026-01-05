@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="container footer-container">
                 <div className="footer-section">
                     <Link to="/">
-                        <img src="/assets/logo-white-official.webp" alt="Monty's Joint" style={{ maxWidth: '180px', marginBottom: '1rem' }} />
+                        <img src="/assets/logo-white-official.webp" alt="Monty's Joint" width="180" height="62" style={{ maxWidth: '180px', height: 'auto', marginBottom: '1rem' }} />
                     </Link>
                     <p className="footer-tagline">Big Flavour, Bigger Impact.</p>
                     <div className="social-links">
