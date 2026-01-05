@@ -5,10 +5,16 @@ import { getOptimizedImage } from '../../utils/rss';
 import './Hero.css';
 
 const Hero = () => {
-    const heroBg = getOptimizedImage('/assets/venue-hero.webp', 1600);
-
     return (
-        <section className="hero" style={{ backgroundImage: `url(${heroBg})` }}>
+        <section className="hero">
+            <img
+                src="/.netlify/images?url=%2Fassets%2Fvenue-hero.webp&w=800&q=80"
+                srcSet="/.netlify/images?url=%2Fassets%2Fvenue-hero.webp&w=800&q=80 800w, /.netlify/images?url=%2Fassets%2Fvenue-hero.webp&w=1600&q=80 1600w"
+                sizes="100vw"
+                alt="Monty's Joint Venue"
+                className="hero-bg-img"
+                fetchPriority="high"
+            />
             <div className="hero-overlay"></div>
             <div className="container hero-content">
                 <h1 className="hero-title">

@@ -6,6 +6,8 @@
   <link rel="icon" href="/favicon.jpg" />
   <link rel="manifest" href="/manifest.json" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFBF00" />
+  <link rel="apple-touch-icon" href="/assets/pwa-icon-192.webp" />
 
   <!-- Primary Meta Tags -->
   <title>Monty's Joint | Gastropub & Local Restaurant In Thunder Bay</title>
@@ -23,8 +25,9 @@
   <link rel="preconnect" href="https://www.googletagmanager.com">
   <link rel="preconnect" href="https://connect.facebook.net">
 
-  <link rel="preload" as="image" href="/.netlify/images?url=%2Fassets%2Fvenue-hero.webp&w=1600&q=80"
-    fetchpriority="high" />
+  <link rel="preload" as="image" href="/.netlify/images?url=%2Fassets%2Fvenue-hero.webp&w=800&q=80"
+    imagesrcset="/.netlify/images?url=%2Fassets%2Fvenue-hero.webp&w=800&q=80 800w, /.netlify/images?url=%2Fassets%2Fvenue-hero.webp&w=1600&q=80 1600w"
+    imagesizes="(max-width: 800px) 800px, 1600px" fetchpriority="high" />
 
   <link href="https://fonts.bunny.net/css?family=bebas-neue:400|roboto:300,400,700&display=swap" rel="stylesheet" />
 
@@ -108,30 +111,36 @@
     }
   </style>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJPJFF2GET"></script>
+  <!-- Global Scripts (Deferred) -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-HJPJFF2GET');
-  </script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        // Google Tag Manager
+        const gaScript = document.createElement('script');
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-HJPJFF2GET';
+        gaScript.async = true;
+        document.head.appendChild(gaScript);
 
-  <!-- Meta Pixel Code -->
-  <script>
-    !function (f, b, e, v, n, t, s) {
-      if (f.fbq) return; n = f.fbq = function () {
-        n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-      n.queue = []; t = b.createElement(e); t.async = !0;
-      t.src = v; s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '33206823375583265');
-    fbq('track', 'PageView');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-HJPJFF2GET');
+
+        // Meta Pixel
+        !function (f, b, e, v, n, t, s) {
+          if (f.fbq) return; n = f.fbq = function () {
+            n.callMethod ?
+              n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          };
+          if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+          n.queue = []; t = b.createElement(e); t.async = !0;
+          t.src = v; s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s)
+        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '33206823375583265');
+        fbq('track', 'PageView');
+      }, 3000); // 3-second delay
+    });
   </script>
 
   <!-- Open Graph / Facebook -->
