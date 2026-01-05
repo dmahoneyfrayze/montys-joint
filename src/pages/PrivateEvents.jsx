@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import SEO from '../components/SEO/SEO';
 import Layout from '../components/Layout/Layout';
 import MotionSection from '../components/UI/MotionSection';
+import { fetchBlogPosts, getOptimizedImage } from '../utils/rss';
 import { Check, Star, Users, Music, Wine, Mic, MapPin, Award, ChevronDown, ChevronUp } from 'lucide-react';
 
 const DietaryBadge = ({ type }) => {

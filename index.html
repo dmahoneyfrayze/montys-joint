@@ -30,7 +30,16 @@
   <meta name="language" content="English" />
   <meta http-equiv="content-language" content="en-CA" />
 
-  <link rel="preload" as="image" href="/assets/venue-hero.webp" />
+  <!-- Performance Optimizations -->
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link rel="preconnect" href="https://images.leadconnectorhq.com">
+  <link rel="preconnect" href="https://beta.leadconnectorhq.com">
+  <link rel="preconnect" href="https://services.leadconnectorhq.com">
+  <link rel="dns-prefetch" href="https://rss-link.com">
+
+  <link rel="preload" as="image" href="/assets/venue-hero.webp" fetchpriority="high" />
+
+  <link href="https://fonts.bunny.net/css?family=inter:400,600,700|outfit:600,700&display=swap" rel="stylesheet" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJPJFF2GET"></script>

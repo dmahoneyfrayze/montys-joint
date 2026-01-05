@@ -53,8 +53,8 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="footer-section">
-                    <h3 className="footer-title">Contact</h3>
+                <section className="footer-section">
+                    <h2 className="footer-title">Contact</h2>
                     <ul className="footer-contact">
                         <li>
                             <MapPin size={18} className="icon" />
@@ -69,10 +69,10 @@ const Footer = () => {
                             <a href="mailto:montysjoint@icloud.com" className="footer-link-text">montysjoint@icloud.com</a>
                         </li>
                     </ul>
-                </div>
+                </section>
 
-                <div className="footer-section">
-                    <h3 className="footer-title">Quick Links</h3>
+                <section className="footer-section">
+                    <h2 className="footer-title">Quick Links</h2>
                     <ul className="footer-links">
                         <li><Link to="/menu">Menu</Link></li>
                         <li><Link to="/lunch-menu">Lunch Menu</Link></li>
@@ -84,10 +84,10 @@ const Footer = () => {
                         <li><Link to="/order">Order Online</Link></li>
                         <li><Link to="/contact">Contact</Link></li>
                     </ul>
-                </div>
+                </section>
 
-                <div className="footer-section">
-                    <h3 className="footer-title">Hours</h3>
+                <section className="footer-section">
+                    <h2 className="footer-title">Hours</h2>
                     <ul className="footer-hours">
                         <li>
                             <span className="day">Mon:</span>
@@ -106,17 +106,17 @@ const Footer = () => {
                             <span className="time">Closed</span>
                         </li>
                     </ul>
-                </div>
+                </section>
             </div>
             <div className="footer-bottom">
                 <p>&copy; {new Date().getFullYear()} Monty's Joint. All rights reserved.</p>
                 <div style={{ marginTop: '0.5rem', fontSize: '0.8rem' }}>
-                    <a href="/privacy-policy" style={{ color: '#666', marginRight: '1rem' }}>Privacy Policy</a>
-                    <a href="/terms-of-service" style={{ color: '#666', marginRight: '1rem' }}>Terms of Service</a>
-                    <Link to="/sitemap" style={{ color: '#666' }}>Sitemap</Link>
+                    <a href="/privacy-policy" style={{ color: '#999', marginRight: '1rem' }}>Privacy Policy</a>
+                    <a href="/terms-of-service" style={{ color: '#999', marginRight: '1rem' }}>Terms of Service</a>
+                    <Link to="/sitemap" style={{ color: '#999' }}>Sitemap</Link>
                 </div>
             </div>
-        </footer>
+        </footer >
     );
 };
 

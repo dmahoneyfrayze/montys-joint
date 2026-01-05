@@ -5,7 +5,7 @@ import { getOptimizedImage } from '../../utils/rss';
 import './Hero.css';
 
 const Hero = () => {
-    const heroBg = getOptimizedImage('/assets/venue-hero.webp', 1920);
+    const heroBg = getOptimizedImage('/assets/venue-hero.webp', 1600);
 
     return (
         <section className="hero" style={{ backgroundImage: `url(${heroBg})` }}>

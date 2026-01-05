@@ -200,7 +200,7 @@ const Home = () => {
                                     height="200"
                                     loading="lazy"
                                 />
-                                <h4 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Monty's Cigars</h4>
+                                <h3 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Monty's Cigars</h3>
                                 <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Premium selection available.</p>
                                 <Link to="/menu" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
                             </div>
@@ -213,7 +213,7 @@ const Home = () => {
                                     height="200"
                                     loading="lazy"
                                 />
-                                <h4 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Buttermilk Chicken Sandwich</h4>
+                                <h3 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Buttermilk Chicken Sandwich</h3>
                                 <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Crispy buttermilk chicken breast.</p>
                                 <Link to="/menu" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
                             </div>
@@ -226,7 +226,7 @@ const Home = () => {
                                     height="200"
                                     loading="lazy"
                                 />
-                                <h4 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Classic Poutine</h4>
+                                <h3 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Classic Poutine</h3>
                                 <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Golden fries, gravy, curds and mozzarella.</p>
                                 <Link to="/menu" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
                             </div>
@@ -244,12 +244,12 @@ const Home = () => {
                     <MotionSection delay={0.2}>
                         <h2 style={{ color: '#fff', marginBottom: '2rem' }}>Gallery</h2>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
-                            <img src={getOptimizedImage("/assets/montys-interior-live-music.webp", 600)} alt="Live Music at Monty's" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} width="600" height="250" loading="lazy" />
-                            <img src={getOptimizedImage("/assets/montys-interior-venue-2.webp", 600)} alt="Monty's Venue Interior" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} width="600" height="250" loading="lazy" />
-                            <img src={getOptimizedImage("/assets/montys-interior-live-sports.webp", 600)} alt="Live Sports at Monty's" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} width="600" height="250" loading="lazy" />
-                            <img src={getOptimizedImage("/assets/montys-interior-gallery-6.webp", 600)} alt="Monty's Atmosphere" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} width="600" height="250" loading="lazy" />
-                            <img src={getOptimizedImage("/assets/montys-interior-food-3.webp", 600)} alt="Dining at Monty's" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} width="600" height="250" loading="lazy" />
-                            <img src={getOptimizedImage("/assets/montys-interior-food-1.webp", 600)} alt="Monty's Interior Detail" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} width="600" height="250" loading="lazy" />
+                            <img src={getOptimizedImage("/assets/montys-interior-live-music.webp", 400)} alt="Live Music at Monty's" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} width="400" height="250" loading="lazy" />
+                            <img src={getOptimizedImage("/assets/montys-interior-venue-2.webp", 400)} alt="Monty's Venue Interior" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} width="400" height="250" loading="lazy" />
+                            <img src={getOptimizedImage("/assets/montys-interior-live-sports.webp", 400)} alt="Live Sports at Monty's" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} width="400" height="250" loading="lazy" />
+                            <img src={getOptimizedImage("/assets/montys-interior-gallery-6.webp", 400)} alt="Monty's Atmosphere" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} width="400" height="250" loading="lazy" />
+                            <img src={getOptimizedImage("/assets/montys-interior-food-3.webp", 400)} alt="Dining at Monty's" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} width="400" height="250" loading="lazy" />
+                            <img src={getOptimizedImage("/assets/montys-interior-food-1.webp", 400)} alt="Monty's Interior Detail" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} width="400" height="250" loading="lazy" />
                         </div>
                     </MotionSection>
                 </div>
@@ -339,7 +339,7 @@ const Home = () => {
                 <div id="private-events" style={{ marginBottom: '4rem' }}>
                     <MotionSection delay={0.25}>
                         <div style={{
-                            background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/assets/private-events-landing.webp)',
+                            background: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${getOptimizedImage('/assets/private-events-landing.webp', 1200)})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             padding: '4rem 2rem',
