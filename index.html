@@ -31,16 +31,99 @@
   <meta http-equiv="content-language" content="en-CA" />
 
   <!-- Performance Optimizations -->
-  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
   <link rel="preconnect" href="https://images.leadconnectorhq.com">
   <link rel="preconnect" href="https://beta.leadconnectorhq.com">
   <link rel="preconnect" href="https://services.leadconnectorhq.com">
   <link rel="dns-prefetch" href="https://rss-link.com">
+  <link rel="preconnect" href="https://go.montysjoint.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://connect.facebook.net">
 
   <link rel="preload" as="image" href="/.netlify/images?url=%2Fassets%2Fvenue-hero.webp&w=1600&q=80"
     fetchpriority="high" />
 
-  <link href="https://fonts.bunny.net/css?family=inter:400,600,700|outfit:600,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.bunny.net/css?family=bebas-neue:400|roboto:300,400,700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --color-black: #000000;
+      --color-yellow: #FFBF00;
+      --color-white: #FFFFFF;
+      --color-dark-grey: #121212;
+      --color-light-grey: #f4f4f4;
+      --font-primary: 'Bebas Neue', sans-serif;
+      --font-secondary: 'Roboto', sans-serif;
+      --spacing-xs: 0.5rem;
+      --spacing-sm: 1rem;
+      --spacing-md: 2rem;
+      --spacing-lg: 4rem;
+      --spacing-xl: 8rem;
+      --transition-fast: 0.2s ease;
+      --transition-medium: 0.4s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-secondary);
+      background-color: var(--color-black);
+      color: var(--color-white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 1.1;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color var(--transition-fast);
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-sm);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 32px;
+      font-family: var(--font-primary);
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background-color: var(--color-yellow);
+      color: var(--color-black);
+      border: 2px solid var(--color-yellow);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+  </style>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJPJFF2GET"></script>
