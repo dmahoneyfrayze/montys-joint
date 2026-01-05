@@ -162,7 +162,7 @@ const PrivateEvents = () => {
 
             {/* Hero Section */}
             <div style={{
-                background: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(/assets/montys-interior-live-music.webp)',
+                background: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${getOptimizedImage('/assets/montys-interior-live-music.webp', 1920)})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 padding: '150px 2rem 100px',
@@ -224,7 +224,7 @@ const PrivateEvents = () => {
                             </div>
                         </div>
                         <div>
-                            <img src="/assets/montys-interior-venue-2.webp" alt="Monty's Joint Interior" style={{ width: '100%', borderRadius: '8px', border: '1px solid #333' }} />
+                            <img src={getOptimizedImage("/assets/montys-interior-venue-2.webp", 800)} alt="Monty's Joint Interior" style={{ width: '100%', borderRadius: '8px', border: '1px solid #333' }} width="800" height="600" loading="lazy" />
                         </div>
                     </div>
                 </MotionSection>
@@ -281,8 +281,8 @@ const PrivateEvents = () => {
                                                 {pkg.ctaText || 'View Details'}
                                             </a>
                                         ) : (
-                                            <a href="#inquiry-form" className="btn" style={{ background: 'var(--color-yellow)', color: '#000', textAlign: 'center', padding: '1rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold', marginTop: '2rem' }}>
-                                                Check Availability
+                                            <a href="tel:18073430001" className="btn" style={{ background: 'var(--color-yellow)', color: '#000', textAlign: 'center', padding: '1rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold', marginTop: '2rem' }}>
+                                                Call to Book
                                             </a>
                                         )
                                     }
@@ -328,12 +328,12 @@ const PrivateEvents = () => {
                 <MotionSection delay={0.4}>
                     <h2 style={{ textAlign: 'center', fontSize: '2.5rem', color: '#fff', marginBottom: '3rem' }}>Event Gallery</h2>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem', marginBottom: '6rem' }}>
-                        <img src="/assets/montys-interior-live-music.webp" alt="Live Music Atmosphere" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
-                        <img src="/assets/montys-interior-venue-2.webp" alt="Venue Interior" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
-                        <img src="/assets/montys-interior-live-sports.webp" alt="Live Sports" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
-                        <img src="/assets/montys-interior-gallery-6.webp" alt="Dining Atmosphere" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
-                        <img src="/assets/venue-private.webp" alt="Private Event Setup" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
-                        <img src="/assets/montys-interior-story.webp" alt="Venue Details" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} />
+                        <img src={getOptimizedImage("/assets/montys-interior-live-music.webp", 600)} alt="Live Music Atmosphere" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} width="600" height="200" loading="lazy" />
+                        <img src={getOptimizedImage("/assets/montys-interior-venue-2.webp", 600)} alt="Venue Interior" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} width="600" height="200" loading="lazy" />
+                        <img src={getOptimizedImage("/assets/montys-interior-live-sports.webp", 600)} alt="Live Sports" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} width="600" height="200" loading="lazy" />
+                        <img src={getOptimizedImage("/assets/montys-interior-gallery-6.webp", 600)} alt="Dining Atmosphere" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} width="600" height="200" loading="lazy" />
+                        <img src={getOptimizedImage("/assets/venue-private.webp", 600)} alt="Private Event Setup" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} width="600" height="200" loading="lazy" />
+                        <img src={getOptimizedImage("/assets/montys-interior-story.webp", 600)} alt="Venue Details" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px' }} width="600" height="200" loading="lazy" />
                     </div>
                 </MotionSection>
 

@@ -5,6 +5,7 @@ import { Utensils, Star, Sandwich, Salad, Drumstick, Pizza } from 'lucide-react'
 import MotionSection from '../components/UI/MotionSection';
 import Layout from '../components/Layout/Layout';
 import { trackMenuView, trackTakeoutClick, trackCallClick } from '../utils/tracking';
+import { getOptimizedImage } from '../utils/rss';
 import './Menu.css';
 
 const DietaryBadge = ({ type }) => {
@@ -255,7 +256,7 @@ const Menu = () => {
                                         {category.items.map((item, idx) => (
                                             <div key={idx} className="menu-item-card">
                                                 {item.image && (
-                                                    <img src={item.image} alt={item.name} loading="lazy" className="menu-item-image" />
+                                                    <img src={getOptimizedImage(item.image, 600)} alt={item.name} loading="lazy" className="menu-item-image" width="600" height="400" />
                                                 )}
                                                 <div className="menu-item-content">
                                                     <div className="menu-item-header">

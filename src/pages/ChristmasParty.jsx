@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import SEO from '../components/SEO/SEO';
 import Layout from '../components/Layout/Layout';
 import MotionSection from '../components/UI/MotionSection';
+import { getOptimizedImage } from '../utils/rss';
 import { Check, Star, Wine, Music, Calendar } from 'lucide-react';
 
 const ChristmasParty = () => {
@@ -226,7 +227,7 @@ const ChristmasParty = () => {
                             </a>
                         </div>
                         <div>
-                            <img src="/assets/montys-interior-venue-2.webp" alt="Armani's Nightclub" style={{ width: '100%', borderRadius: '8px', border: '1px solid #333' }} />
+                            <img src={getOptimizedImage("/assets/montys-interior-venue-2.webp", 800)} alt="Armani's Nightclub" style={{ width: '100%', borderRadius: '8px', border: '1px solid #333' }} width="800" height="600" loading="lazy" />
                         </div>
                     </div>
                 </MotionSection>

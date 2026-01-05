@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SEO from '../components/SEO/SEO';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout/Layout';
-import { fetchBlogPosts } from '../utils/rss';
+import { fetchBlogPosts, getOptimizedImage } from '../utils/rss';
 import MotionSection from '../components/UI/MotionSection';
 
 const Blog = () => {
@@ -74,7 +74,14 @@ const Blog = () => {
                                 <Link to={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
                                     <article style={{ background: '#1a1a1a', borderRadius: '8px', overflow: 'hidden', border: '1px solid #333', height: '100%', display: 'flex', flexDirection: 'column', transition: 'transform 0.3s ease' }} className="blog-card">
                                         <div style={{ height: '200px', overflow: 'hidden', position: 'relative' }}>
-                                            <img src={post.image} alt={post.title} style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }} />
+                                            <img
+                                                src={getOptimizedImage(post.image, 600)}
+                                                alt={post.title}
+                                                style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.5s ease' }}
+                                                width="600"
+                                                height="400"
+                                                loading={index < 3 ? "eager" : "lazy"}
+                                            />
                                             <span style={{ position: 'absolute', top: '1rem', right: '1rem', background: 'var(--color-yellow)', color: '#000', padding: '0.25rem 0.75rem', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 'bold' }}>
                                                 {post.category}
                                             </span>

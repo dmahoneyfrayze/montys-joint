@@ -6,9 +6,12 @@
  * @returns {string} - Optimized URL
  */
 export const getOptimizedImage = (url, width = 800, quality = 80) => {
-    if (!url || url.startsWith('/assets')) return url;
-    // Use Netlify Image CDN for remote images
+    if (!url) return url;
+    // Use Netlify Image CDN for remote images and local assets
     if (url.startsWith('http') && !url.includes('montysjoint.com')) {
+        return `/.netlify/images?url=${encodeURIComponent(url)}&w=${width}&q=${quality}`;
+    }
+    if (url.startsWith('/assets')) {
         return `/.netlify/images?url=${encodeURIComponent(url)}&w=${width}&q=${quality}`;
     }
     return url;

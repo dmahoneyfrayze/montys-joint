@@ -1,0 +1,22 @@
+{
+    "name": "Monty's Joint Gastropub",
+    "short_name": "Monty's Joint",
+    "description": "Thunder Bay's neighbourhood gastropub serving big flavours and community vibes.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#111111",
+    "theme_color": "#FFC107",
+    "icons": [
+        {
+            "src": "/favicon.webp",
+            "sizes": "192x192",
+            "type": "image/webp",
+            "purpose": "any"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ]
+}

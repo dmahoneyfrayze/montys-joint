@@ -48,9 +48,9 @@ const Navbar = () => {
                     </a>
                 </div>
                 <div className="navbar-actions" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                    <Link to="/reservations" className="nav-btn btn" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none' }}>
+                    <a href="tel:18073430001" className="nav-btn btn" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none' }}>
                         Book Table
-                    </Link>
+                    </a>
                     <Link to="/order" className="nav-btn btn" style={{ background: 'transparent', border: '1px solid var(--color-yellow)', color: 'var(--color-yellow)' }}>
                         Order Online
                     </Link>

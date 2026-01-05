@@ -3,6 +3,7 @@ import SEO from '../components/SEO/SEO';
 import { Link } from 'react-router-dom';
 import Layout from '../components/Layout/Layout';
 import MotionSection from '../components/UI/MotionSection';
+import { getOptimizedImage } from '../utils/rss';
 
 const CountdownTimer = ({ targetDate }) => {
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
@@ -120,7 +121,7 @@ const Promotions = () => {
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', marginBottom: '4rem' }}>
                         {recurringSpecials.map((special, index) => (
                             <div key={index} style={{ background: '#1a1a1a', borderRadius: '8px', overflow: 'hidden', border: '1px solid #333' }}>
-                                <img src={special.image} alt={special.title} style={{ width: '100%', height: '200px', objectFit: 'cover' }} />
+                                <img src={getOptimizedImage(special.image, 600)} alt={special.title} style={{ width: '100%', height: '200px', objectFit: 'cover' }} width="600" height="200" loading="lazy" />
                                 <div style={{ padding: '1.5rem' }}>
                                     <h3 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>{special.title}</h3>
                                     <p style={{ color: '#fff', fontWeight: 'bold', marginBottom: '0.5rem' }}>{special.day} • {special.time}</p>
@@ -177,9 +178,9 @@ const Promotions = () => {
                         <div style={{ columnCount: 3, columnGap: '1rem' }}>
                             {pastSpecials.map((special, index) => (
                                 <div key={index} style={{ breakInside: 'avoid', marginBottom: '1rem', background: '#1a1a1a', borderRadius: '8px', overflow: 'hidden', border: '1px solid #333' }}>
-                                    <img src={special.image} alt={special.title} style={{ width: '100%', display: 'block' }} />
+                                    <img src={getOptimizedImage(special.image, 500)} alt={special.title} style={{ width: '100%', display: 'block' }} width="500" height="300" loading="lazy" />
                                     <div style={{ padding: '1rem' }}>
-                                        <h4 style={{ color: '#fff', marginBottom: '0.5rem' }}>{special.title}</h4>
+                                        <h3 style={{ color: '#fff', marginBottom: '0.5rem', fontSize: '1.2rem' }}>{special.title}</h3>
                                         <p style={{ fontSize: '0.8rem', color: '#888', marginBottom: '0.5rem' }}>{special.date}</p>
                                         <p style={{ fontSize: '0.9rem', color: '#ccc' }}>{special.description}</p>
                                     </div>

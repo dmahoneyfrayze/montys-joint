@@ -78,7 +78,7 @@ const BlogPost = () => {
                 title={post.title}
                 description={post.excerpt}
                 url={`https://montysjoint.com/blog/${post.slug}/`}
-                image={post.image}
+                image={getOptimizedImage(post.rawImage || post.image, 1200)}
                 type="article"
             >
                 <script type="application/ld+json">
@@ -165,9 +165,9 @@ const BlogPost = () => {
                             <Link to="/menu" className="btn" style={{ background: '#fff', color: '#000', padding: '0.8rem 1.5rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold' }}>
                                 View Menu
                             </Link>
-                            <Link to="/reservations" className="btn" style={{ background: 'var(--color-yellow)', color: '#000', padding: '0.8rem 1.5rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold' }}>
+                            <a href="tel:18073430001" className="btn" style={{ background: 'var(--color-yellow)', color: '#000', padding: '0.8rem 1.5rem', borderRadius: '4px', textDecoration: 'none', fontWeight: 'bold' }} onClick={() => trackBookingStart('blog_post_cta')}>
                                 Book a Table
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -181,7 +181,14 @@ const BlogPost = () => {
                                 <Link key={related.id} to={`/blog/${related.slug}`} style={{ textDecoration: 'none' }}>
                                     <div style={{ background: '#1a1a1a', borderRadius: '8px', overflow: 'hidden', border: '1px solid #333', height: '100%', display: 'flex', flexDirection: 'column' }}>
                                         <div style={{ height: '200px', overflow: 'hidden' }}>
-                                            <img src={related.image} alt={related.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                            <img
+                                                src={getOptimizedImage(related.image, 600)}
+                                                alt={related.title}
+                                                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                                width="600"
+                                                height="400"
+                                                loading="lazy"
+                                            />
                                         </div>
                                         <div style={{ padding: '1.5rem', flex: 1 }}>
                                             <div style={{ color: 'var(--color-yellow)', fontSize: '0.8rem', marginBottom: '0.5rem' }}>{related.category}</div>

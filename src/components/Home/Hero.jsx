@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { trackBookingStart } from '../../utils/tracking';
+import { getOptimizedImage } from '../../utils/rss';
 import './Hero.css';
 
 const Hero = () => {
+    const heroBg = getOptimizedImage('/assets/venue-hero.webp', 1920);
+
     return (
-        <section className="hero">
+        <section className="hero" style={{ backgroundImage: `url(${heroBg})` }}>
             <div className="hero-overlay"></div>
             <div className="container hero-content">
                 <h1 className="hero-title">
@@ -17,7 +20,7 @@ const Hero = () => {
                 </p>
                 <div className="hero-actions">
                     <Link to="/menu" className="btn" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none' }}>View Menu</Link>
-                    <a href="https://go.montysjoint.com/widget/booking" target="_blank" rel="noopener noreferrer" className="btn btn-outline" onClick={() => trackBookingStart('hero_cta')}>Book a Table</a>
+                    <a href="tel:18073430001" className="btn btn-outline" onClick={() => trackBookingStart('hero_cta')}>Book a Table</a>
                 </div>
 
                 <div style={{ marginTop: '1.5rem' }}>

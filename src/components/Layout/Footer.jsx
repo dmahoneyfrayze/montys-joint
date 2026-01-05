@@ -36,6 +36,7 @@ const Footer = () => {
                             />
                             <button
                                 type="submit"
+                                aria-label="Subscribe to newsletter"
                                 style={{
                                     background: 'var(--color-yellow)',
                                     color: '#000',
@@ -57,7 +58,7 @@ const Footer = () => {
                     <ul className="footer-contact">
                         <li>
                             <MapPin size={18} className="icon" />
-                            <span>513 Victoria Ave E, Thunder Bay, ON P7C 1A8</span>
+                            <a href="https://maps.app.goo.gl/HZXoUYCxSpnzfn5L8" target="_blank" rel="noopener noreferrer" className="footer-link-text">513 Victoria Ave E, Thunder Bay, ON P7C 1A8</a>
                         </li>
                         <li>
                             <Phone size={18} className="icon" />

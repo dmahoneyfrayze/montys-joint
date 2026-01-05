@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Layout from '../components/Layout/Layout';
 import Hero from '../components/Home/Hero';
 import MotionSection from '../components/UI/MotionSection';
-import { fetchBlogPosts } from '../utils/rss';
+import { fetchBlogPosts, getOptimizedImage } from '../utils/rss';
 import { trackCallClick, trackBookingStart, trackTakeoutClick } from '../utils/tracking';
 import './Home.css';
 
@@ -128,7 +128,13 @@ const Home = () => {
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center', textAlign: 'left', marginBottom: '4rem' }}>
                         <div>
-                            <img src="/assets/montys-exterior.webp" alt="Monty's Joint Gastropub Exterior in Thunder Bay" style={{ width: '100%', borderRadius: '8px', border: '1px solid #333' }} />
+                            <img
+                                src={getOptimizedImage("/assets/montys-exterior.webp", 800)}
+                                alt="Monty's Joint Gastropub Exterior in Thunder Bay"
+                                style={{ width: '100%', borderRadius: '8px', border: '1px solid #333' }}
+                                width="800"
+                                height="450"
+                            />
                         </div>
                         <div>
                             <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'var(--color-yellow)' }}>
@@ -158,11 +164,18 @@ const Home = () => {
                                     <Link key={post.id} to={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
                                         <div style={{ background: '#1a1a1a', borderRadius: '8px', overflow: 'hidden', border: '1px solid #333', height: '100%', transition: 'transform 0.3s ease' }} className="blog-card-home">
                                             <div style={{ height: '200px', overflow: 'hidden' }}>
-                                                <img src={post.image} alt={`Blog post: ${post.title}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                                <img
+                                                    src={getOptimizedImage(post.image, 600)}
+                                                    alt={`Blog post: ${post.title}`}
+                                                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                                    width="600"
+                                                    height="400"
+                                                    loading="lazy"
+                                                />
                                             </div>
                                             <div style={{ padding: '1.5rem' }}>
                                                 <p style={{ color: 'var(--color-yellow)', fontSize: '0.85rem', marginBottom: '0.5rem' }}>{post.date}</p>
-                                                <h4 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '0.5rem', lineHeight: '1.4' }}>{post.title}</h4>
+                                                <h3 style={{ color: '#fff', fontSize: '1.2rem', marginBottom: '0.5rem', lineHeight: '1.4' }}>{post.title}</h3>
                                                 <p style={{ color: '#ccc', fontSize: '0.9rem', display: '-webkit-box', WebkitLineClamp: '2', WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>{post.excerpt}</p>
                                             </div>
                                         </div>
@@ -176,31 +189,52 @@ const Home = () => {
                 {/* Menu Highlights */}
                 <div style={{ marginBottom: '4rem' }}>
                     <MotionSection delay={0.2}>
-                        <h3 style={{ color: '#fff', marginBottom: '2rem' }}>Guest Favourites</h3>
+                        <h2 style={{ color: '#fff', marginBottom: '2rem' }}>Guest Favourites</h2>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
                             <div style={{ background: '#1a1a1a', padding: '1.5rem', borderRadius: '8px', border: '1px solid #333' }}>
-                                <img src="/assets/montys-cigars.webp" alt="Monty's Cigars" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }} width="800" height="200" loading="lazy" />
+                                <img
+                                    src={getOptimizedImage("/assets/montys-cigars.webp", 500)}
+                                    alt="Monty's Cigars"
+                                    style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }}
+                                    width="500"
+                                    height="200"
+                                    loading="lazy"
+                                />
                                 <h4 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Monty's Cigars</h4>
                                 <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Premium selection available.</p>
                                 <Link to="/menu" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
                             </div>
                             <div style={{ background: '#1a1a1a', padding: '1.5rem', borderRadius: '8px', border: '1px solid #333' }}>
-                                <img src="/assets/buttermilk-chicken.webp" alt="Buttermilk Chicken Sandwich" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }} width="800" height="200" loading="lazy" />
+                                <img
+                                    src={getOptimizedImage("/assets/buttermilk-chicken.webp", 500)}
+                                    alt="Buttermilk Chicken Sandwich"
+                                    style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }}
+                                    width="500"
+                                    height="200"
+                                    loading="lazy"
+                                />
                                 <h4 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Buttermilk Chicken Sandwich</h4>
                                 <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Crispy buttermilk chicken breast.</p>
                                 <Link to="/menu" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
                             </div>
                             <div style={{ background: '#1a1a1a', padding: '1.5rem', borderRadius: '8px', border: '1px solid #333' }}>
-                                <img src="/assets/gallery-2.webp" alt="Classic Poutine" style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }} />
+                                <img
+                                    src={getOptimizedImage("/assets/gallery-2.webp", 500)}
+                                    alt="Classic Poutine"
+                                    style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '4px', marginBottom: '1rem' }}
+                                    width="500"
+                                    height="200"
+                                    loading="lazy"
+                                />
                                 <h4 style={{ color: 'var(--color-yellow)', marginBottom: '0.5rem' }}>Classic Poutine</h4>
                                 <p style={{ color: '#ccc', fontSize: '0.9rem', marginBottom: '1rem' }}>Golden fries, gravy, curds and mozzarella.</p>
                                 <Link to="/menu" style={{ color: 'var(--color-yellow)', textDecoration: 'underline' }}>See Full Menu</Link>
                             </div>
                         </div>
                         <div className="hero-actions" style={{ marginTop: '2rem' }}>
-                            <Link to="/reservations" className="btn btn-primary" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none', padding: '1rem 2rem', fontSize: '1.2rem', fontWeight: 'bold', textDecoration: 'none', borderRadius: '4px' }} onClick={() => trackBookingStart('home_guest_favourites')}>
+                            <a href="tel:18073430001" className="btn btn-primary" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none', padding: '1rem 2rem', fontSize: '1.2rem', fontWeight: 'bold', textDecoration: 'none', borderRadius: '4px' }} onClick={() => trackBookingStart('home_guest_favourites')}>
                                 Book a Table
-                            </Link>
+                            </a>
                         </div>
                     </MotionSection>
                 </div>
@@ -208,14 +242,14 @@ const Home = () => {
                 {/* Photo Gallery */}
                 <div style={{ marginBottom: '4rem' }}>
                     <MotionSection delay={0.2}>
-                        <h3 style={{ color: '#fff', marginBottom: '2rem' }}>Gallery</h3>
+                        <h2 style={{ color: '#fff', marginBottom: '2rem' }}>Gallery</h2>
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
-                            <img src="/assets/montys-interior-live-music.webp" alt="Live Music at Monty's" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
-                            <img src="/assets/montys-interior-venue-2.webp" alt="Monty's Venue Interior" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
-                            <img src="/assets/montys-interior-live-sports.webp" alt="Live Sports at Monty's" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
-                            <img src="/assets/montys-interior-gallery-6.webp" alt="Monty's Atmosphere" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
-                            <img src="/assets/montys-interior-food-3.webp" alt="Dining at Monty's" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
-                            <img src="/assets/montys-interior-food-1.webp" alt="Monty's Interior Detail" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} />
+                            <img src={getOptimizedImage("/assets/montys-interior-live-music.webp", 600)} alt="Live Music at Monty's" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} width="600" height="250" loading="lazy" />
+                            <img src={getOptimizedImage("/assets/montys-interior-venue-2.webp", 600)} alt="Monty's Venue Interior" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} width="600" height="250" loading="lazy" />
+                            <img src={getOptimizedImage("/assets/montys-interior-live-sports.webp", 600)} alt="Live Sports at Monty's" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} width="600" height="250" loading="lazy" />
+                            <img src={getOptimizedImage("/assets/montys-interior-gallery-6.webp", 600)} alt="Monty's Atmosphere" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} width="600" height="250" loading="lazy" />
+                            <img src={getOptimizedImage("/assets/montys-interior-food-3.webp", 600)} alt="Dining at Monty's" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} width="600" height="250" loading="lazy" />
+                            <img src={getOptimizedImage("/assets/montys-interior-food-1.webp", 600)} alt="Monty's Interior Detail" style={{ width: '100%', height: '250px', objectFit: 'cover', borderRadius: '4px' }} width="600" height="250" loading="lazy" />
                         </div>
                     </MotionSection>
                 </div>
@@ -223,7 +257,7 @@ const Home = () => {
                 {/* Online Ordering Badges */}
                 <div style={{ marginBottom: '4rem', textAlign: 'center' }}>
                     <MotionSection delay={0.2}>
-                        <h3 style={{ color: '#fff', marginBottom: '2rem' }}>Order Online</h3>
+                        <h2 style={{ color: '#fff', marginBottom: '2rem' }}>Order Online</h2>
                         <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
                             <a href="https://www.ubereats.com/ca/store/montys-joint-513-victoria-e/w2fMzhYDW7qzrF_d4y3GSw" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#06C167', color: '#fff', border: 'none', padding: '1rem 2rem', borderRadius: '4px', fontWeight: 'bold', textDecoration: 'none' }} onClick={() => trackTakeoutClick('ubereats', 'delivery', 'home_page', 'https://www.ubereats.com/ca/store/montys-joint-513-victoria-e/w2fMzhYDW7qzrF_d4y3GSw')}>Uber Eats</a>
                             <a href="https://www.skipthedishes.com/montys-joint-513" target="_blank" rel="noopener noreferrer" className="btn" style={{ background: '#D21243', color: '#fff', border: 'none', padding: '1rem 2rem', borderRadius: '4px', fontWeight: 'bold', textDecoration: 'none' }} onClick={() => trackTakeoutClick('skipthedishes', 'delivery', 'home_page', 'https://www.skipthedishes.com/montys-joint-513')}>SkipTheDishes</a>
@@ -244,9 +278,12 @@ const Home = () => {
                         }}>
                             <div style={{ height: '100%', minHeight: '300px' }}>
                                 <img
-                                    src="/assets/mark-potvin.jpg"
+                                    src={getOptimizedImage("/assets/mark-potvin.jpg", 800)}
                                     alt="The Mark Potvin Trio"
                                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                    width="800"
+                                    height="450"
+                                    loading="lazy"
                                 />
                             </div>
                             <div style={{ padding: '2rem', textAlign: 'left' }}>
@@ -348,7 +385,14 @@ const Home = () => {
 
                 <MotionSection delay={0.5}>
                     <div style={{ marginTop: '4rem', display: 'flex', justifyContent: 'center' }}>
-                        <img src="/assets/theme-big-flavour.png" alt="Big Flavour, Bigger Impact logo" loading="lazy" style={{ width: '150px', height: 'auto', opacity: 0.8 }} />
+                        <img
+                            src={getOptimizedImage("/assets/theme-big-flavour.png", 300)}
+                            alt="Big Flavour, Bigger Impact logo"
+                            loading="lazy"
+                            style={{ width: '150px', height: 'auto', opacity: 0.8 }}
+                            width="150"
+                            height="150"
+                        />
                     </div>
                 </MotionSection>
             </section>

@@ -7,16 +7,6 @@ const Reservations = () => {
     useEffect(() => {
         // Track booking start when user lands on reservations page
         trackBookingStart('direct_page_visit');
-
-        const script = document.createElement('script');
-        script.src = "https://go.montysjoint.com/js/form_embed.js";
-        script.type = "text/javascript";
-        script.async = true;
-        document.body.appendChild(script);
-
-        return () => {
-            document.body.removeChild(script);
-        }
     }, []);
 
     return (
@@ -28,20 +18,31 @@ const Reservations = () => {
                 image="https://montysjoint.com/assets/montys-interior-live-music.webp"
             />
             <div style={{ paddingTop: '100px', paddingBottom: '4rem' }} className="container">
-                <h1 style={{ textAlign: 'center', fontSize: '3rem', marginBottom: '1rem', color: 'var(--color-yellow)' }}>Book a Table</h1>
+                <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
+                    <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem', color: 'var(--color-yellow)' }}>RESERVATIONS</h1>
+                    <p style={{ fontSize: '1.25rem', color: '#ccc', marginBottom: '3rem' }}>
+                        To ensure the best experience and guarantee your table, please call us directly to book your reservation.
+                    </p>
 
-                <div style={{ maxWidth: '800px', margin: '0 auto', background: '#fff', padding: '1rem', borderRadius: '8px' }}>
-                    <div style={{ marginBottom: '1rem', padding: '1rem', background: '#fff3cd', color: '#856404', border: '1px solid #ffeeba', borderRadius: '4px', textAlign: 'center' }}>
-                        <strong>Note:</strong> For groups larger than 8, please call us at <a href="tel:18073430001" style={{ color: '#856404', textDecoration: 'underline' }} onClick={() => trackCallClick('reservations_page')}>(807) 343-0001</a>.
+                    <a href="tel:18073430001" className="btn btn-primary" style={{
+                        background: 'var(--color-yellow)',
+                        color: '#000',
+                        padding: '1.5rem 3rem',
+                        fontSize: '1.5rem',
+                        fontWeight: 'bold',
+                        borderRadius: '8px',
+                        display: 'inline-block',
+                        textDecoration: 'none'
+                    }} onClick={() => trackCallClick('reservations_page')}>
+                        Call 1 (807) 343-0001
+                    </a>
+
+                    <div style={{ marginTop: '4rem', padding: '2rem', border: '1px solid #333', borderRadius: '12px', background: '#1a1a1a' }}>
+                        <h2 style={{ color: '#fff', marginBottom: '1rem' }}>Walk-ins Welcome!</h2>
+                        <p style={{ color: '#ccc' }}>
+                            We always keep space for walk-in guests, but reservations are recommended for Friday nights and during live sports events.
+                        </p>
                     </div>
-
-                    <iframe
-                        src="https://go.montysjoint.com/widget/booking/4LOyj98wpXJlUylxEsp3"
-                        style={{ width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px' }}
-                        scrolling="no"
-                        id="4LOyj98wpXJlUylxEsp3_1764388439947"
-                        title="Book a Table"
-                    ></iframe>
                 </div>
             </div>
         </Layout>
