@@ -49,7 +49,7 @@ export const getBlogRoutes = async () => {
 
                 posts.push({
                     url: `/blog/${slug}`, // Relative URL for prerenderer matches
-                    fullUrl: `${BASE_URL}/blog/${slug}/`, // Absolute URL for sitemap
+                    fullUrl: `${BASE_URL}/blog/${slug}`, // Absolute URL for sitemap
                     title,
                     lastmod: date,
                     images: image ? [{ loc: image, title: title }] : []

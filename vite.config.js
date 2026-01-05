@@ -15,11 +15,8 @@ export default defineConfig(async () => {
       prerender({
         staticDir: path.join(__dirname, 'dist'),
         routes: routes,
-        renderer: new PuppeteerRenderer({
-          maxConcurrentRoutes: 1,
-          renderAfterTime: 5000,
-        }),
         postProcess(renderedRoute) {
+          if (!renderedRoute.html) return renderedRoute;
           // Optional: Add any post-processing logic here
           renderedRoute.html = renderedRoute.html
             .replace(/http:\/\/localhost:\d+/g, 'https://montysjoint.com')
