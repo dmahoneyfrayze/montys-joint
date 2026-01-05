@@ -82,3 +82,6 @@
   pretty_urls = true
 [build.processing.images]
   compress = true
+
+[images]
+  remote_images = ["https://storage.googleapis.com/msgsndr/.*"]

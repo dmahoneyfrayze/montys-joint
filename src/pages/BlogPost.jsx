@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import SEO from '../components/SEO/SEO';
 import Layout from '../components/Layout/Layout';
-import { fetchBlogPosts } from '../utils/rss';
+import { fetchBlogPosts, getOptimizedImage } from '../utils/rss';
 import MotionSection from '../components/UI/MotionSection';
 
 const BlogPost = () => {
@@ -112,7 +112,7 @@ const BlogPost = () => {
                 <div style={{
                     height: '50vh',
                     minHeight: '400px',
-                    background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(${post.image})`,
+                    background: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(${getOptimizedImage(post.rawImage || post.image, 1200)})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     display: 'flex',
@@ -149,7 +149,12 @@ const BlogPost = () => {
                         <div
                             className="blog-content"
                             style={{ color: '#ddd', fontSize: '1.1rem', lineHeight: '1.8' }}
-                            dangerouslySetInnerHTML={{ __html: post.content }}
+                            dangerouslySetInnerHTML={{
+                                __html: post.content.replace(
+                                    /<img([^>]+)src="([^">]+)"/g,
+                                    (match, attrs, src) => `<img${attrs}src="${getOptimizedImage(src, 800)}"`
+                                )
+                            }}
                         />
                     </MotionSection>
 

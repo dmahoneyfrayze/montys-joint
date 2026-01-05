@@ -1,4 +1,20 @@
 /**
+ * Optimizes an image URL using Netlify Image CDN
+ * @param {string} url - The original image URL
+ * @param {number} width - Desired width
+ * @param {number} quality - Image quality (1-100)
+ * @returns {string} - Optimized URL
+ */
+export const getOptimizedImage = (url, width = 800, quality = 80) => {
+    if (!url || url.startsWith('/assets')) return url;
+    // Use Netlify Image CDN for remote images
+    if (url.startsWith('http') && !url.includes('montysjoint.com')) {
+        return `/.netlify/images?url=${encodeURIComponent(url)}&w=${width}&q=${quality}`;
+    }
+    return url;
+};
+
+/**
  * Fetches and parses the Monty's Joint RSS feed.
  * @returns {Promise<Array>} Array of blog post objects
  */
@@ -38,20 +54,20 @@ export const fetchBlogPosts = async () => {
 
             // Image
             // Try media:content first, then enclosure, then parse from description
-            let image = '/assets/venue-hero.webp'; // Default fallback
+            let rawImage = '/assets/venue-hero.webp'; // Default fallback
 
             const mediaContent = item.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'content')[0];
             const enclosure = item.querySelector('enclosure');
 
             if (mediaContent && mediaContent.getAttribute('url')) {
-                image = mediaContent.getAttribute('url');
+                rawImage = mediaContent.getAttribute('url');
             } else if (enclosure && enclosure.getAttribute('url')) {
-                image = enclosure.getAttribute('url');
+                rawImage = enclosure.getAttribute('url');
             } else {
                 // Try to find first img in description
                 const imgMatch = descriptionHtml.match(/<img[^>]+src="([^">]+)"/);
                 if (imgMatch) {
-                    image = imgMatch[1];
+                    rawImage = imgMatch[1];
                 }
             }
 
@@ -74,7 +90,8 @@ export const fetchBlogPosts = async () => {
                 date,
                 excerpt,
                 content,
-                image,
+                image: getOptimizedImage(rawImage, 800), // Optimized version for lists
+                rawImage, // Original URL for hero/content/sharing
                 link, // Original link
                 author,
                 category,

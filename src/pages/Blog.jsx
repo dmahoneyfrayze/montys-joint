@@ -30,7 +30,7 @@ const Blog = () => {
         <Layout>
             <SEO
                 title="Blog"
-                description="Read the latest news, stories, and updates from Monty’s Joint. Food, community, and culture in Thunder Bay."
+                description="Stay up to date with the latest news, special events, and behind-the-scenes stories from Monty’s Joint - Thunder Bay's favourite neighbourhood gastropub."
                 url="https://montysjoint.com/blog/"
                 image="https://montysjoint.com/assets/logo-main.png"
             />

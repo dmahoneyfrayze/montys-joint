@@ -9,7 +9,7 @@ const NotFound = () => {
             <SEO
                 title="Page Not Found"
                 description="Oops! The page you are looking for does not exist."
-                url="https://montysjoint.com/404"
+                url="https://montysjoint.com/404/"
             >
                 <meta name="robots" content="noindex" />
             </SEO>

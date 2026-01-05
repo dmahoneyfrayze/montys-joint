@@ -128,7 +128,7 @@ const Home = () => {
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center', textAlign: 'left', marginBottom: '4rem' }}>
                         <div>
-                            <img src="/assets/montys-exterior.webp" alt="Monty's Joint Exterior" style={{ width: '100%', borderRadius: '8px', border: '1px solid #333' }} />
+                            <img src="/assets/montys-exterior.webp" alt="Monty's Joint Gastropub Exterior in Thunder Bay" style={{ width: '100%', borderRadius: '8px', border: '1px solid #333' }} />
                         </div>
                         <div>
                             <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem', color: 'var(--color-yellow)' }}>
@@ -158,7 +158,7 @@ const Home = () => {
                                     <Link key={post.id} to={`/blog/${post.slug}`} style={{ textDecoration: 'none' }}>
                                         <div style={{ background: '#1a1a1a', borderRadius: '8px', overflow: 'hidden', border: '1px solid #333', height: '100%', transition: 'transform 0.3s ease' }} className="blog-card-home">
                                             <div style={{ height: '200px', overflow: 'hidden' }}>
-                                                <img src={post.image} alt={post.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                                <img src={post.image} alt={`Blog post: ${post.title}`} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                             </div>
                                             <div style={{ padding: '1.5rem' }}>
                                                 <p style={{ color: 'var(--color-yellow)', fontSize: '0.85rem', marginBottom: '0.5rem' }}>{post.date}</p>
@@ -348,7 +348,7 @@ const Home = () => {
 
                 <MotionSection delay={0.5}>
                     <div style={{ marginTop: '4rem', display: 'flex', justifyContent: 'center' }}>
-                        <img src="/assets/theme-big-flavour.png" alt="Big Flavour, Bigger Impact" loading="lazy" style={{ width: '150px', height: 'auto', opacity: 0.8 }} />
+                        <img src="/assets/theme-big-flavour.png" alt="Big Flavour, Bigger Impact logo" loading="lazy" style={{ width: '150px', height: 'auto', opacity: 0.8 }} />
                     </div>
                 </MotionSection>
             </section>

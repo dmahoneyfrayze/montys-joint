@@ -6,7 +6,7 @@ const SEO = ({ title, description, image, url, type = 'website', children }) => 
     const siteName = "Monty's Joint";
     const defaultImage = "https://montysjoint.com/assets/venue-hero.webp";
     const defaultDescription = "Monty's Joint is Thunder Bay's neighbourhood gastropub serving great food, the coldest draught, and a relaxed pub atmosphere.";
-    const fullTitle = title.includes("Monty's Joint") ? title : `${title} | ${siteName}`;
+    const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
 
     return (
         <Helmet>

@@ -8,7 +8,8 @@ const ThankYou = () => {
         <Layout>
             <SEO
                 title="Thank You"
-                description="Thank you for contacting Monty’s Joint."
+                description="Thank you for reaching out to Monty’s Joint. We have received your message and will be in touch soon."
+                url="https://montysjoint.com/thank-you/"
             />
             <div style={{ paddingTop: '150px', paddingBottom: '4rem', textAlign: 'center', minHeight: '60vh' }} className="container">
                 <h1 style={{ fontSize: '3rem', color: 'var(--color-yellow)', marginBottom: '1.5rem' }}>Thank You!</h1>
