@@ -9,6 +9,12 @@
   force = true
 
 [[redirects]]
+  from = "https://blog.montysjoint.com/blog/*"
+  to = "/blog/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://blog.montysjoint.com/*"
   to = "/blog/:splat"
   status = 301
