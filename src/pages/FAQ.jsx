@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Layout from '../components/Layout/Layout';
 import SEO from '../components/SEO/SEO';
 import MotionSection from '../components/UI/MotionSection';
@@ -19,7 +20,11 @@ const FAQ_DATA = [
             },
             {
                 q: "Is Monty’s Joint family-friendly?",
-                a: "Yes! We love hosting families and have a dedicated kids menu with favorites like chicken fingers, burgers, and pasta."
+                a: (
+                    <>
+                        Yes! We love hosting families and have a dedicated <Link to="/menu/" style={{ color: 'var(--color-yellow)' }}>kids menu</Link> with favorites like chicken fingers, burgers, and pasta.
+                    </>
+                )
             }
         ]
     },
@@ -28,15 +33,27 @@ const FAQ_DATA = [
         questions: [
             {
                 q: "Do you take reservations?",
-                a: "Absolutely! We recommend booking in advance, especially for Friday and Saturday nights. You can book directly through our website or call us at (807) 343-0001."
+                a: (
+                    <>
+                        Absolutely! We recommend <Link to="/reservations/" style={{ color: 'var(--color-yellow)' }}>booking in advance</Link>, especially for Friday and Saturday nights. You can book directly through our website or call us at (807) 343-0001.
+                    </>
+                )
             },
             {
                 q: "Can I host a private event at Monty’s?",
-                a: "Yes! We host everything from birthday parties to corporate gatherings. Check our Private Events page or contact us for custom menu options and venue availability."
+                a: (
+                    <>
+                        Yes! We host everything from birthday parties to corporate gatherings. Check our <Link to="/private-events/" style={{ color: 'var(--color-yellow)' }}>Private Events</Link> page or <Link to="/contact/" style={{ color: 'var(--color-yellow)' }}>contact us</Link> for custom menu options and venue availability.
+                    </>
+                )
             },
             {
                 q: "Do you offer catering?",
-                a: "We do! We have specialized party packages designed for external events. See the Catering section on our Menu page for details."
+                a: (
+                    <>
+                        We do! We have specialized party packages designed for external events. See the <Link to="/menu/#catering" style={{ color: 'var(--color-yellow)' }}>Catering section</Link> on our Menu page for details.
+                    </>
+                )
             }
         ]
     },
@@ -45,7 +62,11 @@ const FAQ_DATA = [
         questions: [
             {
                 q: "Do you have vegetarian or vegan options?",
-                a: "Yes, we offer several vegetarian dishes and can often accommodate vegan requests. Our menu clearly identifies these options."
+                a: (
+                    <>
+                        Yes, we offer several vegetarian dishes and can often accommodate vegan requests. Our <Link to="/menu/" style={{ color: 'var(--color-yellow)' }}>menu</Link> clearly identifies these options.
+                    </>
+                )
             },
             {
                 q: "Are there gluten-free choices available?",
@@ -122,7 +143,7 @@ const FAQItem = ({ question, answer }) => {
             </div>
             {isOpen && (
                 <div className="faq-answer">
-                    <p>{answer}</p>
+                    <div style={{ color: '#ccc', lineHeight: '1.6', fontSize: '1.1rem' }}>{answer}</div>
                 </div>
             )}
         </div>
