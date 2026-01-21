@@ -91,7 +91,7 @@ export const fetchBlogPosts = async () => {
                 date,
                 excerpt,
                 content,
-                image: getOptimizedImage(rawImage, 800), // Optimized version for lists
+                image: rawImage, // Return raw image, component will optimize with correct width
                 rawImage, // Original URL for hero/content/sharing
                 link, // Original link
                 author,

@@ -10,7 +10,7 @@ const Hero = () => {
             <img
                 src="/.netlify/images?url=%2Fassets%2Fvenue-hero.webp&w=800&q=80"
                 srcSet="/.netlify/images?url=%2Fassets%2Fvenue-hero.webp&w=800&q=80 800w, /.netlify/images?url=%2Fassets%2Fvenue-hero.webp&w=1600&q=80 1600w"
-                sizes="100vw"
+                sizes="(max-width: 600px) 100vw, 1600px"
                 alt="Monty's Joint Venue"
                 className="hero-bg-img"
                 fetchPriority="high"
