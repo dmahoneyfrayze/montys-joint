@@ -75,6 +75,7 @@ const Footer = () => {
                     <h2 className="footer-title">Quick Links</h2>
                     <ul className="footer-links">
                         <li><Link to="/menu/">Menu</Link></li>
+                        <li><Link to="/menu/#catering">Catering Menu</Link></li>
                         <li><Link to="/lunch-menu/">Lunch Menu</Link></li>
                         <li><Link to="/promotions/">Specials</Link></li>
                         <li><Link to="/blog/" className="footer-link">Blog</Link></li>

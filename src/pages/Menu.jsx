@@ -144,6 +144,33 @@ const Menu = () => {
             items: [
                 { name: 'Kids Meal', price: '$12.25', description: 'Choice of Burger, Cheese Burger or Chicken Tenders.', dietary: [], allergens: { containsNuts: false, containsDairy: true, containsGluten: true, containsShellfish: false } }
             ]
+        },
+        {
+            id: 'catering',
+            title: 'Catering / Takeout / Events',
+            icon: <Utensils size={24} className="text-yellow" />,
+            description: 'Preordered takeout packages for parties and gatherings. Prepared fresh to order.',
+            isComingSoon: true,
+            items: [
+                {
+                    name: 'The Artisan Mediterranean Dip Package',
+                    price: 'Coming Soon',
+                    description: 'A sophisticated 1-Litre tasting experience (Serves 6-8). Featuring four signature house-made dips in 250ml portions. Perfect for hosts who want something elevated but approachable.',
+                    longDescription: 'This artisan box is built for sharing and grazing, making it perfect for early arrivals or mixed crowds. Expect a curated selection of house-made dips paired with fresh bread and crackers—balanced, bold, and made fresh to order.'
+                },
+                {
+                    name: 'The Mega Fryer Platter',
+                    price: 'Coming Soon',
+                    description: 'The ultimate hot-and-crispy shareable (Serves 6-8). A mountain of golden favorites served with a trio of dipping sauces.',
+                    longDescription: 'The Mega Fryer Platter is designed for big moments—game-winning plays, loud rooms, and guests who hover near the food table. It’s built to feed a group efficiently while keeping quality front and center.'
+                },
+                {
+                    name: 'The Double Joint Combo',
+                    price: 'Coming Soon',
+                    description: 'The best of both worlds. Includes one Artisan Mediterranean Box and one Mega Fryer Platter (Serves 12-15).',
+                    longDescription: 'Perfect for mixed age groups, longer events, or hosts who want “something for everyone” without overthinking it. A balanced pairing of fresh artisan flavors and hot savory snacks.'
+                }
+            ]
         }
     ];
 
@@ -251,6 +278,9 @@ const Menu = () => {
                                             <h2>{category.title}</h2>
                                             <p>{category.description}</p>
                                         </div>
+                                        {category.isComingSoon && (
+                                            <span className="coming-soon-badge">COMING SOON</span>
+                                        )}
                                     </div>
                                     <div className="menu-items-grid">
                                         {category.items.map((item, idx) => (
@@ -267,20 +297,22 @@ const Menu = () => {
                                                         <span className="menu-item-price">{item.price}</span>
                                                     </div>
                                                     <p className="menu-item-desc">{item.description}</p>
+                                                    {item.longDescription && <p className="menu-item-long-desc">{item.longDescription}</p>}
 
-                                                    {item.availableUntil && (
-                                                        <div style={{ fontSize: '0.85rem', color: 'var(--color-yellow)', marginTop: '0.5rem', fontWeight: 'bold' }}>
-                                                            Available Until: {item.availableUntil}
-                                                        </div>
+                                                    {item.name.includes('Mediterranean') && (
+                                                        <p style={{ fontSize: '0.85rem', marginTop: '1rem', fontStyle: 'italic' }}>
+                                                            Curious about our full range? <Link to="/menu/" style={{ color: 'var(--color-yellow)' }} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Browse the current Menu.</Link>
+                                                        </p>
                                                     )}
-
-                                                    {item.allergens && (
-                                                        <div style={{ fontSize: '0.75rem', color: '#888', marginTop: '0.5rem', display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-                                                            {item.allergens.containsNuts && <span>Contains Nuts</span>}
-                                                            {item.allergens.containsDairy && <span>Contains Dairy</span>}
-                                                            {item.allergens.containsGluten && <span>Contains Gluten</span>}
-                                                            {item.allergens.containsShellfish && <span>Contains Shellfish</span>}
-                                                        </div>
+                                                    {item.name.includes('Mega Fryer') && (
+                                                        <p style={{ fontSize: '0.85rem', marginTop: '1rem', fontStyle: 'italic' }}>
+                                                            For smaller gatherings, check out our <a href="https://www.skipthedishes.com/montys-joint-513" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-yellow)' }}>Online Ordering</a> options.
+                                                        </p>
+                                                    )}
+                                                    {item.name.includes('Double Joint') && (
+                                                        <p style={{ fontSize: '0.85rem', marginTop: '1rem', fontStyle: 'italic' }}>
+                                                            Organizing a birthday? <Link to="/birthday-club/" style={{ color: 'var(--color-yellow)' }}>Join the Birthday Club</Link> for exclusive perks.
+                                                        </p>
                                                     )}
                                                 </div>
                                             </div>
@@ -294,6 +326,15 @@ const Menu = () => {
                             </div>
                         )}
                     </div>
+
+                    {/* Quick Navigation Links */}
+                    <MotionSection delay={0.3} className="menu-quick-links">
+                        <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap', borderTop: '1px solid #333', paddingTop: '2rem', marginTop: '4rem' }}>
+                            <Link to="/" style={{ color: '#888', textDecoration: 'none' }}>Home</Link>
+                            <Link to="/promotions/" style={{ color: '#888', textDecoration: 'none' }}>Promotions</Link>
+                            <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} style={{ background: 'none', border: 'none', color: '#888', cursor: 'pointer', font: 'inherit' }}>Back to Top</button>
+                        </div>
+                    </MotionSection>
 
                     <MotionSection delay={0.4} className="dietary-section">
                         <Utensils size={48} className="text-yellow mx-auto mb-4" />
