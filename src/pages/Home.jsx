@@ -133,7 +133,7 @@ const Home = () => {
                                 alt="Monty's Joint Gastropub Exterior in Thunder Bay"
                                 style={{ width: '100%', borderRadius: '8px', border: '1px solid #333' }}
                                 width="800"
-                                height="450"
+                                height="600"
                             />
                         </div>
                         <div>
@@ -151,8 +151,8 @@ const Home = () => {
                 </MotionSection>
 
                 {/* What's Happening at Monty's */}
-                {latestPosts.length > 0 && (
-                    <div style={{ marginBottom: '4rem' }}>
+                <div style={{ marginBottom: '4rem' }} suppressHydrationWarning={true}>
+                    {latestPosts.length > 0 && (
                         <MotionSection delay={0.2}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'end', marginBottom: '2rem', flexWrap: 'wrap', gap: '1rem' }}>
                                 <h2 style={{ color: '#fff', fontSize: '2rem', margin: 0 }}>What's Happening at Monty's</h2>
@@ -183,8 +183,8 @@ const Home = () => {
                                 ))}
                             </div>
                         </MotionSection>
-                    </div>
-                )}
+                    )}
+                </div>
 
                 {/* Menu Highlights */}
                 <div style={{ marginBottom: '4rem' }}>
