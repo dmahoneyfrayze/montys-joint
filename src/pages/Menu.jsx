@@ -155,18 +155,21 @@ const Menu = () => {
                 {
                     name: 'The Artisan Mediterranean Dip Package',
                     price: 'Coming Soon',
+                    image: '/assets/mediterranean-dip-package.webp',
                     description: 'A sophisticated 1-Litre tasting experience (Serves 6-8). Featuring four signature house-made dips in 250ml portions. Perfect for hosts who want something elevated but approachable.',
                     longDescription: 'This artisan box is built for sharing and grazing, making it perfect for early arrivals or mixed crowds. Expect a curated selection of house-made dips paired with fresh bread and crackers—balanced, bold, and made fresh to order.'
                 },
                 {
                     name: 'The Mega Fryer Platter',
                     price: 'Coming Soon',
+                    image: '/assets/mega-fryer-platter.webp',
                     description: 'The ultimate hot-and-crispy shareable (Serves 6-8). A mountain of golden favorites served with a trio of dipping sauces.',
                     longDescription: 'The Mega Fryer Platter is designed for big moments—game-winning plays, loud rooms, and guests who hover near the food table. It’s built to feed a group efficiently while keeping quality front and center.'
                 },
                 {
                     name: 'The Double Joint Combo',
                     price: 'Coming Soon',
+                    image: '/assets/double-joint-combo.webp',
                     description: 'The best of both worlds. Includes one Artisan Mediterranean Box and one Mega Fryer Platter (Serves 12-15).',
                     longDescription: 'Perfect for mixed age groups, longer events, or hosts who want “something for everyone” without overthinking it. A balanced pairing of fresh artisan flavors and hot savory snacks.'
                 }
