@@ -25,6 +25,7 @@ const LunchMenu = lazy(() => import('./pages/LunchMenu'));
 const Offer = lazy(() => import('./pages/Offer'));
 const OfferClaimed = lazy(() => import('./pages/OfferClaimed'));
 const NotFound = lazy(() => import('./pages/NotFoundPage'));
+const FAQ = lazy(() => import('./pages/FAQ'));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -65,6 +66,7 @@ function App() {
           <Route path="/lunch-menu" element={<LunchMenu />} />
           <Route path="/offer" element={<Offer />} />
           <Route path="/offer/claimed" element={<OfferClaimed />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

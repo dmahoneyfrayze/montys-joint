@@ -162,6 +162,13 @@
     background: #333;
 }
 
+.menu-category#catering .menu-item-image {
+    height: auto;
+    aspect-ratio: 4/5;
+    object-fit: contain;
+    background: #111;
+}
+
 .menu-item-content {
     padding: 1.5rem;
     flex: 1;
@@ -190,8 +197,14 @@
 
 .menu-category#catering .menu-items-grid {
     grid-template-columns: 1fr;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+    .menu-category#catering .menu-items-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .menu-item-price {

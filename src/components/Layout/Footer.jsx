@@ -80,6 +80,7 @@ const Footer = () => {
                         <li><Link to="/promotions/">Specials</Link></li>
                         <li><Link to="/blog/" className="footer-link">Blog</Link></li>
                         <li><Link to="/birthday-club/" className="footer-link">Birthday Club</Link></li>
+                        <li><Link to="/faq/" className="footer-link">FAQ</Link></li>
                         <li><Link to="/careers/" className="footer-link">Careers</Link></li>
                         <li><Link to="/contact/" className="footer-link">Contact Us</Link></li>
                         <li><Link to="/order/" className="footer-link">Order Online</Link></li>
