@@ -27,7 +27,7 @@ const BirthdayClub = () => {
                 <Gift size={64} color="var(--color-yellow)" style={{ marginBottom: '2rem' }} />
                 <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', color: 'var(--color-yellow)' }}>Birthday Club</h1>
                 <p style={{ color: '#ccc', fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto 3rem auto' }}>
-                    Join our Birthday Club and get a <strong>FREE appetizer</strong> on your special day! Plus, be the first to know about exclusive events and offers.
+                    Join our Birthday Club and get exclusive treats on your special day! Plus, be the first to know about upcoming events and special offers.
                 </p>
 
                 <div style={{ maxWidth: '800px', margin: '0 auto', background: '#1a1a1a', borderRadius: '8px', overflow: 'hidden', border: '1px solid #333' }}>

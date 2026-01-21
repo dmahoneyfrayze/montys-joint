@@ -78,7 +78,7 @@ const BirthdayClubPopup = () => {
 
                 <h2 style={{ color: 'var(--color-yellow)', fontSize: '2rem', marginBottom: '1rem' }}>Join the Birthday Club!</h2>
                 <p style={{ color: '#ccc', marginBottom: '2rem', fontSize: '1.1rem' }}>
-                    Sign up for our Birthday Club and get a <strong>FREE appetizer</strong> on your special day! Plus, be the first to know about exclusive events and offers.
+                    Sign up for our Birthday Club and get exclusive treats on your special day! Plus, be the first to know about upcoming events and offers.
                 </p>
 
                 <a
