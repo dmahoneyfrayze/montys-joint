@@ -22,15 +22,15 @@ const Home = () => {
     return (
         <Layout>
             <SEO
-                title="Thunder Bay Gastropub"
-                description="Monty's Joint is Thunder Bay's neighbourhood gastropub serving great food, the coldest draught, and a relaxed pub atmosphere. Enjoy dine-in, takeout, catering, and private bookings."
+                title="Monty’s Joint | Casual Dining, Wings, Burgers & Late Night in Thunder Bay"
+                description="Monty's Joint is Thunder Bay's go-to for casual dining, live music, billiards, and great drinks. Enjoy famous wings, burgers, and a relaxed atmosphere open late."
                 url="https://montysjoint.com/"
             >
                 {/* Schema.org Structured Data */}
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": ["Restaurant", "LocalBusiness"],
+                        "@type": ["Restaurant", "BarOrPub", "LocalBusiness"],
                         "name": "Monty's Joint",
                         "image": [
                             "https://montysjoint.com/assets/venue-hero.webp",

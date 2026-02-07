@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import SEO from '../components/SEO/SEO';
 import Layout from '../components/Layout/Layout';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import OpenStatus from '../components/UI/OpenStatus';
 
 const Contact = () => {
     useEffect(() => {
@@ -59,9 +60,12 @@ const Contact = () => {
                         </div>
 
                         <div>
-                            <h2 style={{ color: '#fff', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                                <Clock color="var(--color-yellow)" /> Hours
-                            </h2>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
+                                <h2 style={{ color: '#fff', margin: 0, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                    <Clock color="var(--color-yellow)" /> Hours
+                                </h2>
+                                <OpenStatus />
+                            </div>
                             <ul style={{ listStyle: 'none', padding: 0, color: '#ccc', fontSize: '1.1rem', lineHeight: '1.6' }}>
                                 <li><strong style={{ color: '#fff' }}>Monday:</strong> 5:00 PM - 10:00 PM</li>
                                 <li><strong style={{ color: '#fff' }}>Tuesday - Friday:</strong> 11:30 AM - 10:00 PM</li>

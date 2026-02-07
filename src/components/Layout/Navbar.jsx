@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone } from 'lucide-react';
+import OpenStatus from '../UI/OpenStatus';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -43,6 +44,10 @@ const Navbar = () => {
                     <Link to="/promotions/" className="nav-link">Specials</Link>
                     <Link to="/private-events/" className="nav-link">Private Events</Link>
                     <Link to="/contact/" className="nav-link">Contact</Link>
+
+                    <div className="mobile-only" style={{ padding: '0.75rem 0', borderBottom: '1px solid rgba(255,255,255,0.1)', marginBottom: '1rem' }}>
+                        <OpenStatus />
+                    </div>
 
                     {/* Mobile Only Call Button */}
                     <a href="tel:8073430001" className="nav-link mobile-call-link" style={{ display: 'none', alignItems: 'center', gap: '0.5rem' }}>

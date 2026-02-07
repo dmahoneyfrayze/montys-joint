@@ -230,8 +230,8 @@ const Menu = () => {
     return (
         <Layout>
             <SEO
-                title="Our Menu"
-                description="Explore our menu featuring locally sourced burgers, shareable appetizers, fresh salads, and more. Gluten-free and vegetarian options available."
+                title="Monty’s Joint Menu | Wings, Burgers, Nachos & Poutine in Thunder Bay"
+                description="View our full menu of guest favourites! From our famous wings and nachos to handmade burgers and poutine. Open now for dine-in and takeout. Reserve your table today."
                 url="https://montysjoint.com/menu/"
                 image="https://montysjoint.com/assets/montys-interior-food-3.webp"
             />

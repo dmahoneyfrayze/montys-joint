@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
 import { trackCallClick, trackNewsletterSignup } from '../../utils/tracking';
+import OpenStatus from '../UI/OpenStatus';
 import './Footer.css';
 
 const Footer = () => {
@@ -88,7 +89,10 @@ const Footer = () => {
                 </section>
 
                 <section className="footer-section">
-                    <h2 className="footer-title">Hours</h2>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+                        <h2 className="footer-title" style={{ margin: 0 }}>Hours</h2>
+                        <OpenStatus />
+                    </div>
                     <ul className="footer-hours">
                         <li>
                             <span className="day">Mon:</span>
