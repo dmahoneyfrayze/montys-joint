@@ -240,6 +240,9 @@ const Menu = () => {
                     <MotionSection className="menu-header">
                         <h1 className="page-title">OUR <span className="text-yellow">MENU</span></h1>
                         <p className="page-subtitle">Big flavours, locally sourced ingredients, and something for everyone.</p>
+                        <p style={{ textAlign: 'center', color: '#888', maxWidth: '600px', margin: '1rem auto 0', fontSize: '0.9rem' }}>
+                            Monty’s Joint is a popular choice for <Link to="/thunder-bay-restaurants/" style={{ color: 'var(--color-yellow)' }}>casual dining in Thunder Bay</Link>. If you’re comparing restaurants, see our local dining guide to help decide.
+                        </p>
                     </MotionSection>
 
                     {/* Sticky Controls Container */}

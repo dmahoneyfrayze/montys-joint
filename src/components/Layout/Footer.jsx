@@ -89,6 +89,14 @@ const Footer = () => {
                 </section>
 
                 <section className="footer-section">
+                    <h2 className="footer-title">Dining in Thunder Bay</h2>
+                    <ul className="footer-links">
+                        <li><Link to="/thunder-bay-restaurants/" className="footer-link">Best Restaurants in Thunder Bay</Link></li>
+                        <li><Link to="/best-casual-dining-thunder-bay/" className="footer-link">Best Casual Dining in Thunder Bay</Link></li>
+                    </ul>
+                </section>
+
+                <section className="footer-section">
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
                         <h2 className="footer-title" style={{ margin: 0 }}>Hours</h2>
                         <OpenStatus />

@@ -15,7 +15,9 @@ export const STATIC_ROUTES = [
     '/terms-of-service/',
     '/privacy-policy/',
     '/private-events/',
-    '/thank-you/'
+    '/thank-you/',
+    '/thunder-bay-restaurants/',
+    '/best-casual-dining-thunder-bay/'
 ];
 
 export const getBlogRoutes = async () => {

@@ -26,6 +26,8 @@ const Offer = lazy(() => import('./pages/Offer'));
 const OfferClaimed = lazy(() => import('./pages/OfferClaimed'));
 const NotFound = lazy(() => import('./pages/NotFoundPage'));
 const FAQ = lazy(() => import('./pages/FAQ'));
+const ThunderBayRestaurants = lazy(() => import('./pages/ThunderBayRestaurants'));
+const BestCasualDining = lazy(() => import('./pages/BestCasualDining'));
 
 // Loading fallback component
 const PageLoader = () => (
@@ -67,6 +69,8 @@ function App() {
           <Route path="/offer" element={<Navigate to="/menu" replace />} />
           <Route path="/offer/claimed" element={<OfferClaimed />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/thunder-bay-restaurants" element={<ThunderBayRestaurants />} />
+          <Route path="/best-casual-dining-thunder-bay" element={<BestCasualDining />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

@@ -146,6 +146,9 @@ const Home = () => {
                             <Link to="/blog/welcome-to-montys-new-blog/" className="btn btn-primary" style={{ background: 'var(--color-yellow)', color: '#000', border: 'none', padding: '0.8rem 1.5rem', fontSize: '1rem', fontWeight: 'bold', textDecoration: 'none', borderRadius: '4px' }}>
                                 Read Full Story
                             </Link>
+                            <p style={{ marginTop: '1.5rem', fontSize: '0.9rem', color: '#888' }}>
+                                Exploring Thunder Bay restaurants? See our local dining guide and why many locals choose Monty’s Joint for <Link to="/best-casual-dining-thunder-bay/" style={{ color: 'var(--color-yellow)' }}>best casual dining in Thunder Bay</Link>.
+                            </p>
                         </div>
                     </div>
                 </MotionSection>
