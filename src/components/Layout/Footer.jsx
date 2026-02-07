@@ -122,7 +122,7 @@ const Footer = () => {
                 </section>
             </div>
             <div className="footer-bottom">
-                <p>&copy; {new Date().getFullYear()} Monty's Joint. All rights reserved.</p>
+                <p suppressHydrationWarning>&copy; {new Date().getFullYear()} Monty's Joint. All rights reserved.</p>
                 <div style={{ marginTop: '0.5rem', fontSize: '0.8rem' }}>
                     <Link to="/privacy-policy/" style={{ color: '#999', marginRight: '1rem' }}>Privacy Policy</Link>
                     <Link to="/terms-of-service/" style={{ color: '#999', marginRight: '1rem' }}>Terms of Service</Link>

@@ -131,7 +131,7 @@ const Home = () => {
                             <img
                                 src={getOptimizedImage("/assets/montys-exterior.webp", 800)}
                                 alt="Monty's Joint Gastropub Exterior in Thunder Bay"
-                                style={{ width: '100%', borderRadius: '8px', border: '1px solid #333' }}
+                                style={{ width: '100%', height: 'auto', borderRadius: '8px', border: '1px solid #333' }}
                                 width="800"
                                 height="600"
                             />
