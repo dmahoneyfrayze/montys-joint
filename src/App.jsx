@@ -1,6 +1,6 @@
 // Main App Component
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import ScrollToTop from './components/UI/ScrollToTop';
 import './styles/global.css';
 
@@ -64,7 +64,7 @@ function App() {
           <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/christmas-party" element={<ChristmasParty />} />
           <Route path="/lunch-menu" element={<LunchMenu />} />
-          <Route path="/offer" element={<Offer />} />
+          <Route path="/offer" element={<Navigate to="/menu" replace />} />
           <Route path="/offer/claimed" element={<OfferClaimed />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="*" element={<NotFound />} />

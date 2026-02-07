@@ -15,8 +15,7 @@ export const STATIC_ROUTES = [
     '/terms-of-service/',
     '/privacy-policy/',
     '/private-events/',
-    '/thank-you/',
-    '/offer-claimed/'
+    '/thank-you/'
 ];
 
 export const getBlogRoutes = async () => {
